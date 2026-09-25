@@ -3,7 +3,7 @@
 Objetivo desta fase: descobrir qual dos 5 criativos gera **lead mais barato e mais qualificado** para a isca "Checklist dos 5 Erros de Layout". O vencedor vai para a escala; os outros são pausados.
 
 ```
-Anúncio (Reels/Stories/Feed) → Página de captura (landing/index.html) → VSL → Checkout Hotmart → order bump / upsell
+Anúncio (Reels/Stories/Feed) → Página de captura (site/loja-que-vende/) → VSL → Checkout Hotmart → order bump / upsell
 ```
 
 ---
@@ -43,11 +43,11 @@ Criado via API em 25/09/2026. **Tudo PAUSADO, sem gasto.**
 
 | Item | Onde | Status |
 |---|---|---|
-| Pixel criado e ID colado em `META_PIXEL_ID` no `landing/index.html` | Gerenciador de Eventos → Conectar fonte de dados → Web | ☐ |
+| Pixel criado e ID colado em `META_PIXEL_ID` no `site/loja-que-vende/index.html` | Gerenciador de Eventos → Conectar fonte de dados → Web | ☐ |
 | Domínio da landing verificado | Configurações do negócio → Segurança da marca → Domínios | ☐ |
 | Evento `Lead` aparecendo no Gerenciador de Eventos (faça 1 cadastro de teste com o "Testar eventos") | Gerenciador de Eventos → Testar eventos | ☐ |
 | API de Conversões ligada (opcional, recomendado): `META_PIXEL_ID` + `META_CAPI_TOKEN` no Apps Script. O Lead chega 2× com o mesmo `event_id` e a Meta deduplica | `integracoes/apps-script-leads.gs` | ☐ |
-| `FORM_ENDPOINT` e `VSL_URL` preenchidos; cadastro de teste gravou na planilha e o e-mail com o PDF chegou | `landing/index.html` | ☐ |
+| `FORM_ENDPOINT` e `VSL_URL` preenchidos; cadastro de teste gravou na planilha e o e-mail com o PDF chegou | `site/loja-que-vende/index.html` | ☐ |
 | Pixel também instalado na página da VSL e no checkout Hotmart (Hotmart → Ferramentas → Pixel de rastreamento) para medir `InitiateCheckout` e `Purchase` | Hotmart | ☐ |
 | Públicos personalizados criados (seção 4) | Públicos | ☐ |
 | Instagram profissional conectado à conta de anúncios | Configurações do negócio → Contas do Instagram | ☐ |
@@ -190,8 +190,8 @@ Com o criativo e a região vencedores fixos: segmentação detalhada acima vs. A
 |---|---|---|---|
 | `LQV Leads 180d` | Pixel | Evento `Lead`, últimos 180 dias | Exclusão no teste; base para Semelhante |
 | `LQV Compradores` | Pixel (Hotmart) | Evento `Purchase`, 180 dias | Exclusão em tudo |
-| `LQV Visitou captura sem cadastro 7d` | Pixel | URL contém `/` da landing, 7 dias, **excluindo** `Lead` | Remarketing (fase 2) |
-| `LQV Viu VSL sem comprar 14d` | Pixel | URL contém `/vsl`, 14 dias, excluindo `Purchase` | Remarketing de venda (fase 2) |
+| `LQV Visitou captura sem cadastro 7d` | Pixel | URL contém `/loja-que-vende/`, 7 dias, **excluindo** `Lead` | Remarketing (fase 2) |
+| `LQV Viu VSL sem comprar 14d` | Pixel | URL contém `/loja-que-vende/vsl`, 14 dias, excluindo `Purchase` | Remarketing de venda (fase 2) |
 | `LQV Engajou vídeo 50% 30d` | Engajamento → Vídeo | Assistiu ≥ 50% de qualquer um dos 5 criativos, 30 dias | Remarketing / Semelhante |
 
 ---
@@ -256,7 +256,7 @@ Os roteiros do doc terminam em **"link na bio"**. Em anúncio pago isso manda o 
 
 ## 7. Os 5 anúncios
 
-URL de destino (todos): `https://SEU-DOMINIO.com.br/` (a landing)
+URL de destino (todos): `https://SEU-DOMINIO.com.br/loja-que-vende/` (a página de captura)
 Parâmetros de URL (campo "Parâmetros de URL" do anúncio, igual nos 5):
 
 ```

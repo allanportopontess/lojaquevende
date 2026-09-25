@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allan Porto | Arquitetura comercial que vende</title>
+<meta name="description" content="Allan Porto, arquiteto especialista em Retail Design (CAU-PE A166156-6). Métodos e materiais para lojistas transformarem o espaço em vendas.">
+<meta property="og:title" content="Allan Porto | Arquitetura comercial que vende">
+<meta property="og:description" content="Métodos e materiais gratuitos e pagos para lojistas: layout, vitrine, zoneamento e iluminação que vendem.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#1f1813">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232b211b'/%3E%3Cpath d='M8 24V8h16v16M8 16h9' stroke='%23d9a441' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+/* ============ CONFIGURAÇÃO ============ */
+window.HUB_CONFIG = {
+  META_PIXEL_ID: "1414869993251554",
+  // Deixe "" para esconder o ícone
+  INSTAGRAM: "https://www.instagram.com/SEU_USUARIO/",
+  WHATSAPP: "",            // ex.: "5581999999999"
+  EMAIL: ""                // ex.: "contato@seudominio.com.br"
+};
+</script>
+<script>
+(function (cfg) {
+  if (!cfg.META_PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', cfg.META_PIXEL_ID);
+  fbq('track', 'PageView');
+})(window.HUB_CONFIG);
+</script>
+
+<style>
+:root {
+  --bg: #1f1813;
+  --bg-2: #2b211b;
+  --card: #fbf8f3;
+  --ink: #2b211b;
+  --muted: #7a6c62;
+  --line: rgba(255,255,255,.12);
+  --gold: #d9a441;
+  --hot: #d9572b;
+  --cream: #f4ece0;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; min-height: 100vh; color: var(--cream);
+  font: 400 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 22px),
+    radial-gradient(120% 60% at 50% 0%, #3a2c23 0%, var(--bg) 60%);
+  background-color: var(--bg);
+}
+a { color: inherit; text-decoration: none; }
+.wrap { width: 100%; max-width: 480px; margin: 0 auto; padding: 40px 16px calc(32px + env(safe-area-inset-bottom)); }
+
+/* Perfil */
+.profile { text-align: center; }
+.avatar {
+  position: relative; width: 104px; height: 104px; margin: 0 auto 14px; border-radius: 50%;
+  padding: 3px; background: conic-gradient(from 200deg, var(--gold), var(--hot), var(--gold));
+}
+.avatar img, .avatar .mono {
+  width: 100%; height: 100%; border-radius: 50%; border: 3px solid var(--bg); object-fit: cover; display: block;
+}
+.avatar .mono {
+  display: grid; place-items: center; background: var(--bg-2); color: var(--gold);
+  font: 600 38px/1 Fraunces, Georgia, serif;
+}
+.avatar .verified {
+  position: absolute; right: 2px; bottom: 4px; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--gold); color: var(--bg); display: grid; place-items: center; border: 3px solid var(--bg);
+  font-size: 13px; font-weight: 700;
+}
+h1 { font: 600 26px/1.15 Fraunces, Georgia, serif; margin: 0; color: #fff; letter-spacing: -.01em; }
+.role { margin: 6px 0 0; font-size: 14px; color: var(--gold); font-weight: 600; letter-spacing: .02em; }
+.bio { margin: 10px auto 0; max-width: 340px; font-size: 15px; color: #d8ccba; }
+
+.social { display: flex; justify-content: center; gap: 12px; margin: 18px 0 28px; }
+.social a {
+  width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--line); background: rgba(255,255,255,.04); transition: background .15s, transform .15s;
+}
+.social a:hover { background: rgba(255,255,255,.1); transform: translateY(-1px); }
+.social svg { width: 20px; height: 20px; fill: var(--cream); }
+
+.label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a8998a; margin: 0 4px 12px; }
+
+/* Cartões de produto */
+.links { display: grid; gap: 14px; }
+.product {
+  display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center;
+  background: var(--card); color: var(--ink); border-radius: 18px; padding: 12px 14px 12px 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35); transition: transform .15s, box-shadow .15s; position: relative; overflow: hidden;
+}
+.product:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,.45); }
+.product:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.product.featured { border: 2px solid var(--gold); }
+.thumb { width: 96px; height: 96px; border-radius: 12px; overflow: hidden; background: #dbe5ee; }
+.thumb svg { width: 100%; height: 100%; display: block; }
+.badge {
+  display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px; background: var(--hot); color: #fff;
+}
+.product h2 { font: 600 19px/1.15 Fraunces, Georgia, serif; margin: 6px 0 3px; }
+.product p { margin: 0; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+.cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 13.5px; font-weight: 700; color: var(--hot); }
+.cta svg { width: 14px; height: 14px; transition: transform .15s; }
+.product:hover .cta svg { transform: translateX(3px); }
+
+.product.soon {
+  background: rgba(255,255,255,.03); color: var(--cream); box-shadow: none;
+  border: 1.5px dashed rgba(255,255,255,.2); cursor: default;
+}
+.product.soon:hover { transform: none; }
+.product.soon .thumb { background: rgba(255,255,255,.05); display: grid; place-items: center; }
+.product.soon .thumb svg { width: 34px; height: 34px; fill: none; stroke: #a8998a; stroke-width: 1.6; }
+.product.soon .badge { background: rgba(255,255,255,.1); color: #d8ccba; }
+.product.soon p { color: #a8998a; }
+
+footer { margin-top: 36px; text-align: center; font-size: 12px; color: #8c7d70; }
+footer a { text-decoration: underline; }
+footer p { margin: 4px 0; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="profile">
+    <div class="avatar">
+      <!-- Para usar sua foto: salve "foto.jpg" (quadrada, 400×400) nesta pasta. Sem ela, aparece o monograma. -->
+      <img src="foto.jpg" alt="Allan Porto" width="104" height="104" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mono',textContent:'AP'}))">
+      <span class="verified" title="Arquiteto registrado no CAU">✓</span>
+    </div>
+    <h1>Allan Porto</h1>
+    <p class="role">Arquiteto · Retail Design · CAU-PE A166156-6</p>
+    <p class="bio">Arquitetura comercial que vende. Ajudo lojistas a transformar o espaço da loja em faturamento.</p>
+  </header>
+
+  <nav class="social" aria-label="Redes sociais" id="social"></nav>
+
+  <p class="label">Produtos e materiais</p>
+
+  <div class="links">
+    <!-- PRODUTO 1: Loja que Vende -->
+    <a class="product featured" href="/loja-que-vende/" data-produto="loja-que-vende">
+      <div class="thumb" aria-hidden="true">
+        <svg viewBox="0 0 96 96">
+          <defs><radialGradient id="h" cx="80%" cy="95%" r="75%"><stop offset="0" stop-color="#d9572b" stop-opacity=".6"/><stop offset="1" stop-color="#d9572b" stop-opacity="0"/></radialGradient></defs>
+          <rect width="96" height="96" fill="#dbe5ee"/><rect width="96" height="96" fill="url(#h)"/>
+          <rect x="10" y="10" width="76" height="76" fill="none" stroke="#2b211b" stroke-width="3"/>
+          <rect x="60" y="84" width="20" height="4" fill="#dbe5ee"/>
+          <rect x="16" y="16" width="30" height="5" fill="#fff" stroke="#2b211b" stroke-width="1.2"/>
+          <circle cx="54" cy="50" r="8" fill="#fff" stroke="#2b211b" stroke-width="1.2"/>
+          <rect x="40" y="76" width="18" height="5" fill="#2b211b"/>
+          <circle cx="28" cy="36" r="6" fill="#5b7c99"/>
+          <path d="M70 90 C70 72 66 64 58 58" fill="none" stroke="#2b211b" stroke-width="1.6" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+      <div>
+        <span class="badge">Checklist grátis</span>
+        <h2>Loja que Vende</h2>
+        <p>Os 5 erros de layout que fazem sua loja perder venda, e como corrigir sem reforma.</p>
+        <span class="cta">Baixar agora <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+
+    <!-- PRODUTO 2: reservado. Para ativar, troque <div class="product soon"> por <a class="product" href="/caminho/"> -->
+    <div class="product soon" aria-disabled="true">
+      <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+      <div>
+        <span class="badge">Em breve</span>
+        <h2>Novo produto</h2>
+        <p>Em preparação. Siga no Instagram para saber primeiro.</p>
+      </div>
+    </div>
+
+    <!-- PRODUTO 3: reservado -->
+    <div class="product soon" aria-disabled="true">
+      <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+      <div>
+        <span class="badge">Em breve</span>
+        <h2>Novo produto</h2>
+        <p>Em preparação. Siga no Instagram para saber primeiro.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Allan Porto Arquitetura · CAU-PE A166156-6</p>
+    <p><a href="/privacidade.html">Política de privacidade</a></p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var cfg = window.HUB_CONFIG;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Ícones sociais (só aparecem se preenchidos na configuração)
+  var icons = {
+    instagram: '<path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8c-.1-1.6-.4-3-1.6-4.2S17.6 2.2 16 2.1C14.4 2 9.6 2 8 2.1 6.4 2.2 5 2.5 3.8 3.7S2.2 6.4 2.1 8C2 9.6 2 14.4 2.1 16c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4 0-8zm-2.1 9.8a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.2.4-5.9.4s-4.7.1-5.9-.4a3.2 3.2 0 0 1-1.8-1.8c-.5-1.3-.4-4.2-.4-5.8s-.1-4.6.4-5.8a3.2 3.2 0 0 1 1.8-1.8c1.3-.5 4.2-.4 5.9-.4s4.7-.1 5.9.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.2.4 5.8s.1 4.6-.4 5.8z"/>',
+    whatsapp: '<path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.5 3.5z"/>',
+    email: '<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5z"/>'
+  };
+  var nav = document.getElementById('social');
+  [['instagram', cfg.INSTAGRAM, 'Instagram'],
+   ['whatsapp', cfg.WHATSAPP && 'https://wa.me/' + cfg.WHATSAPP.replace(/\D/g, ''), 'WhatsApp'],
+   ['email', cfg.EMAIL && 'mailto:' + cfg.EMAIL, 'E-mail']
+  ].forEach(function (s) {
+    if (!s[1]) return;
+    var a = document.createElement('a');
+    a.href = s[1]; a.setAttribute('aria-label', s[2]);
+    if (s[0] !== 'email') { a.target = '_blank'; a.rel = 'noopener'; }
+    a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + icons[s[0]] + '</svg>';
+    nav.appendChild(a);
+  });
+  if (!nav.children.length) nav.style.display = 'none';
+
+  // Repassa UTMs da bio/anúncio para a página do produto e registra o clique no Pixel
+  var qs = location.search;
+  document.querySelectorAll('a.product[href]').forEach(function (a) {
+    if (qs) a.href = a.getAttribute('href') + qs;
+    a.addEventListener('click', function () {
+      if (window.fbq) fbq('trackCustom', 'CliqueProduto', { produto: a.dataset.produto });
+    });
+  });
+})();
+</script>
+</body>
+</html>
