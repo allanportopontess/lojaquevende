@@ -12,19 +12,30 @@ Anúncio (Reels/Stories/Feed) → Página de captura (landing/index.html) → VS
 
 Criado via API em 25/09/2026. **Tudo PAUSADO, sem gasto.**
 
-| Nível | Nome | ID | Status |
-|---|---|---|---|
-| Campanha | LQV \| Leads \| Teste Criativos \| ABO (objetivo Leads, orçamento nos conjuntos) | `120252208276050286` | Pausada |
-| Conjunto | LQV \| C1 Trafego sem conversao \| Lojistas RegPrio 25-60 | `120252208286520286` | Pausado |
+| Nível | Nome | ID |
+|---|---|---|
+| Campanha | LQV \| Leads \| Teste Criativos \| ABO | `120252208276050286` |
+| Conjunto | LQV \| C1 Trafego sem conversao \| Lojistas RegPrio 25-60 | `120252208286520286` |
+| Conjunto | LQV \| C2 Margem zona fria \| Lojistas RegPrio 25-60 | `120252209022210286` |
+| Conjunto | LQV \| C3 Sem ponto de decisao \| Lojistas RegPrio 25-60 | `120252209149640286` |
+| Conjunto | LQV \| C4 Vitrine lotada \| Lojistas RegPrio 25-60 | `120252209208490286` |
+| Conjunto | LQV \| C5 Iluminacao generica \| Lojistas RegPrio 25-60 | `120252209263640286` |
 
-Configurado no C1: otimização para `Lead` no pixel `1414869993251554`, R$ 40/dia, 25–60 anos, 16 estados dos 4 clusters (moradores), Advantage+ público desligado, posicionamentos FB/IG Feed, Stories e Reels.
+**Configuração aplicada nos 5 conjuntos** (C2–C5 duplicados do C1):
+- Otimização: `Lead` no pixel `1414869993251554` · lance menor custo · R$ 40/dia cada
+- Idade 25–60 (regra fixa, Advantage+ público desligado) · moradores dos 16 estados dos 4 clusters
+- Posicionamentos: Facebook Feed/Stories/Reels + Instagram Feed/Stories/Reels (mobile e desktop)
+- Segmentação detalhada (OU), IDs validados pela API da Meta:
+  - Interesses: Varejo `6003778400853`, Pequenas empresas `6002884511422`, Empreendedorismo `6003371567474`, Ponto de venda `6003366145856`, Boutiques `6003103108917`, Marketing digital `6003127206524`, Marketing de mídia social `6003389760112`, Design de interiores `6002920953955`
+  - Comportamentos: Proprietários de pequenas empresas `6002714898572`, Admins de páginas de varejo `6020530250383`, Admins de páginas de negócios `6020530281783`
+  - Setores: Vendas `6008888980183`, Gestão `6009003311983`
+- **Descontinuados pela Meta** (a API rejeitou, não usar): Merchandising visual. Retirados por serem da mesma categoria em descontinuação: Retail design, Small Business Owners (interesse), business owner, Store manager.
 
-**Pendente (conferir/fazer no Gerenciador):**
-1. **Localização do C1:** conferir se aparecem exatamente SP, RJ, MG, ES, PR, SC, RS, PE, CE, BA, PB, RN, GO, DF, MT, MS. Os códigos de SP, RJ, ES, RS, PE, PB e RN vieram de campanhas antigas da conta; os outros 9 foram inferidos da sequência e a API não permite lê-los de volta sem gasto.
-2. **Segmentação detalhada do C1:** digitar os interesses/cargos dos blocos A, B e C (seção 3). A integração não tem busca de interesses, e IDs chutados a Meta rejeita ou troca por outro interesse.
-3. **Duplicar o C1 em C2–C5** (pelo Gerenciador ou pedindo ao Claude, via `duplicate_adset`), depois do item 1 e 2, para herdar a segmentação corrigida.
-4. **Anúncios:** dependem dos 5 vídeos gravados, da landing publicada (URL final) e da página do Facebook/Instagram escolhida como identidade.
-5. **Pixel:** `1414869993251554` é o pixel que já roda nas campanhas de vendas da conta; usar o mesmo ID em `META_PIXEL_ID` na landing.
+**Pendente:**
+1. **Pagamento da conta:** as campanhas ativas aparecem com "Erro no pagamento". Nada veicula até resolver em Cobrança.
+2. **Conferir a lista de estados** em um conjunto (os 5 são iguais): SP, RJ, MG, ES, PR, SC, RS, PE, CE, BA, PB, RN, GO, DF, MT, MS. 7 códigos vieram de campanhas antigas; 9 foram inferidos pela sequência (a API não devolve conjunto sem gasto).
+3. **Anúncios:** dependem dos 5 vídeos (link público), da URL publicada da landing e da página do Facebook que assina os anúncios.
+4. **Pixel na landing:** usar `1414869993251554` em `META_PIXEL_ID`.
 
 ---
 
@@ -124,7 +135,7 @@ Os nomes abaixo são os que aparecem na busca do Gerenciador em português. A Me
 
 **B. Varejo e gestão de loja** (Interesses)
 - Varejo, Comércio varejista, Loja de varejo, Gerenciamento de varejo
-- Merchandising visual, Vitrinismo, Design de loja / Design de varejo
+- ~~Merchandising visual~~ (descontinuado pela Meta), Vitrinismo, Design de loja / Design de varejo
 - Franquia, Pequenas empresas, Empreendedorismo, Sebrae
 - Ponto de venda, Atendimento ao cliente
 
