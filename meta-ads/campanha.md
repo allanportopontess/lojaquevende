@@ -8,6 +8,26 @@ Anúncio (Reels/Stories/Feed) → Página de captura (landing/index.html) → VS
 
 ---
 
+## 0. Status na conta de anúncios (Allan Porto · 711536816218119)
+
+Criado via API em 25/09/2026. **Tudo PAUSADO, sem gasto.**
+
+| Nível | Nome | ID | Status |
+|---|---|---|---|
+| Campanha | LQV \| Leads \| Teste Criativos \| ABO (objetivo Leads, orçamento nos conjuntos) | `120252208276050286` | Pausada |
+| Conjunto | LQV \| C1 Trafego sem conversao \| Lojistas RegPrio 25-60 | `120252208286520286` | Pausado |
+
+Configurado no C1: otimização para `Lead` no pixel `1414869993251554`, R$ 40/dia, 25–60 anos, 16 estados dos 4 clusters (moradores), Advantage+ público desligado, posicionamentos FB/IG Feed, Stories e Reels.
+
+**Pendente (conferir/fazer no Gerenciador):**
+1. **Localização do C1:** conferir se aparecem exatamente SP, RJ, MG, ES, PR, SC, RS, PE, CE, BA, PB, RN, GO, DF, MT, MS. Os códigos de SP, RJ, ES, RS, PE, PB e RN vieram de campanhas antigas da conta; os outros 9 foram inferidos da sequência e a API não permite lê-los de volta sem gasto.
+2. **Segmentação detalhada do C1:** digitar os interesses/cargos dos blocos A, B e C (seção 3). A integração não tem busca de interesses, e IDs chutados a Meta rejeita ou troca por outro interesse.
+3. **Duplicar o C1 em C2–C5** (pelo Gerenciador ou pedindo ao Claude, via `duplicate_adset`), depois do item 1 e 2, para herdar a segmentação corrigida.
+4. **Anúncios:** dependem dos 5 vídeos gravados, da landing publicada (URL final) e da página do Facebook/Instagram escolhida como identidade.
+5. **Pixel:** `1414869993251554` é o pixel que já roda nas campanhas de vendas da conta; usar o mesmo ID em `META_PIXEL_ID` na landing.
+
+---
+
 ## 1. Antes de subir (checklist técnico)
 
 | Item | Onde | Status |
