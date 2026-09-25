@@ -39,15 +39,15 @@ CAMPANHA  LQV | Leads | Teste Criativos | ABO
 │  Objetivo: Leads · Local de conversão: Site · Categoria especial: nenhuma
 │  Orçamento: no CONJUNTO (ABO), não na campanha
 │
-├─ CONJUNTO  LQV | C1 Trafego sem conversao | Amplo BR 25-60     R$ 40/dia
+├─ CONJUNTO  LQV | C1 Trafego sem conversao | Lojistas RegPrio 25-60     R$ 40/dia
 │    └─ AD  C1 | Trafego sem conversao | 9x16
-├─ CONJUNTO  LQV | C2 Margem zona fria      | Amplo BR 25-60     R$ 40/dia
+├─ CONJUNTO  LQV | C2 Margem zona fria      | Lojistas RegPrio 25-60     R$ 40/dia
 │    └─ AD  C2 | Margem zona fria | 9x16
-├─ CONJUNTO  LQV | C3 Sem ponto de decisao  | Amplo BR 25-60     R$ 40/dia
+├─ CONJUNTO  LQV | C3 Sem ponto de decisao  | Lojistas RegPrio 25-60     R$ 40/dia
 │    └─ AD  C3 | Sem ponto de decisao | 9x16
-├─ CONJUNTO  LQV | C4 Vitrine lotada        | Amplo BR 25-60     R$ 40/dia
+├─ CONJUNTO  LQV | C4 Vitrine lotada        | Lojistas RegPrio 25-60     R$ 40/dia
 │    └─ AD  C4 | Vitrine lotada | 9x16
-└─ CONJUNTO  LQV | C5 Iluminacao generica   | Amplo BR 25-60     R$ 40/dia
+└─ CONJUNTO  LQV | C5 Iluminacao generica   | Lojistas RegPrio 25-60     R$ 40/dia
      └─ AD  C5 | Iluminacao generica | 9x16
 ```
 
@@ -71,30 +71,85 @@ CAMPANHA  LQV | Leads | Teste Criativos | ABO
 
 ## 3. Público
 
-**Avatar:** dono(a) de loja física ou showroom pequeno/médio (roupas, acessórios, alimentício, farmácia), sem verba para contratar arquiteto, com a dor imediata "minha loja não vende o que devia".
+**Avatar:** dono(a) ou gerente de loja de varejo (pequeno, médio e grande porte), física ou física + digital, incluindo lojas que vendem pelo Instagram e querem um espaço "instagramável". Dor imediata: "minha loja não vende o que devia".
 
-### Público de teste (o mesmo nos 5 conjuntos)
+> **Varejo digital:** entra quem tem ponto físico **e** vende online/Instagram (o método é sobre o espaço). E-commerce 100% online não tem onde aplicar vitrine, zoneamento e luz: vira lead barato que não compra. Não há como excluí-los por interesse; o filtro é o criativo, que sempre fala de "sua loja" física.
+>
+> **Grande porte / redes:** entram no público, mas o Loja que Vende é a porta de entrada. Leads que se identificarem como rede vão para os produtos 3 e 5 (mentoria de expansão e consultoria) via WhatsApp, conforme o funil do doc.
+
+### Configuração (a mesma nos 5 conjuntos do teste)
 
 | Campo | Valor |
 |---|---|
-| Localização | Brasil (pessoas que moram no local) |
-| Idade | 25–60 |
+| Tipo de público | **Opções de público originais** (não Advantage+), para a idade 25–60 e os interesses valerem como regra, não como sugestão |
+| Localização | **Regiões prioritárias** (abaixo), "pessoas que moram neste local" |
+| Idade | **25–60** |
 | Gênero | Todos |
 | Idioma | Português (Brasil) |
-| Público Advantage+ | **Ligado**, com as sugestões abaixo como ponto de partida |
+| Segmentação detalhada | Blocos A + B + C abaixo, combinados com **OU** (qualquer um) |
+| Advantage+ segmentação detalhada | **Desligado** na fase de teste |
 | Exclusões | `LQV Leads 180d` e `LQV Compradores` (seção 4) |
+| Tamanho estimado esperado | 4–12 milhões. Se ficar abaixo de 2 mi, incluir o bloco D |
 
-**Sugestões de público (interesses e comportamentos)** para orientar o algoritmo nas primeiras 48h:
+### Segmentação detalhada
 
-- **Negócio:** Varejo, Pequenas empresas, Empreendedorismo, Franquia, Sebrae, Merchandising visual, Vitrinismo, Gestão de varejo
-- **Segmentos do avatar:** Loja de roupas, Moda feminina, Boutique, Bijuteria, Loja de calçados, Farmácia, Drogaria, Empório, Loja de conveniência
-- **Comportamentos:** Administradores de página de negócios; Proprietários de pequenas empresas (se aparecer na busca da conta)
+Os nomes abaixo são os que aparecem na busca do Gerenciador em português. A Meta remove e renomeia opções com frequência: digite cada termo e use o equivalente mais próximo se o nome exato não existir.
 
-Por que amplo com Advantage+: com R$ 40/dia por conjunto, público estreito (<1 mi) encarece o CPM e trava a fase de aprendizado. Quem filtra o avatar é o **criativo**: a primeira frase já fala com lojista, e quem não tem loja rola o feed.
+**A. Quem é dono(a) ou gerente** (Dados demográficos e Comportamentos)
+- Comportamentos → Administradores de página de negócios
+- Comportamentos → Administradores de páginas do Facebook: Comércio e compras
+- Comportamentos → Proprietários de pequenas empresas (se disponível no Brasil)
+- Dados demográficos → Trabalho → Cargos: Proprietário de loja, Lojista, Gerente de loja, Gerente comercial, Empresário(a), Comerciante, Visual merchandiser (se disponível)
+- Dados demográficos → Trabalho → Setores: Vendas; Gestão
 
-### Público para teste futuro (fase 2, não agora)
+**B. Varejo e gestão de loja** (Interesses)
+- Varejo, Comércio varejista, Loja de varejo, Gerenciamento de varejo
+- Merchandising visual, Vitrinismo, Design de loja / Design de varejo
+- Franquia, Pequenas empresas, Empreendedorismo, Sebrae
+- Ponto de venda, Atendimento ao cliente
 
-Depois de escolher o criativo vencedor, testar o público com o criativo fixo: Advantage+ aberto vs. interesses restritos vs. Semelhante 1% de `LQV Leads 180d` (a partir de ~100 leads) vs. Semelhante 1% de compradores (a partir de ~100 vendas).
+**C. Loja instagramável e varejo físico + digital** (Interesses)
+- Instagram for Business / Instagram para empresas, Marketing digital, Marketing de mídia social
+- Comércio eletrônico, Loja virtual, Nuvemshop, Shopify
+- Design de interiores, Decoração, Arquitetura de interiores
+- Segmentos do avatar: Boutique, Moda feminina, Moda fitness, Loja de roupas, Bijuteria, Calçados, Óticas, Farmácia, Cosméticos, Empório, Cafeteria, Confeitaria
+
+**D. Reserva (só se o público ficar pequeno):** Negócios, Vendas, Administração de empresas, Gestão de pequenas empresas.
+
+### Regiões prioritárias
+
+Critério: densidade de lojas físicas, poder de compra para um ticket de R$497–997, polos de moda e confecção (a loja de roupa é o avatar mais forte) e a base do Allan em Pernambuco, onde o caso Empório Fit é prova local.
+
+| Cluster | Estados | Por que entra |
+|---|---|---|
+| **1. Sudeste** | SP, RJ, MG, ES | Maior concentração de varejo e shoppings do país. CPM mais alto, mas ticket compatível |
+| **2. Sul** | PR, SC, RS | Varejo de moda forte (polos de Cianorte, Maringá, Brusque, Blumenau), renda alta |
+| **3. Nordeste** | PE, CE, BA, PB, RN | Base do Allan (Caruaru/Agreste, prova local), polos de confecção (Caruaru, Toritama, Santa Cruz do Capibaribe, Fortaleza), CPM mais baixo |
+| **4. Centro-Oeste** | GO, DF, MT, MS | Goiânia é polo de moda atacadista (Região da 44), Brasília tem renda alta |
+
+**Fora da fase de teste:** Norte (AM, PA, RO, AC, AP, RR, TO), MA, PI, AL, SE. Motivo: menor densidade de varejo formal e menor volume de lojistas com caixa para o ticket. Entram na escala se o detalhamento por região mostrar lead barato vindo de estados vizinhos.
+
+**Polos de moda e varejo** (cidades para o conjunto de polos da fase 2; já estão cobertas pelos estados na fase 1):
+
+| Polo | Cidade + raio |
+|---|---|
+| Agreste pernambucano | Caruaru +40 km (pega Toritama e Santa Cruz do Capibaribe) |
+| Brás / Bom Retiro / 25 de Março | São Paulo capital |
+| Região da 44 | Goiânia +25 km |
+| Moda de Fortaleza | Fortaleza +25 km |
+| Moda PR | Cianorte +25 km, Maringá +25 km |
+| Moda SC | Brusque +25 km, Blumenau +25 km |
+| Moda íntima / calçados | Nova Friburgo +15 km (RJ), Franca +15 km (SP), Divinópolis +20 km (MG) |
+
+### Como a região entra no teste
+
+**Fase 1 (teste dos 5 criativos):** os 4 clusters juntos, num público único, igual nos 5 conjuntos. Separar por região agora exigiria 5 criativos × 4 regiões = 20 conjuntos, cerca de R$ 800/dia para cada um sair do aprendizado. Durante o teste, ver o resultado por estado em **Detalhamento → Por entrega → Região**, sem custo extra.
+
+**Fase 2 (com o criativo vencedor fixo):** teste A/B de região com 1 conjunto por cluster (R$ 40/dia cada) + 1 conjunto "Polos de moda" com as cidades acima. Os clusters com CPL ≤ alvo e melhor taxa de compra recebem a verba da escala.
+
+### Públicos para testes futuros (fase 2 em diante)
+
+Com o criativo e a região vencedores fixos: segmentação detalhada acima vs. Advantage+ aberto vs. Semelhante 1% de `LQV Leads 180d` (a partir de ~100 leads) vs. Semelhante 1% de compradores (a partir de ~100 vendas).
 
 ---
 
@@ -299,7 +354,7 @@ Um criativo com CPL de R$ 4 que não vende perde para um de R$ 6 que vende. Por 
    - `Visitou captura sem cadastro 7d` → reforço da isca (C4 ou C5, os mais visuais)
    - `Viu VSL sem comprar 14d` → trecho da VSL (bloco de autoridade + oferta), destino: checkout Hotmart, otimização `Purchase`
    - Excluir `LQV Compradores` sempre.
-4. **Teste de público** com o criativo fixo (seção 3, fase 2).
+4. **Teste de região** (4 clusters + polos de moda) e depois **teste de público**, sempre com o criativo vencedor fixo (seção 3).
 
 ---
 
