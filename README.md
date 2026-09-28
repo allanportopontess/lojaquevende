@@ -1,38 +1,40 @@
-# Loja que Vende: funil de captura + Meta Ads
+# Allan Porto Arquitetura: site + funil Loja que Vende
 
-Infoproduto da Allan Porto Arquitetura (CAU-PE A166156-6) para lojistas de varejo físico.
+Site estático (HTML/CSS/JS, sem build), com o visual do Kit Usucapião Pro, publicado de graça no GitHub Pages:
+**https://allanportopontess.github.io/lojaquevende/**
 
 ```
-Meta Ads (5 criativos A/B) → site/loja-que-vende/ (isca: Checklist dos 5 Erros de Layout)
-   → redirect para a VSL (com UTMs + primeiro nome) → checkout Hotmart → order bump / upsell
+Meta Ads (5 criativos A/B) → /loja-que-vende/ (captura: Checklist dos 5 Erros de Layout)
+   → /loja-que-vende/obrigado/ (download do PDF + vídeo + checkout Hotmart)
 ```
 
-## Estrutura
+## Páginas
+
+| Rota | Arquivo | O que é |
+|---|---|---|
+| `/` | `site/index.html` | Site institucional: hero, formação, método, produtos, projeto Empório Fit, sobre, contato |
+| `/links/` | `site/links/index.html` | Página para a bio do Instagram |
+| `/loja-que-vende/` | `site/loja-que-vende/index.html` | Captura do checklist (leads vão para o banco) |
+| `/loja-que-vende/obrigado/` | `site/loja-que-vende/obrigado/index.html` | Download do PDF, vídeo (VSL) e botão de compra |
+| `/privacidade/` | `site/privacidade/index.html` | Política de privacidade (LGPD) |
+
+## Onde editar
+
+- **`site/assets/config.js`**: WhatsApp, Instagram, e-mail, Pixel, link do vídeo, link do checkout Hotmart e a **lista de produtos** (para lançar um produto novo, troque `status` para `"ativo"` e preencha título, texto e link).
+- **`site/img/`**: fotos. Nomes e tamanhos em `site/img/LEIA-ME.txt`. Sem a foto, o site mostra um espaço reservado.
+- **`isca/checklist.html`**: fonte do PDF do checklist (`site/assets/checklist-5-erros-de-layout.pdf`).
+
+Todo push no branch principal que altere `site/` republica o site automaticamente (`.github/workflows/pages.yml`).
+
+## Leads
+
+Gravados na tabela `leads` do Lovable Cloud (projeto "Allan Porto Arquitetura" no Lovable → Cloud → Database). O site só consegue **inserir**; ninguém de fora consegue ler. Campos: nome, email, whatsapp (55DDDNÚMERO), consentimento, produto, utm_source/medium/campaign/content/term, fbclid, event_id, pagina, data.
+
+## Outros arquivos
 
 | Pasta | Conteúdo |
 |---|---|
-| `site/index.html` | Página principal (links): perfil + cartões de produto. Produto 1 = Loja que Vende; 2 e 3 reservados. |
-| `site/loja-que-vende/index.html` | Página de captura (HTML estático, sem build). Formulário nome + e-mail + WhatsApp, consentimento LGPD, Pixel da Meta, captura de UTMs, redirect para a VSL. |
-| `site/privacidade.html` | Política de privacidade (preencher os campos `[ ]`). |
-| `integracoes/apps-script-leads.gs` | Backend grátis em Google Apps Script: grava o lead na planilha, envia o PDF por e-mail e (opcional) manda o `Lead` pela API de Conversões. |
-| `meta-ads/campanha.md` | Estrutura completa da campanha: público, posicionamentos, orçamento, os 5 anúncios, métricas e regras de decisão. |
-| `meta-ads/anuncios.csv` | Os 5 anúncios em tabela (texto, título, descrição, CTA, UTMs) para copiar e colar. |
-
-## Colocar no ar
-
-1. **Backend dos leads:** siga o cabeçalho de `integracoes/apps-script-leads.gs` e copie a URL `/exec`.
-2. **Configurar a landing:** no topo de `site/loja-que-vende/index.html`, bloco `LQV_CONFIG`:
-   - `META_PIXEL_ID`: ID do Pixel
-   - `FORM_ENDPOINT`: URL do Apps Script (ou webhook de ActiveCampaign / RD / Make / Zapier que aceite POST form-urlencoded)
-   - `VSL_URL`: página da VSL
-3. **Publicar a pasta `site/`** em qualquer hospedagem estática: Netlify, Vercel, Cloudflare Pages ou GitHub Pages. Use domínio próprio (ex.: `lojaquevende.com.br`) e verifique-o no Gerenciador de Negócios.
-4. **Teste:** faça um cadastro real e confira a linha na planilha, o e-mail com o PDF, o evento `Lead` em *Testar eventos* e a chegada na VSL com `?utm_...&nome=`.
-5. **Campanha:** siga `meta-ads/campanha.md`.
-
-Sem `FORM_ENDPOINT` a página funciona em modo teste: valida, mostra o sucesso e redireciona, mas só loga o lead no console.
-
-## O que a landing envia ao endpoint
-
-`nome, email, whatsapp (55DDDNÚMERO), consentimento, pagina, event_id, fbp, fbc, user_agent, utm_source, utm_medium, utm_campaign, utm_content, utm_term, fbclid`
-
-O `event_id` é o mesmo do `fbq('track','Lead')` no navegador, então a Meta deduplica o evento do Pixel e o da API de Conversões.
+| `meta-ads/campanha.md` | Estrutura da campanha, público, orçamento, anúncios, métricas e status na conta |
+| `meta-ads/anuncios.csv` | Os 5 anúncios em tabela |
+| `criativos/` | Roteiros dos 5 vídeos (PDF para imprimir) |
+| `integracoes/apps-script-leads.gs` | Alternativa de backend via Google Planilhas (não usada no momento) |

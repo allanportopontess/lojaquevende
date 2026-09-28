@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Checklist dos 5 Erros de Layout que Fazem Sua Loja Perder Venda</title>
+<style>
+@font-face{font-family:M;src:url(fonts/metropolis-latin-400-normal.woff2) format("woff2");font-weight:400}
+@font-face{font-family:M;src:url(fonts/metropolis-latin-600-normal.woff2) format("woff2");font-weight:600}
+@font-face{font-family:M;src:url(fonts/metropolis-latin-700-normal.woff2) format("woff2");font-weight:700}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 10.5pt/1.5 M,sans-serif;color:#2b2b2b;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pg{width:210mm;height:297mm;padding:14mm 16mm 12mm;position:relative;page-break-after:always;display:flex;flex-direction:column;overflow:hidden}
+.pg:last-child{page-break-after:auto}
+.pg>*{flex-shrink:0}
+.laranja{color:#E08A00}
+h1,h2,h3{color:#0D0D0D;font-weight:700;letter-spacing:-.02em}
+.capa{background:#0D0D0D;color:#A7A7A7;margin:-14mm -16mm 6mm;padding:11mm 16mm 9mm;position:relative;overflow:hidden}
+.capa::before{content:"";position:absolute;width:120mm;height:90mm;right:-30mm;top:-20mm;border-radius:50%;background:#FF9F01;opacity:.28;filter:blur(40px)}
+.capa .tag{display:inline-block;background:#2D2D2D;color:#F3F3F3;font-size:8pt;letter-spacing:.22em;text-transform:uppercase;padding:2mm 3.5mm;border-radius:1mm}
+.capa .tag b{color:#FF9F01}
+.capa h1{color:#F3F3F3;font-size:24pt;line-height:1.08;margin:4mm 0 3mm;max-width:150mm;position:relative}
+.capa h1 span{color:#FF9F01}
+.capa p{font-size:11pt;max-width:150mm;position:relative}
+.capa .autor{margin-top:4mm;font-size:9pt;color:#F3F3F3}
+.capa .autor b{color:#FF9F01}
+.como{display:grid;grid-template-columns:auto 1fr;gap:4mm;align-items:center;background:#FFF4E0;border:1px solid #FFD699;border-radius:3mm;padding:3.5mm 5mm;margin-bottom:5mm}
+.como .n{width:10mm;height:10mm;border-radius:50%;background:#FF9F01;color:#0D0D0D;font-weight:700;display:grid;place-items:center;font-size:12pt}
+.como b{color:#0D0D0D}
+.erro{border:1px solid #e3e3e3;border-radius:3mm;padding:4.5mm 5.5mm;margin-bottom:4mm;display:grid;grid-template-columns:16mm 1fr;gap:4mm;break-inside:avoid}
+.erro .num{font-size:30pt;line-height:.9;font-weight:700;color:#FF9F01;letter-spacing:-.04em}
+.erro h2{font-size:15pt;margin-bottom:1.5mm}
+.erro .porque{margin-bottom:1.5mm}
+.erro h4{font-size:8pt;letter-spacing:.16em;text-transform:uppercase;color:#E08A00;margin:2mm 0 1mm}
+.erro ul{padding-left:4.5mm}
+.erro li{margin:.6mm 0}
+.pergunta{display:flex;justify-content:space-between;align-items:center;gap:4mm;margin-top:3mm;padding:3mm 4mm;background:#0D0D0D;color:#F3F3F3;border-radius:2mm;font-weight:600}
+.pergunta .op{display:flex;gap:4mm;white-space:nowrap;font-size:9.5pt}
+.pergunta .op span{display:inline-flex;align-items:center;gap:1.8mm}
+.pergunta .op i{width:4.2mm;height:4.2mm;border:1.5px solid #FF9F01;border-radius:1mm;display:inline-block}
+.exemplo{margin-top:2.5mm;font-size:9pt;color:#555;border-left:2px solid #FF9F01;padding-left:3mm}
+.exemplo b{color:#0D0D0D}
+.rodape{margin-top:auto;display:flex;justify-content:space-between;font-size:8pt;color:#8a8a8a;border-top:1px solid #e3e3e3;padding-top:3mm}
+.placar{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin:5mm 0 7mm}
+.faixa{border-radius:3mm;padding:5mm;border:1px solid #e3e3e3}
+.faixa .q{font-size:22pt;font-weight:700;color:#0D0D0D;line-height:1}
+.faixa .q small{font-size:10pt;color:#8a8a8a;font-weight:600}
+.faixa h3{font-size:12pt;margin:2mm 0 1.5mm}
+.faixa.alerta{background:#0D0D0D;border-color:#0D0D0D;color:#A7A7A7}
+.faixa.alerta .q,.faixa.alerta h3{color:#F3F3F3}
+.faixa.alerta .q small{color:#FF9F01}
+.total{display:flex;align-items:center;gap:5mm;background:#FFF4E0;border:1px solid #FFD699;border-radius:3mm;padding:5mm 6mm}
+.total .caixa{width:22mm;height:16mm;border:2px solid #FF9F01;border-radius:2mm;flex:none}
+.total b{color:#0D0D0D;font-size:12pt}
+.proximo{margin-top:7mm;background:#0D0D0D;color:#A7A7A7;border-radius:4mm;padding:9mm 9mm;position:relative;overflow:hidden}
+.proximo::before{content:"";position:absolute;width:90mm;height:70mm;right:-20mm;bottom:-30mm;border-radius:50%;background:#FF9F01;opacity:.3;filter:blur(40px)}
+.proximo h2{color:#F3F3F3;font-size:18pt;line-height:1.15;position:relative}
+.proximo h2 span{color:#FF9F01}
+.proximo p{margin-top:3mm;position:relative;max-width:140mm}
+.proximo a{display:inline-block;margin-top:5mm;background:#FF9F01;color:#0D0D0D;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:3.5mm 6mm;border-radius:2mm;text-decoration:none;position:relative}
+.proximo .url{display:block;margin-top:3mm;font-size:8.5pt;color:#8a8a8a;position:relative;word-break:break-all}
+.lembrete{margin-top:6mm;font-size:9.5pt}
+.lembrete li{margin:1.2mm 0}
+</style>
+</head>
+<body>
+
+<section class="pg">
+  <div class="capa">
+    <span class="tag"><b>Checklist gratuito</b> · Loja que Vende</span>
+    <h1>Os 5 erros de layout que fazem sua loja <span>perder venda</span></h1>
+    <p>Uma autoavaliação rápida para descobrir onde o espaço da sua loja está deixando dinheiro na mesa. Leitura de 3 minutos, sem precisar de reforma.</p>
+    <p class="autor"><b>Allan Porto</b> · Arquiteto e Urbanista · CAU-PE A166156-6 · Especialista em Retail Design</p>
+  </div>
+
+  <div class="como">
+    <span class="n">?</span>
+    <div><b>Como usar:</b> fique na frente da sua loja (ou abra fotos dela) e responda cada pergunta com <b>SIM</b> ou <b>NÃO</b>. Seja honesto. <b>Cada "NÃO" é venda escapando todo dia.</b> No final, some quantos "não" você marcou.</div>
+  </div>
+
+  <article class="erro">
+    <div class="num">01</div>
+    <div>
+      <h2>Vitrine sem foco</h2>
+      <p class="porque">A vitrine tem 2 a 3 segundos para fazer alguém parar na calçada. Quando ela tenta mostrar tudo ao mesmo tempo, o olho não encontra onde pousar e a pessoa passa reto.</p>
+      <h4>Sinais de alerta</h4>
+      <ul>
+        <li>Mais de 5 peças ou produtos expostos na vitrine</li>
+        <li>Cartazes de promoção disputando espaço com o produto</li>
+        <li>A vitrine está igual há mais de um mês</li>
+      </ul>
+      <div class="pergunta"><span>Sua vitrine tem no máximo 3 itens em destaque?</span><span class="op"><span><i></i>SIM</span><span><i></i>NÃO</span></span></div>
+    </div>
+  </article>
+
+  <article class="erro">
+    <div class="num">02</div>
+    <div>
+      <h2>Produto de maior margem na zona fria</h2>
+      <p class="porque">Toda loja tem uma zona quente (onde o cliente olha e passa primeiro) e uma zona fria (onde quase ninguém chega). Na maioria das lojas, o produto que mais dá lucro está justamente na zona fria.</p>
+      <h4>Sinais de alerta</h4>
+      <ul>
+        <li>Você não sabe dizer para que lado o cliente vira ao entrar</li>
+        <li>O produto mais lucrativo fica no fundo ou atrás do balcão</li>
+        <li>A área perto da entrada tem itens baratos ou de reposição</li>
+      </ul>
+      <div class="pergunta"><span>Seu produto de maior margem está na zona quente?</span><span class="op"><span><i></i>SIM</span><span><i></i>NÃO</span></span></div>
+      <p class="exemplo"><b>Caso real:</b> no Empório Fit (Caruaru/PE), as araras com as peças de maior margem ficavam fora do primeiro campo de visão de quem entrava pela vitrine.</p>
+    </div>
+  </article>
+
+  <div class="rodape"><span>Checklist Loja que Vende · Allan Porto Arquitetura</span><span>1 / 3</span></div>
+</section>
+
+<section class="pg">
+  <article class="erro">
+    <div class="num">03</div>
+    <div>
+      <h2>Nenhum ponto de decisão no trajeto</h2>
+      <p class="porque">O cliente entra, dá uma volta e vai embora. Não por falta de interesse: nada no caminho fez ele parar. Lojas que convertem bem têm pelo menos um ponto no meio do fluxo desenhado para o cliente parar, olhar e considerar comprar.</p>
+      <h4>Sinais de alerta</h4>
+      <ul>
+        <li>O cliente consegue ir da porta ao fundo sem desviar de nada</li>
+        <li>Não há mesa, ilha ou expositor no meio da loja</li>
+        <li>Nenhum produto tem preço ou oferta visível no meio do trajeto</li>
+      </ul>
+      <div class="pergunta"><span>Existe um ponto no meio da loja que faz o cliente parar?</span><span class="op"><span><i></i>SIM</span><span><i></i>NÃO</span></span></div>
+      <p class="exemplo"><b>Caso real:</b> no Empório Fit, a mesa central e o console de dobrados fazem esse papel logo depois da entrada.</p>
+    </div>
+  </article>
+
+  <article class="erro">
+    <div class="num">04</div>
+    <div>
+      <h2>Iluminação genérica</h2>
+      <p class="porque">Luz uniforme em tudo deixa a loja "clara", mas não vende nada sozinha. Sem contraste, o melhor produto se perde no meio dos outros, e a vitrine some quando a rua está mais iluminada que ela.</p>
+      <h4>Sinais de alerta</h4>
+      <ul>
+        <li>A loja inteira usa o mesmo tipo de lâmpada, no teto, sem spots</li>
+        <li>De dia, a vitrine fica mais escura que a calçada</li>
+        <li>O provador ou o caixa têm luz fria, fraca ou com sombra</li>
+      </ul>
+      <div class="pergunta"><span>Seu produto-foco tem uma luz dirigida só para ele?</span><span class="op"><span><i></i>SIM</span><span><i></i>NÃO</span></span></div>
+    </div>
+  </article>
+
+  <article class="erro">
+    <div class="num">05</div>
+    <div>
+      <h2>Fluxo confuso</h2>
+      <p class="porque">Quando o cliente não sabe por onde ir, ele não explora, e quem não explora não compra. Corredores estreitos, móveis no caminho e seções sem lógica fazem a pessoa desistir antes de ver metade da loja.</p>
+      <h4>Sinais de alerta</h4>
+      <ul>
+        <li>Há pontos onde duas pessoas não passam ao mesmo tempo</li>
+        <li>Os produtos não seguem uma lógica clara (tipo, uso ou ocasião)</li>
+        <li>O caminho até o provador ou o caixa não é óbvio</li>
+      </ul>
+      <div class="pergunta"><span>O caminho da entrada até o caixa é óbvio e livre?</span><span class="op"><span><i></i>SIM</span><span><i></i>NÃO</span></span></div>
+    </div>
+  </article>
+
+  <div class="rodape"><span>Checklist Loja que Vende · Allan Porto Arquitetura</span><span>2 / 3</span></div>
+</section>
+
+<section class="pg">
+  <h1 style="font-size:24pt;line-height:1.1">Qual é o <span class="laranja">resultado</span> da sua loja?</h1>
+  <p style="margin-top:3mm;font-size:11pt">Conte quantas vezes você marcou <b>NÃO</b> nas 5 perguntas.</p>
+
+  <div class="total" style="margin-top:6mm">
+    <span class="caixa"></span>
+    <div><b>Total de "NÃO" na minha loja</b><br>Anote aqui. É o seu ponto de partida.</div>
+  </div>
+
+  <div class="placar">
+    <div class="faixa"><div class="q">0 <small>"não"</small></div><h3>Loja bem resolvida</h3><p>Seu layout trabalha a favor da venda. O próximo passo é refinar: medir quais produtos giram em cada zona.</p></div>
+    <div class="faixa"><div class="q">1 a 2 <small>"não"</small></div><h3>Vazamento pontual</h3><p>Você está perdendo vendas em pontos específicos. São os ajustes mais baratos e de retorno mais rápido.</p></div>
+    <div class="faixa alerta"><div class="q">3 a 5 <small>"não"</small></div><h3>Loja trabalhando contra você</h3><p>O espaço está afastando o cliente da compra. Corrigir o layout tende a render mais do que mais anúncio.</p></div>
+  </div>
+
+  <h3 style="font-size:13pt">Antes de sair mudando tudo, lembre:</h3>
+  <ul class="lembrete" style="padding-left:5mm">
+    <li><b>Comece pelo erro mais barato de corrigir</b>, não pelo maior. Tirar peças da vitrine custa zero.</li>
+    <li><b>Mude uma coisa por vez</b> e observe o movimento por uma semana. Assim você sabe o que funcionou.</li>
+    <li><b>Não precisa de reforma.</b> Os 5 erros deste checklist se corrigem com reposicionamento, luz e organização.</li>
+  </ul>
+
+  <div class="proximo">
+    <h2>Descobriu o erro. <span>E agora, como corrigir?</span></h2>
+    <p>Gravei um vídeo curto mostrando o que fazer com o resultado deste checklist: por onde começar, o que mudar primeiro e como saber se deu certo.</p>
+    <a href="https://allanportopontess.github.io/lojaquevende/loja-que-vende/obrigado/?utm_source=checklist&amp;utm_medium=pdf">Assistir ao vídeo</a>
+    <span class="url">allanportopontess.github.io/lojaquevende/loja-que-vende/obrigado/</span>
+  </div>
+
+  <div class="rodape"><span>Allan Porto · Arquiteto e Urbanista · CAU-PE A166156-6</span><span>3 / 3</span></div>
+</section>
+
+</body>
+</html>

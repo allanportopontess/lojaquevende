@@ -2,241 +2,239 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Allan Porto | Arquitetura comercial que vende</title>
-<meta name="description" content="Allan Porto, arquiteto especialista em Retail Design (CAU-PE A166156-6). Métodos e materiais para lojistas transformarem o espaço em vendas.">
+<meta name="description" content="Allan Porto, arquiteto especialista em Retail Design (CAU-PE A166156-6). Layout, vitrine, zoneamento e iluminação para lojas que vendem mais.">
 <meta property="og:title" content="Allan Porto | Arquitetura comercial que vende">
-<meta property="og:description" content="Métodos e materiais gratuitos e pagos para lojistas: layout, vitrine, zoneamento e iluminação que vendem.">
+<meta property="og:description" content="Arquiteto especialista em Retail Design. Métodos e materiais para lojistas transformarem o espaço em faturamento.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta name="theme-color" content="#1f1813">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232b211b'/%3E%3Cpath d='M8 24V8h16v16M8 16h9' stroke='%23d9a441' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<script>
-/* ============ CONFIGURAÇÃO ============ */
-window.HUB_CONFIG = {
-  META_PIXEL_ID: "1414869993251554",
-  // Deixe "" para esconder o ícone
-  INSTAGRAM: "https://www.instagram.com/SEU_USUARIO/",
-  WHATSAPP: "",            // ex.: "5581999999999"
-  EMAIL: ""                // ex.: "contato@seudominio.com.br"
-};
-</script>
-<script>
-(function (cfg) {
-  if (!cfg.META_PIXEL_ID) return;
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', cfg.META_PIXEL_ID);
-  fbq('track', 'PageView');
-})(window.HUB_CONFIG);
-</script>
-
-<style>
-:root {
-  --bg: #1f1813;
-  --bg-2: #2b211b;
-  --card: #fbf8f3;
-  --ink: #2b211b;
-  --muted: #7a6c62;
-  --line: rgba(255,255,255,.12);
-  --gold: #d9a441;
-  --hot: #d9572b;
-  --cream: #f4ece0;
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0; min-height: 100vh; color: var(--cream);
-  font: 400 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background:
-    repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 22px),
-    radial-gradient(120% 60% at 50% 0%, #3a2c23 0%, var(--bg) 60%);
-  background-color: var(--bg);
-}
-a { color: inherit; text-decoration: none; }
-.wrap { width: 100%; max-width: 480px; margin: 0 auto; padding: 40px 16px calc(32px + env(safe-area-inset-bottom)); }
-
-/* Perfil */
-.profile { text-align: center; }
-.avatar {
-  position: relative; width: 104px; height: 104px; margin: 0 auto 14px; border-radius: 50%;
-  padding: 3px; background: conic-gradient(from 200deg, var(--gold), var(--hot), var(--gold));
-}
-.avatar img, .avatar .mono {
-  width: 100%; height: 100%; border-radius: 50%; border: 3px solid var(--bg); object-fit: cover; display: block;
-}
-.avatar .mono {
-  display: grid; place-items: center; background: var(--bg-2); color: var(--gold);
-  font: 600 38px/1 Fraunces, Georgia, serif;
-}
-.avatar .verified {
-  position: absolute; right: 2px; bottom: 4px; width: 26px; height: 26px; border-radius: 50%;
-  background: var(--gold); color: var(--bg); display: grid; place-items: center; border: 3px solid var(--bg);
-  font-size: 13px; font-weight: 700;
-}
-h1 { font: 600 26px/1.15 Fraunces, Georgia, serif; margin: 0; color: #fff; letter-spacing: -.01em; }
-.role { margin: 6px 0 0; font-size: 14px; color: var(--gold); font-weight: 600; letter-spacing: .02em; }
-.bio { margin: 10px auto 0; max-width: 340px; font-size: 15px; color: #d8ccba; }
-
-.social { display: flex; justify-content: center; gap: 12px; margin: 18px 0 28px; }
-.social a {
-  width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
-  border: 1px solid var(--line); background: rgba(255,255,255,.04); transition: background .15s, transform .15s;
-}
-.social a:hover { background: rgba(255,255,255,.1); transform: translateY(-1px); }
-.social svg { width: 20px; height: 20px; fill: var(--cream); }
-
-.label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a8998a; margin: 0 4px 12px; }
-
-/* Cartões de produto */
-.links { display: grid; gap: 14px; }
-.product {
-  display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center;
-  background: var(--card); color: var(--ink); border-radius: 18px; padding: 12px 14px 12px 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35); transition: transform .15s, box-shadow .15s; position: relative; overflow: hidden;
-}
-.product:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,.45); }
-.product:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-.product.featured { border: 2px solid var(--gold); }
-.thumb { width: 96px; height: 96px; border-radius: 12px; overflow: hidden; background: #dbe5ee; }
-.thumb svg { width: 100%; height: 100%; display: block; }
-.badge {
-  display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
-  padding: 3px 8px; border-radius: 999px; background: var(--hot); color: #fff;
-}
-.product h2 { font: 600 19px/1.15 Fraunces, Georgia, serif; margin: 6px 0 3px; }
-.product p { margin: 0; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
-.cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 13.5px; font-weight: 700; color: var(--hot); }
-.cta svg { width: 14px; height: 14px; transition: transform .15s; }
-.product:hover .cta svg { transform: translateX(3px); }
-
-.product.soon {
-  background: rgba(255,255,255,.03); color: var(--cream); box-shadow: none;
-  border: 1.5px dashed rgba(255,255,255,.2); cursor: default;
-}
-.product.soon:hover { transform: none; }
-.product.soon .thumb { background: rgba(255,255,255,.05); display: grid; place-items: center; }
-.product.soon .thumb svg { width: 34px; height: 34px; fill: none; stroke: #a8998a; stroke-width: 1.6; }
-.product.soon .badge { background: rgba(255,255,255,.1); color: #d8ccba; }
-.product.soon p { color: #a8998a; }
-
-footer { margin-top: 36px; text-align: center; font-size: 12px; color: #8c7d70; }
-footer a { text-decoration: underline; }
-footer p { margin: 4px 0; }
-
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-</style>
+<meta property="og:image" content="img/og.jpg">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0D0D'/%3E%3Cpath d='M8 24V8h16v16M8 16h9' stroke='%23FF9F01' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/700.css">
+<link rel="stylesheet" href="assets/base.css">
+<script src="assets/config.js"></script>
 </head>
-<body>
-<main class="wrap">
+<body data-raiz="">
 
-  <header class="profile">
-    <div class="avatar">
-      <!-- Para usar sua foto: salve "foto.jpg" (quadrada, 400×400) nesta pasta. Sem ela, aparece o monograma. -->
-      <img src="foto.jpg" alt="Allan Porto" width="104" height="104" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mono',textContent:'AP'}))">
-      <span class="verified" title="Arquiteto registrado no CAU">✓</span>
+<header class="menu menu-ativo">
+  <div class="wrap">
+    <a class="logo" href="#topo"><b>Allan</b> Porto <i>·</i></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#topo" class="on">Home</a>
+      <a href="#metodo">Método</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="btn-outline" href="#contato">Contato</a>
+    <button class="burger" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="topo">
+
+<section class="hero">
+  <!-- FOTO: salve img/hero.jpg (2400×1350, Allan à direita, fundo escuro) e img/hero-mobile.jpg (1000×1000). Enquanto não existir, aparece a planta. -->
+  <div class="bgfoto" data-src="img/hero.jpg" data-src-mobile="img/hero-mobile.jpg"></div>
+  <svg class="arte" viewBox="0 0 200 150" aria-hidden="true">
+    <defs><radialGradient id="hq" cx="72%" cy="88%" r="75%"><stop offset="0" stop-color="#FF9F01" stop-opacity=".5"/><stop offset="1" stop-color="#FF9F01" stop-opacity="0"/></radialGradient></defs>
+    <rect x="10" y="10" width="180" height="130" fill="url(#hq)"/>
+    <rect x="10" y="10" width="180" height="130" fill="none" stroke="#F3F3F3" stroke-opacity=".8" stroke-width="1.6"/>
+    <rect x="138" y="138" width="36" height="4" fill="#0D0D0D"/>
+    <path d="M138 140 A36 36 0 0 1 174 104" fill="none" stroke="#A7A7A7" stroke-width=".6" stroke-dasharray="2 2"/>
+    <rect x="20" y="20" width="56" height="7" fill="none" stroke="#A7A7A7" stroke-width=".8"/>
+    <rect x="20" y="20" width="7" height="56" fill="none" stroke="#A7A7A7" stroke-width=".8"/>
+    <circle cx="112" cy="78" r="13" fill="none" stroke="#A7A7A7" stroke-width=".8"/>
+    <rect x="92" y="126" width="40" height="6" fill="none" stroke="#F3F3F3" stroke-width=".8"/>
+    <rect x="164" y="36" width="16" height="40" fill="none" stroke="#A7A7A7" stroke-width=".8"/>
+    <circle cx="50" cy="50" r="7" fill="#5b7c99"/>
+    <path d="M156 150 C156 118 146 104 126 94 C114 88 116 70 150 60" fill="none" stroke="#FF9F01" stroke-width="1.4" stroke-dasharray="4 3"/>
+    <text x="112" y="80.5" text-anchor="middle" font-size="5" fill="#A7A7A7" font-family="sans-serif">ponto de pausa</text>
+    <text x="50" y="66" text-anchor="middle" font-size="5" fill="#A7A7A7" font-family="sans-serif">zona fria</text>
+    <text x="112" y="122" text-anchor="middle" font-size="5" fill="#FF9F01" font-family="sans-serif">vitrine</text>
+  </svg>
+  <div class="wrap">
+    <div class="conteudo">
+      <span class="produto-nome"><b>Arquiteto</b> · Retail Design · CAU-PE A166156-6</span>
+      <h1>Arquitetura comercial <span class="laranja">que vende.</span></h1>
+      <p class="sub">Ajudo lojistas a transformar o espaço da loja em faturamento: layout, vitrine, zoneamento e iluminação pensados para o cliente comprar.</p>
+      <div class="btns">
+        <a class="btn" href="loja-que-vende/" data-rastreia>Baixe o checklist grátis</a>
+        <a class="btn-outline" href="#produtos">Conheça os produtos</a>
+      </div>
+      <span class="micro">Checklist gratuito · 5 erros de layout que fazem sua loja perder venda</span>
     </div>
-    <h1>Allan Porto</h1>
-    <p class="role">Arquiteto · Retail Design · CAU-PE A166156-6</p>
-    <p class="bio">Arquitetura comercial que vende. Ajudo lojistas a transformar o espaço da loja em faturamento.</p>
-  </header>
+  </div>
+</section>
 
-  <nav class="social" aria-label="Redes sociais" id="social"></nav>
-
-  <p class="label">Produtos e materiais</p>
-
-  <div class="links">
-    <!-- PRODUTO 1: Loja que Vende -->
-    <a class="product featured" href="/loja-que-vende/" data-produto="loja-que-vende">
-      <div class="thumb" aria-hidden="true">
-        <svg viewBox="0 0 96 96">
-          <defs><radialGradient id="h" cx="80%" cy="95%" r="75%"><stop offset="0" stop-color="#d9572b" stop-opacity=".6"/><stop offset="1" stop-color="#d9572b" stop-opacity="0"/></radialGradient></defs>
-          <rect width="96" height="96" fill="#dbe5ee"/><rect width="96" height="96" fill="url(#h)"/>
-          <rect x="10" y="10" width="76" height="76" fill="none" stroke="#2b211b" stroke-width="3"/>
-          <rect x="60" y="84" width="20" height="4" fill="#dbe5ee"/>
-          <rect x="16" y="16" width="30" height="5" fill="#fff" stroke="#2b211b" stroke-width="1.2"/>
-          <circle cx="54" cy="50" r="8" fill="#fff" stroke="#2b211b" stroke-width="1.2"/>
-          <rect x="40" y="76" width="18" height="5" fill="#2b211b"/>
-          <circle cx="28" cy="36" r="6" fill="#5b7c99"/>
-          <path d="M70 90 C70 72 66 64 58 58" fill="none" stroke="#2b211b" stroke-width="1.6" stroke-dasharray="3 3"/>
-        </svg>
+<section>
+  <div class="wrap">
+    <div class="recebe surge">
+      <div>
+        <h4>Formação</h4>
+        <ul>
+          <li><span class="check"></span>Arquiteto e urbanista · CAU-PE A166156-6</li>
+          <li><span class="check"></span>Pós Master em Arquitetura Comercial (Retail Design) · IPOG</li>
+          <li><span class="check"></span>UX/UI e Design Centrado no Usuário · PUCRS</li>
+        </ul>
       </div>
       <div>
-        <span class="badge">Checklist grátis</span>
-        <h2>Loja que Vende</h2>
-        <p>Os 5 erros de layout que fazem sua loja perder venda, e como corrigir sem reforma.</p>
-        <span class="cta">Baixar agora <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h4>Experiência</h4>
+        <ul>
+          <li><span class="check"></span>Ex-diretor de Expansão e Novos Negócios</li>
+          <li><span class="check"></span>Gestor de obras comerciais</li>
+          <li><span class="check"></span>Gerente de projetos</li>
+        </ul>
       </div>
-    </a>
-
-    <!-- PRODUTO 2: reservado. Para ativar, troque <div class="product soon"> por <a class="product" href="/caminho/"> -->
-    <div class="product soon" aria-disabled="true">
-      <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
       <div>
-        <span class="badge">Em breve</span>
-        <h2>Novo produto</h2>
-        <p>Em preparação. Siga no Instagram para saber primeiro.</p>
-      </div>
-    </div>
-
-    <!-- PRODUTO 3: reservado -->
-    <div class="product soon" aria-disabled="true">
-      <div class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
-      <div>
-        <span class="badge">Em breve</span>
-        <h2>Novo produto</h2>
-        <p>Em preparação. Siga no Instagram para saber primeiro.</p>
+        <h4>Especialidades</h4>
+        <div class="softs">
+          <span class="soft">Layout comercial</span>
+          <span class="soft">Vitrine</span>
+          <span class="soft">Zoneamento</span>
+          <span class="soft">Iluminação</span>
+          <span class="soft">Expansão de lojas</span>
+          <span class="soft">Regularização</span>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <footer>
-    <p>© <span id="year"></span> Allan Porto Arquitetura · CAU-PE A166156-6</p>
-    <p><a href="/privacidade.html">Política de privacidade</a></p>
-  </footer>
+<section class="sec centro glow fraco meio" id="metodo">
+  <div class="wrap">
+    <span class="eyebrow">Metodologia</span>
+    <h2 class="h2">Método Loja que Vende</h2>
+    <p class="bee-slogan">Loja que mais vende não é a mais bonita. É a <b>desenhada pra conduzir o cliente</b> do primeiro olhar até o caixa.</p>
+    <div class="metodo-grid">
+      <div class="passo-bee surge"><div class="letra">01</div><h3>Diagnóstico do fluxo</h3><p>Por onde o cliente entra, pra onde olha primeiro e onde desiste.</p></div>
+      <div class="passo-bee surge"><div class="letra">02</div><h3>Zoneamento comercial</h3><p>Produto certo na zona quente, produto certo na zona fria.</p></div>
+      <div class="passo-bee surge"><div class="letra">03</div><h3>Pontos de decisão</h3><p>Criar, de propósito, os lugares onde o cliente para e considera comprar.</p></div>
+      <div class="passo-bee surge"><div class="letra">04</div><h3>Iluminação estratégica</h3><p>Luz que guia o olhar até o produto certo, não só decora.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec centro glow esq" id="produtos" style="padding-top:40px">
+  <div class="wrap">
+    <span class="eyebrow">Produtos e materiais</span>
+    <h2 class="h2">Comece por aqui</h2>
+    <p class="lead">Conteúdo direto ao ponto para você aplicar na sua loja, sem depender de um projeto completo.</p>
+    <div class="produtos" data-produtos></div>
+  </div>
+</section>
+
+<section class="dupla glow" id="projetos">
+  <div class="wrap">
+    <!-- FOTO: img/emporio-vitrine.jpg (foto ou render da vitrine do Empório Fit, 1600×1200) -->
+    <div class="foto tem-foto surge">
+      <img src="img/emporio-vitrine.jpg" alt="Vitrine do Empório Fit, projeto de Allan Porto" loading="lazy" onerror="this.remove()">
+      <div class="vaga"><b>Foto da vitrine do Empório Fit</b><span>img/emporio-vitrine.jpg</span></div>
+    </div>
+    <div class="cartao surge">
+      <span class="chip">Projeto real</span>
+      <span class="eyebrow" style="display:block">Caruaru · PE</span>
+      <h2>Empório Fit: <span class="laranja">19,52 m² desenhados pra vender</span></h2>
+      <p>Loja fitness pequena onde cada metro foi pensado para conduzir o cliente: a vitrine domina a primeira impressão e o trajeto passa por todos os pontos de decisão antes do caixa.</p>
+      <ul class="lista-check">
+        <li><span class="check"></span>Vitrine com nicho próprio e produto-foco, iluminada por trilho de spots</li>
+        <li><span class="check"></span>Ponto de pausa no meio do trajeto, com mesa e área de espera</li>
+        <li><span class="check"></span>Luz em camadas: destaque, tarefa no caixa e luz quente no provador</li>
+        <li><span class="check"></span>Circulação proposital pelo provador, expondo o cliente ao produto de novo antes de pagar</li>
+      </ul>
+      <div class="stats">
+        <div class="stat"><b>19,52</b><span>m² de loja</span></div>
+        <div class="stat"><b>1</b><span>produto-foco na vitrine</span></div>
+        <div class="stat"><b>1</b><span>ponto de pausa</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clara centro">
+  <div class="wrap">
+    <span class="eyebrow">Por dentro do projeto</span>
+    <h2 class="h2">Cada decisão tem um motivo comercial</h2>
+    <div class="amostras">
+      <article class="amostra surge">
+        <div class="tem-foto"><img src="img/emporio-planta.jpg" alt="Planta do Empório Fit com o trajeto do cliente" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Planta ou render 3D</b><span>img/emporio-planta.jpg</span></div></div>
+        <div class="txt"><h3>Fluxo e zoneamento</h3><p>O trajeto natural do cliente define onde fica cada produto.</p></div>
+      </article>
+      <article class="amostra surge">
+        <div class="tem-foto"><img src="img/emporio-interior.jpg" alt="Área central do Empório Fit" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Área central / araras</b><span>img/emporio-interior.jpg</span></div></div>
+        <div class="txt"><h3>Ponto de decisão</h3><p>Mesa central e console de dobrados param o cliente no meio do caminho.</p></div>
+      </article>
+      <article class="amostra surge">
+        <div class="tem-foto"><img src="img/emporio-luz.jpg" alt="Iluminação e ripado do Empório Fit" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Iluminação / ripado</b><span>img/emporio-luz.jpg</span></div></div>
+        <div class="txt"><h3>Luz e contraste</h3><p>Ripado escuro com piso claro e spots dirigidos ampliam o espaço e destacam o produto.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dupla inverte glow esq" id="sobre">
+  <div class="wrap">
+    <!-- FOTO: img/allan-retrato.jpg (retrato real do Allan, vertical 4:5, 1120×1400) -->
+    <div class="foto tem-foto surge" style="aspect-ratio:4/5;width:44%">
+      <img src="img/allan-retrato.jpg" alt="Allan Porto, arquiteto especialista em Retail Design" loading="lazy" onerror="this.remove()">
+      <div class="vaga"><span class="mono">AP</span><b>Seu retrato</b><span>img/allan-retrato.jpg</span></div>
+    </div>
+    <div class="cartao surge">
+      <span class="eyebrow" style="display:block">Sobre</span>
+      <h2>Projeto, obra e <span class="laranja">resultado no caixa</span></h2>
+      <p><span class="destaque">Allan Porto</span> · Arquiteto e Urbanista · CAU-PE A166156-6</p>
+      <p>Sou arquiteto especialista em Arquitetura Comercial e Retail Design. Antes de ensinar lojistas, estive do outro lado do balcão como diretor de expansão e novos negócios, respondendo pela conta no fim do mês, e como gestor de obras comerciais, colocando loja de pé com prazo e orçamento.</p>
+      <p>Foi nesse cruzamento entre projeto, obra e resultado que percebi o padrão: a loja que mais vende não é a mais bonita, é a que conduz o cliente. Hoje transformo essa experiência em métodos e materiais práticos para que lojistas corrijam o que está custando venda, sem depender de uma reforma grande.</p>
+      <div class="btns" style="margin-top:32px">
+        <a class="btn" href="loja-que-vende/" data-rastreia>Baixe o checklist grátis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oferta" id="contato">
+  <div class="wrap">
+    <div class="vidro surge">
+      <div>
+        <span class="eyebrow">Contato</span>
+        <h2>Quer falar sobre o <span class="laranja">projeto da sua loja?</span></h2>
+        <p>Projetos comerciais, consultoria de layout e expansão de lojas. Me chame e conte o que está acontecendo no seu ponto de venda.</p>
+        <div class="redes" style="margin-top:26px"></div>
+      </div>
+      <div class="caixa-acao">
+        <a class="btn" data-contato="whatsapp" href="#">Chamar no WhatsApp</a>
+        <a class="btn-outline" data-contato="instagram" href="#">Ver o Instagram</a>
+        <a class="btn-outline" data-contato="email" href="#">Enviar e-mail</a>
+        <a class="btn" href="loja-que-vende/" data-rastreia>Baixar o checklist grátis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
+<footer>
+  <div class="wrap">
+    <span class="logo"><b>Allan</b> Porto <i>·</i></span>
+    <nav class="links-rodape" aria-label="Rodapé">
+      <a href="#metodo">Método</a><a href="#produtos">Produtos</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="links/">Links</a><a href="privacidade/">Privacidade</a>
+    </nav>
+    <span>© <span data-ano></span> Allan Porto Arquitetura · CAU-PE A166156-6</span>
+  </div>
+</footer>
+
+<div class="cta-fixo"><a class="btn" href="loja-que-vende/" data-rastreia>Baixe o checklist grátis</a></div>
+
+<script src="assets/app.js"></script>
 <script>
-(function () {
-  var cfg = window.HUB_CONFIG;
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Ícones sociais (só aparecem se preenchidos na configuração)
-  var icons = {
-    instagram: '<path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8c-.1-1.6-.4-3-1.6-4.2S17.6 2.2 16 2.1C14.4 2 9.6 2 8 2.1 6.4 2.2 5 2.5 3.8 3.7S2.2 6.4 2.1 8C2 9.6 2 14.4 2.1 16c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4 0-8zm-2.1 9.8a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.2.4-5.9.4s-4.7.1-5.9-.4a3.2 3.2 0 0 1-1.8-1.8c-.5-1.3-.4-4.2-.4-5.8s-.1-4.6.4-5.8a3.2 3.2 0 0 1 1.8-1.8c1.3-.5 4.2-.4 5.9-.4s4.7-.1 5.9.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.2.4 5.8s.1 4.6-.4 5.8z"/>',
-    whatsapp: '<path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.5 3.5z"/>',
-    email: '<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5z"/>'
-  };
-  var nav = document.getElementById('social');
-  [['instagram', cfg.INSTAGRAM, 'Instagram'],
-   ['whatsapp', cfg.WHATSAPP && 'https://wa.me/' + cfg.WHATSAPP.replace(/\D/g, ''), 'WhatsApp'],
-   ['email', cfg.EMAIL && 'mailto:' + cfg.EMAIL, 'E-mail']
-  ].forEach(function (s) {
-    if (!s[1]) return;
-    var a = document.createElement('a');
-    a.href = s[1]; a.setAttribute('aria-label', s[2]);
-    if (s[0] !== 'email') { a.target = '_blank'; a.rel = 'noopener'; }
-    a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + icons[s[0]] + '</svg>';
-    nav.appendChild(a);
+  // Links para a página de captura levam as UTMs junto
+  document.querySelectorAll('[data-rastreia]').forEach(function (a) {
+    a.addEventListener('click', function () { a.href = LQV.comTracking(a.getAttribute('href')); });
   });
-  if (!nav.children.length) nav.style.display = 'none';
-
-  // Repassa UTMs da bio/anúncio para a página do produto e registra o clique no Pixel
-  var qs = location.search;
-  document.querySelectorAll('a.product[href]').forEach(function (a) {
-    if (qs) a.href = a.getAttribute('href') + qs;
-    a.addEventListener('click', function () {
-      if (window.fbq) fbq('trackCustom', 'CliqueProduto', { produto: a.dataset.produto });
-    });
-  });
-})();
 </script>
 </body>
 </html>

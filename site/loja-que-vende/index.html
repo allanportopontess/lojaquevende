@@ -3,547 +3,252 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Checklist grátis: 5 erros de layout que fazem sua loja perder venda | Allan Porto Arquitetura</title>
-<meta name="description" content="Checklist gratuito de um arquiteto especialista em Retail Design: identifique em 3 minutos os 5 erros de layout que fazem o cliente entrar na sua loja e sair sem comprar.">
+<title>Checklist grátis: 5 erros de layout que fazem sua loja perder venda | Allan Porto</title>
+<meta name="description" content="Checklist gratuito de um arquiteto especialista em Retail Design: descubra em 3 minutos os 5 erros de layout que fazem o cliente entrar e sair sem comprar.">
 <meta name="robots" content="noindex, follow">
 <meta property="og:title" content="Sua loja tem movimento, mas não vende o que devia?">
 <meta property="og:description" content="Baixe grátis o Checklist dos 5 Erros de Layout que Fazem Sua Loja Perder Venda.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta name="theme-color" content="#2b211b">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232b211b'/%3E%3Cpath d='M8 24V8h16v16M8 16h9' stroke='%23d9a441' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<script>
-/* =====================================================================
-   CONFIGURAÇÃO — edite apenas este bloco antes de publicar
-   ===================================================================== */
-window.LQV_CONFIG = {
-  // ID do Pixel da Meta (Gerenciador de Eventos → Fontes de dados). Deixe "" para desativar.
-  META_PIXEL_ID: "1414869993251554",
-  // URL do Web App do Google Apps Script (integracoes/apps-script-leads.gs)
-  // ou de qualquer webhook que aceite POST form-urlencoded (ActiveCampaign, RD, Make, Zapier…).
-  FORM_ENDPOINT: "",
-  // Página da VSL para onde o lead é redirecionado logo após o cadastro.
-  VSL_URL: "/loja-que-vende/vsl/",
-  // Nome do conteúdo enviado no evento Lead (aparece nos relatórios do Pixel).
-  LEAD_CONTENT_NAME: "Checklist 5 Erros de Layout"
-};
-</script>
-
-<!-- Meta Pixel (carrega só se META_PIXEL_ID estiver preenchido) -->
-<script>
-(function (cfg) {
-  if (!cfg.META_PIXEL_ID) return;
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', cfg.META_PIXEL_ID);
-  fbq('track', 'PageView');
-})(window.LQV_CONFIG);
-</script>
-
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0D0D'/%3E%3Cpath d='M8 24V8h16v16M8 16h9' stroke='%23FF9F01' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/700.css">
+<link rel="stylesheet" href="../assets/base.css">
 <style>
-:root {
-  --ink: #2b211b;         /* marrom do ripado */
-  --ink-2: #4a3a30;
-  --paper: #f7f3ec;       /* piso claro */
-  --card: #ffffff;
-  --muted: #6f625a;
-  --line: #e4dccf;
-  --hot: #d9572b;         /* zona quente */
-  --hot-soft: #f6d9cb;
-  --cold: #5b7c99;        /* zona fria */
-  --cold-soft: #dbe5ee;
-  --gold: #d9a441;        /* luz / destaque */
-  --ok: #2f7d4f;
-  --err: #b3261e;
-  --radius: 14px;
-  --shadow: 0 1px 2px rgba(43,33,27,.06), 0 12px 32px rgba(43,33,27,.10);
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body {
-  margin: 0; background: var(--paper); color: var(--ink);
-  font: 400 17px/1.55 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-img, svg { max-width: 100%; display: block; }
-a { color: inherit; }
-.wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 650; line-height: 1.12; letter-spacing: -.01em; margin: 0; }
-p { margin: 0; }
-
-/* Top bar */
-.top { background: var(--ink); color: #eadfce; font-size: 13px; }
-.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 44px; }
-.brand { font-weight: 600; letter-spacing: .02em; color: #fff; }
-.brand span { color: var(--gold); }
-.cau { opacity: .8; white-space: nowrap; }
-
-/* Hero */
-.hero { background: linear-gradient(180deg, var(--ink) 0 58%, var(--paper) 58% 100%); padding: 36px 0 48px; }
-.hero-grid { display: grid; gap: 28px; }
-.hero-copy { color: #f4ece0; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600;
-  text-transform: uppercase; letter-spacing: .08em; color: var(--gold);
-}
-.eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(217,164,65,.2); }
-.hero h1 { font-size: clamp(32px, 7.2vw, 54px); margin: 14px 0 16px; color: #fff; }
-.hero h1 em { font-style: normal; color: var(--gold); }
-.hero .lead { font-size: 18px; color: #e3d7c6; max-width: 34em; }
-.hero-points { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 8px; font-size: 15px; color: #e3d7c6; }
-.hero-points li { display: flex; gap: 10px; align-items: flex-start; }
-.hero-points li::before { content: "✓"; color: var(--gold); font-weight: 700; }
-
-/* Form card */
-.card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px 20px; }
-.form-card { position: relative; border-top: 5px solid var(--gold); }
-.form-card h2 { font-size: 24px; }
-.form-card .sub { color: var(--muted); font-size: 15px; margin: 6px 0 18px; }
-.pdf-badge { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; padding: 10px 12px; background: var(--paper); border-radius: 10px; font-size: 14px; }
-.pdf-badge svg { flex: none; }
-.field { margin-bottom: 14px; }
-.field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-.field input {
-  width: 100%; font: inherit; font-size: 16px; padding: 13px 14px; border-radius: 10px;
-  border: 1.5px solid var(--line); background: #fff; color: var(--ink); transition: border-color .15s, box-shadow .15s;
-}
-.field input:focus { outline: none; border-color: var(--ink-2); box-shadow: 0 0 0 3px rgba(217,164,65,.35); }
-.field.invalid input { border-color: var(--err); }
-.field .msg { display: none; color: var(--err); font-size: 13px; margin-top: 5px; }
-.field.invalid .msg { display: block; }
-.consent { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--muted); margin: 4px 0 16px; }
-.consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--ink); flex: none; }
-.consent.invalid { color: var(--err); }
-.btn {
-  display: inline-flex; justify-content: center; align-items: center; gap: 10px; width: 100%;
-  font: 700 17px/1.2 Inter, system-ui, sans-serif; padding: 17px 20px; border: 0; border-radius: 12px; cursor: pointer;
-  background: var(--hot); color: #fff; box-shadow: 0 6px 18px rgba(217,87,43,.35); transition: transform .08s, filter .15s;
-  text-decoration: none; text-align: center;
-}
-.btn:hover { filter: brightness(1.06); }
-.btn:active { transform: translateY(1px); }
-.btn[disabled] { opacity: .7; cursor: progress; }
-.btn .spin { display: none; width: 18px; height: 18px; border: 2.5px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; }
-.btn.loading .spin { display: inline-block; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.secure { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 12px; }
-.form-error { display: none; margin-top: 12px; color: var(--err); font-size: 14px; text-align: center; }
-
-/* Sections */
-section { padding: 56px 0; }
-.section-head { max-width: 720px; margin-bottom: 28px; }
-.section-head .eyebrow { color: var(--hot); }
-.section-head .eyebrow::before { background: var(--hot); box-shadow: 0 0 0 4px rgba(217,87,43,.18); }
-.section-head h2 { font-size: clamp(26px, 5vw, 38px); margin-top: 10px; }
-.section-head p { color: var(--muted); margin-top: 10px; }
-
-/* Plan illustration */
-.plan-card { padding: 18px; }
-.plan-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); margin-top: 12px; }
-.plan-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
-
-/* Errors list */
-.errors { display: grid; gap: 14px; counter-reset: e; }
-.err {
-  display: grid; grid-template-columns: 48px 1fr; gap: 14px; align-items: start;
-  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px;
-}
-.err::before {
-  counter-increment: e; content: counter(e);
-  display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px;
-  background: var(--ink); color: var(--gold); font: 650 22px/1 Fraunces, Georgia, serif;
-}
-.err h3 { font-size: 19px; }
-.err p { color: var(--muted); font-size: 15px; margin-top: 4px; }
-.err .q { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--ink-2); }
-.err .q .yn { white-space: nowrap; }
-.err .q .yn span { display: inline-block; margin-left: 6px; padding: 1px 8px; border: 1.5px solid var(--line); border-radius: 999px; font-size: 12px; font-weight: 700; color: var(--muted); }
-
-/* For whom */
-.alt { background: #efe8dc; }
-.segments { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.seg { background: var(--card); border-radius: 12px; padding: 16px; border: 1px solid var(--line); }
-.seg strong { display: block; font-size: 16px; }
-.seg span { font-size: 14px; color: var(--muted); }
-.note { margin-top: 18px; font-size: 15px; color: var(--ink-2); }
-
-/* Authority */
-.author { display: grid; gap: 24px; align-items: center; }
-.monogram {
-  width: 112px; height: 112px; border-radius: 50%; background: var(--ink); color: var(--gold);
-  display: grid; place-items: center; font: 650 40px/1 Fraunces, Georgia, serif; flex: none;
-}
-.creds { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; }
-.creds li { display: flex; gap: 10px; font-size: 15px; }
-.creds li b { color: var(--hot); }
-.case { border-left: 4px solid var(--gold); }
-.case .tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-.case h3 { font-size: 21px; margin: 6px 0 8px; }
-.case p { color: var(--muted); font-size: 15px; }
-.case .stats { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; }
-.case .stats div { font-size: 13px; color: var(--muted); }
-.case .stats b { display: block; font: 650 22px/1.1 Fraunces, Georgia, serif; color: var(--ink); }
-
-/* Final CTA */
-.final { background: var(--ink); color: #f4ece0; text-align: center; }
-.final h2 { color: #fff; font-size: clamp(26px, 5vw, 38px); max-width: 760px; margin: 0 auto; }
-.final p { color: #d8ccba; max-width: 600px; margin: 12px auto 24px; }
-.final .btn { max-width: 420px; }
-
-footer { background: #211913; color: #a8998a; font-size: 12.5px; padding: 28px 0 90px; }
-footer p + p { margin-top: 8px; }
-footer a { color: #d8ccba; }
-
-/* Sticky CTA (mobile) */
-.sticky {
-  position: fixed; left: 0; right: 0; bottom: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-  background: rgba(247,243,236,.96); border-top: 1px solid var(--line); backdrop-filter: blur(6px);
-  transform: translateY(110%); transition: transform .25s; z-index: 10;
-}
-.sticky.show { transform: none; }
-
-/* Success state */
-.success { display: none; text-align: center; padding: 12px 0; }
-.success .check { width: 56px; height: 56px; margin: 0 auto 12px; border-radius: 50%; background: var(--ok); color: #fff; display: grid; place-items: center; font-size: 28px; }
-.form-card.done form { display: none; }
-.form-card.done .success { display: block; }
-
-@media (min-width: 900px) {
-  .hero { padding: 56px 0 72px; background: linear-gradient(180deg, var(--ink) 0 78%, var(--paper) 78% 100%); }
-  .hero-grid { grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
-  .hero-copy { padding-top: 24px; }
-  .form-card { padding: 30px 28px; }
-  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-  .errors { grid-template-columns: 1fr 1fr; }
-  .errors .err:last-child { grid-column: 1 / -1; }
-  .segments { grid-template-columns: repeat(4, 1fr); }
-  .author { grid-template-columns: auto 1fr 1fr; gap: 36px; }
-  .sticky { display: none; }
-  footer { padding-bottom: 28px; }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+  .hero-captura{padding:150px 0 150px;background:#0D0D0D}
+  .hero-captura .grade{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .hero-captura h1{font-size:54px;line-height:1.08;letter-spacing:-2px}
+  .hero-captura .sub{font-size:21px;line-height:1.45;font-weight:600;color:var(--text);margin:24px 0 0;letter-spacing:-.3px}
+  .hero-captura .pontos{list-style:none;display:grid;gap:12px;margin-top:28px}
+  .hero-captura .pontos li{display:flex;gap:12px;color:var(--text-strong)}
+  .pdf{display:flex;gap:14px;align-items:center;background:var(--bg);border:1px solid var(--line-soft);border-radius:12px;padding:12px 14px;margin-bottom:20px}
+  .pdf svg{flex:none}
+  .pdf b{color:var(--text-strong);display:block;font-size:15px}
+  .pdf span{font-size:13px}
+  @media (max-width:1024px){.hero-captura .grade{grid-template-columns:1fr;gap:40px}}
+  @media (max-width:767px){.hero-captura{padding:110px 0 110px}.hero-captura h1{font-size:34px;letter-spacing:-1px}.hero-captura .sub{font-size:17px}}
 </style>
+<script src="../assets/config.js"></script>
 </head>
-<body>
+<body data-raiz="../">
 
-<div class="top">
+<header class="menu menu-ativo">
   <div class="wrap">
-    <div class="brand">Allan Porto <span>Arquitetura</span></div>
-    <div class="cau">Arquiteto · CAU A166156-6</div>
-  </div>
-</div>
-
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow">Checklist gratuito · PDF de 3 páginas</div>
-      <h1>Sua loja tem movimento, mas <em>não vende o que devia?</em></h1>
-      <p class="lead">O problema pode não ser o produto, o vendedor ou o preço. Pode ser o espaço. Descubra em 3 minutos os <strong>5 erros de layout</strong> que fazem o cliente entrar, dar uma volta e sair sem comprar.</p>
-      <ul class="hero-points">
-        <li>Autoavaliação "sim/não" pra aplicar na sua loja hoje</li>
-        <li>Feito por arquiteto especialista em Retail Design</li>
-        <li>Correções de baixo custo, sem reforma grande</li>
-      </ul>
-    </div>
-
-    <div class="card form-card" id="form">
-      <h2>Receba o checklist grátis</h2>
-      <p class="sub">Preencha abaixo e receba agora no seu e-mail e WhatsApp.</p>
-      <div class="pdf-badge">
-        <svg width="34" height="40" viewBox="0 0 34 40" aria-hidden="true"><path d="M3 1h20l10 10v26a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z" fill="#fff" stroke="#2b211b" stroke-width="1.5"/><path d="M23 1v10h10" fill="none" stroke="#2b211b" stroke-width="1.5"/><rect x="5" y="24" width="24" height="10" rx="2" fill="#d9572b"/><text x="17" y="31.5" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#fff">PDF</text></svg>
-        <div><strong>Checklist dos 5 Erros de Layout</strong><br><span style="color:var(--muted)">que Fazem Sua Loja Perder Venda</span></div>
-      </div>
-
-      <form id="lead-form" novalidate>
-        <div class="field">
-          <label for="nome">Seu primeiro nome</label>
-          <input id="nome" name="nome" type="text" autocomplete="given-name" placeholder="Ex.: Ana" required>
-          <div class="msg">Digite seu nome.</div>
-        </div>
-        <div class="field">
-          <label for="email">Seu melhor e-mail</label>
-          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" required>
-          <div class="msg">Digite um e-mail válido.</div>
-        </div>
-        <div class="field">
-          <label for="whatsapp">WhatsApp com DDD</label>
-          <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel-national" inputmode="numeric" placeholder="(81) 99999-9999" required>
-          <div class="msg">Digite um celular válido com DDD.</div>
-        </div>
-        <label class="consent" id="consent-wrap">
-          <input type="checkbox" id="consent" name="consent" value="sim">
-          <span>Aceito receber o checklist e conteúdos da Allan Porto Arquitetura por e-mail e WhatsApp. Posso cancelar quando quiser. <a href="../privacidade.html" target="_blank" rel="noopener">Política de privacidade</a>.</span>
-        </label>
-        <button class="btn" type="submit" id="submit-btn"><span class="spin" aria-hidden="true"></span><span class="label">Quero o checklist grátis</span></button>
-        <p class="secure">🔒 Seus dados estão seguros. Zero spam.</p>
-        <p class="form-error" id="form-error" role="alert">Não conseguimos enviar agora. Confira sua conexão e tente de novo.</p>
-      </form>
-
-      <div class="success" role="status" aria-live="polite">
-        <div class="check">✓</div>
-        <h2 style="font-size:22px">Pronto! O checklist está a caminho.</h2>
-        <p class="sub" style="margin-top:8px">Enquanto isso, preparei um vídeo curto explicando o que fazer com o resultado. Abrindo…</p>
-        <a class="btn" id="vsl-link" href="#">Assistir ao vídeo agora</a>
-      </div>
-    </div>
+    <a class="logo" href="../"><b>Loja</b> que <i>Vende</i></a>
+    <a class="btn-outline" href="#form">Baixar grátis</a>
   </div>
 </header>
 
 <main>
-  <section>
-    <div class="wrap two">
-      <div class="section-head">
-        <div class="eyebrow">O que ninguém te contou</div>
-        <h2>Sua loja foi desenhada pra ficar bonita. Não pra vender.</h2>
-        <p>Você reformou a fachada, trocou a iluminação, treinou a equipe e investiu em anúncio. E mesmo assim o cliente entra, dá uma volta e sai sem comprar.</p>
-        <p>Isso não é falta de sorte: é sintoma. Decisões de layout que o cliente sente, mas que quem está dentro do negócio não enxerga.</p>
-      </div>
-      <figure class="card plan-card" style="margin:0">
-        <svg viewBox="0 0 400 260" role="img" aria-labelledby="plan-t">
-          <title id="plan-t">Planta de loja com zona quente próxima à entrada e zona fria no fundo, onde está o produto de maior margem</title>
-          <defs>
-            <radialGradient id="hotg" cx="78%" cy="92%" r="70%"><stop offset="0" stop-color="#d9572b" stop-opacity=".55"/><stop offset=".55" stop-color="#d9572b" stop-opacity=".12"/><stop offset="1" stop-color="#d9572b" stop-opacity="0"/></radialGradient>
-            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2b211b"/></marker>
-          </defs>
-          <rect x="20" y="20" width="360" height="210" fill="#dbe5ee"/>
-          <rect x="20" y="20" width="360" height="210" fill="url(#hotg)"/>
-          <rect x="20" y="20" width="360" height="210" fill="none" stroke="#2b211b" stroke-width="6"/>
-          <!-- porta -->
-          <rect x="280" y="226" width="70" height="8" fill="#f7f3ec"/>
-          <path d="M280 230 A70 70 0 0 1 350 160" fill="none" stroke="#2b211b" stroke-width="1.2" stroke-dasharray="3 3"/>
-          <!-- vitrine -->
-          <rect x="190" y="206" width="80" height="16" fill="#2b211b"/>
-          <text x="230" y="199" text-anchor="middle" font-size="11" font-family="Inter,sans-serif" fill="#2b211b">vitrine</text>
-          <!-- caixa -->
-          <rect x="330" y="60" width="40" height="70" fill="#fff" stroke="#2b211b" stroke-width="1.5"/>
-          <text x="350" y="99" text-anchor="middle" font-size="10" font-family="Inter,sans-serif" fill="#2b211b" transform="rotate(-90 350 96)">caixa</text>
-          <!-- mesa central -->
-          <circle cx="220" cy="130" r="22" fill="#fff" stroke="#2b211b" stroke-width="1.5"/>
-          <text x="220" y="134" text-anchor="middle" font-size="10" font-family="Inter,sans-serif" fill="#2b211b">mesa</text>
-          <!-- araras fundo -->
-          <rect x="34" y="34" width="110" height="14" fill="#fff" stroke="#2b211b" stroke-width="1.5"/>
-          <rect x="34" y="34" width="14" height="110" fill="#fff" stroke="#2b211b" stroke-width="1.5"/>
-          <g transform="translate(96 88)">
-            <circle r="17" fill="#5b7c99"/>
-            <text y="5" text-anchor="middle" font-size="15" font-weight="700" font-family="Inter,sans-serif" fill="#fff">$</text>
-          </g>
-          <text x="96" y="124" text-anchor="middle" font-size="10.5" font-weight="600" font-family="Inter,sans-serif" fill="#2b211b">maior margem</text>
-          <text x="96" y="137" text-anchor="middle" font-size="10.5" font-family="Inter,sans-serif" fill="#2b211b">na zona fria</text>
-          <!-- trajeto -->
-          <path d="M315 245 C315 190 300 170 270 150 C 250 138 250 110 285 95" fill="none" stroke="#2b211b" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
-          <text x="315" y="252" text-anchor="middle" font-size="10" font-weight="700" font-family="Inter,sans-serif" fill="#2b211b">ENTRADA</text>
-        </svg>
-        <figcaption class="plan-legend">
-          <span><i style="background:#d9572b"></i>Zona quente (onde o cliente olha)</span>
-          <span><i style="background:#5b7c99"></i>Zona fria</span>
-          <span><i style="border:2px dashed #2b211b"></i>Trajeto real do cliente</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
 
-  <section class="alt">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">O que tem no checklist</div>
-        <h2>Os 5 erros que fazem sua loja perder venda todo dia</h2>
-        <p>Pra cada erro, uma pergunta de autoavaliação. Em 3 minutos você sabe onde sua loja está "vazando" venda.</p>
-      </div>
-      <div class="errors">
-        <article class="err"><div><h3>Vitrine sem foco</h3><p>Dez peças tentando vender tudo ao mesmo tempo: ninguém para na calçada.</p><p class="q">Sua vitrine tem até 3 itens em destaque? <span class="yn"><span>SIM</span> <span>NÃO</span></span></p></div></article>
-        <article class="err"><div><h3>Produto de maior margem na zona fria</h3><p>O item que mais te dá lucro está justamente onde o cliente menos olha.</p><p class="q">Você sabe onde fica sua zona quente? <span class="yn"><span>SIM</span> <span>NÃO</span></span></p></div></article>
-        <article class="err"><div><h3>Nenhum ponto de decisão no trajeto</h3><p>O cliente passa, dá uma volta e vai embora, porque nada fez ele parar.</p><p class="q">Existe um ponto que obriga o cliente a parar? <span class="yn"><span>SIM</span> <span>NÃO</span></span></p></div></article>
-        <article class="err"><div><h3>Iluminação genérica</h3><p>A mesma luz em tudo: seu melhor produto se perde no meio dos outros.</p><p class="q">Seu produto-foco tem luz dirigida? <span class="yn"><span>SIM</span> <span>NÃO</span></span></p></div></article>
-        <article class="err"><div><h3>Fluxo confuso</h3><p>O cliente não sabe por onde ir, e quem não sabe por onde ir não compra.</p><p class="q">O caminho da entrada ao caixa é óbvio? <span class="yn"><span>SIM</span> <span>NÃO</span></span></p></div></article>
-      </div>
+<section class="hero-captura glow">
+  <div class="wrap grade">
+    <div>
+      <span class="produto-nome"><b>Checklist gratuito</b> · Para lojistas</span>
+      <h1>Sua loja tem movimento, mas <span class="laranja">não vende o que devia?</span></h1>
+      <p class="sub">O problema pode não ser o produto, o vendedor ou o preço. Pode ser o espaço. Descubra em 3 minutos os 5 erros de layout que fazem o cliente entrar, dar uma volta e sair sem comprar.</p>
+      <ul class="pontos">
+        <li><span class="check"></span>Autoavaliação "sim ou não" pra aplicar na sua loja hoje</li>
+        <li><span class="check"></span>Feito por arquiteto especialista em Retail Design</li>
+        <li><span class="check"></span>Correções de baixo custo, sem reforma grande</li>
+      </ul>
     </div>
-  </section>
 
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Pra quem é</div>
-        <h2>Pra quem tem loja física e não pode pagar um projeto completo agora</h2>
+    <div class="form-card" id="form" data-esconde-cta>
+      <h2>Receba o checklist grátis</h2>
+      <p class="sub2">Preencha e baixe na hora, na próxima tela.</p>
+      <div class="pdf">
+        <svg width="34" height="40" viewBox="0 0 34 40" aria-hidden="true"><path d="M3 1h20l10 10v26a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z" fill="#1A1A1A" stroke="#A7A7A7" stroke-width="1.5"/><path d="M23 1v10h10" fill="none" stroke="#A7A7A7" stroke-width="1.5"/><rect x="5" y="24" width="24" height="10" rx="2" fill="#FF9F01"/><text x="17" y="31.5" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#0D0D0D">PDF</text></svg>
+        <div><b>Checklist dos 5 Erros de Layout</b><span>que Fazem Sua Loja Perder Venda</span></div>
       </div>
-      <div class="segments">
-        <div class="seg"><strong>Moda e roupas</strong><span>boutique, multimarca, fitness</span></div>
-        <div class="seg"><strong>Acessórios</strong><span>bijuteria, óculos, calçados</span></div>
-        <div class="seg"><strong>Alimentício</strong><span>empório, padaria, conveniência</span></div>
-        <div class="seg"><strong>Farmácia</strong><span>drogaria, dermocosméticos</span></div>
+      <form id="lead-form" novalidate>
+        <div class="campo"><label for="nome">Seu primeiro nome</label><input id="nome" name="nome" autocomplete="given-name" placeholder="Ex.: Ana" required><div class="msg">Digite seu nome.</div></div>
+        <div class="campo"><label for="email">Seu melhor e-mail</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" required><div class="msg">Digite um e-mail válido.</div></div>
+        <div class="campo"><label for="whatsapp">WhatsApp com DDD</label><input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(81) 99999-9999" required><div class="msg">Digite um celular válido com DDD.</div></div>
+        <label class="aceite" id="aceite"><input type="checkbox" id="consent"><span>Aceito receber o checklist e conteúdos da Allan Porto Arquitetura por e-mail e WhatsApp. Posso cancelar quando quiser. <a href="../privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</span></label>
+        <button class="btn" type="submit" id="enviar">Quero o checklist grátis</button>
+        <p class="seguro">🔒 Seus dados estão seguros. Zero spam.</p>
+        <p class="falha" id="falha" role="alert">Não conseguimos enviar agora. Confira sua conexão e tente de novo.</p>
+      </form>
+      <div class="sucesso" role="status" aria-live="polite">
+        <div class="ok">✓</div>
+        <h2>Pronto! Abrindo seu checklist…</h2>
+        <p class="sub2" style="margin-top:8px">Se não abrir sozinho, <a id="link-obrigado" href="obrigado/" style="color:var(--accent);text-decoration:underline">clique aqui</a>.</p>
       </div>
-      <p class="note">Vale pra loja de bairro de 40m² tanto quanto pra loja de shopping. Não é coisa só de rede grande.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="alt">
-    <div class="wrap author">
-      <div class="monogram" aria-hidden="true">AP</div>
-      <div>
-        <div class="eyebrow" style="color:var(--hot)">Quem assina o checklist</div>
-        <h2 style="font-size:30px;margin-top:10px">Allan Porto</h2>
-        <ul class="creds">
-          <li><b>▸</b> Arquiteto e urbanista, CAU-PE A166156-6</li>
-          <li><b>▸</b> Pós Master em Arquitetura Comercial (Retail Design), IPOG</li>
-          <li><b>▸</b> Ex-diretor de expansão e novos negócios: já respondeu pela conta no fim do mês</li>
-          <li><b>▸</b> Gestor de obras comerciais e gerente de projetos</li>
-        </ul>
-      </div>
-      <div class="card case">
-        <div class="tag">Caso real</div>
-        <h3>Empório Fit, Caruaru/PE</h3>
-        <p>Loja fitness de 19,52m² com vitrine de produto-foco, ponto de pausa no meio do trajeto e luz em camadas. É o projeto usado como exemplo no checklist.</p>
-        <div class="stats">
-          <div><b>19,52m²</b>área total</div>
-          <div><b>3</b>peças na vitrine</div>
-          <div><b>1</b>ponto de pausa</div>
-        </div>
-      </div>
+<section class="dupla glow esq">
+  <div class="wrap">
+    <div class="foto caixa surge" style="aspect-ratio:1">
+      <svg viewBox="0 0 400 300" role="img" aria-labelledby="pl">
+        <title id="pl">Planta de loja: a zona quente fica perto da entrada e o produto de maior margem está escondido na zona fria</title>
+        <defs><radialGradient id="zq2" cx="78%" cy="92%" r="70%"><stop offset="0" stop-color="#FF9F01" stop-opacity=".5"/><stop offset="1" stop-color="#FF9F01" stop-opacity="0"/></radialGradient></defs>
+        <rect x="20" y="20" width="360" height="260" fill="#141414"/><rect x="20" y="20" width="360" height="260" fill="url(#zq2)"/>
+        <rect x="20" y="20" width="360" height="260" fill="none" stroke="#F3F3F3" stroke-width="5"/>
+        <rect x="280" y="276" width="70" height="8" fill="#1A1A1A"/>
+        <rect x="190" y="252" width="80" height="14" fill="#F3F3F3"/><text x="230" y="244" text-anchor="middle" font-size="12" fill="#FF9F01" font-family="sans-serif">vitrine</text>
+        <rect x="330" y="60" width="36" height="80" fill="none" stroke="#A7A7A7" stroke-width="1.5"/><text x="348" y="104" text-anchor="middle" font-size="11" fill="#A7A7A7" font-family="sans-serif" transform="rotate(-90 348 100)">caixa</text>
+        <circle cx="220" cy="150" r="24" fill="none" stroke="#A7A7A7" stroke-width="1.5"/><text x="220" y="154" text-anchor="middle" font-size="11" fill="#A7A7A7" font-family="sans-serif">mesa</text>
+        <rect x="34" y="34" width="110" height="14" fill="none" stroke="#A7A7A7" stroke-width="1.5"/><rect x="34" y="34" width="14" height="120" fill="none" stroke="#A7A7A7" stroke-width="1.5"/>
+        <circle cx="96" cy="96" r="18" fill="#5b7c99"/><text x="96" y="102" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" font-family="sans-serif">$</text>
+        <text x="96" y="134" text-anchor="middle" font-size="12" font-weight="700" fill="#F3F3F3" font-family="sans-serif">maior margem</text><text x="96" y="148" text-anchor="middle" font-size="12" fill="#A7A7A7" font-family="sans-serif">na zona fria</text>
+        <path d="M315 295 C315 230 300 205 270 185 C250 172 250 140 290 118" fill="none" stroke="#FF9F01" stroke-width="2.5" stroke-dasharray="7 6"/>
+        <text x="315" y="298" text-anchor="middle" font-size="11" font-weight="700" fill="#F3F3F3" font-family="sans-serif">ENTRADA</text>
+      </svg>
     </div>
-  </section>
+    <div class="cartao surge">
+      <span class="eyebrow" style="display:block">O que ninguém te contou</span>
+      <h2>Sua loja foi desenhada pra ficar bonita. <span class="laranja">Não pra vender.</span></h2>
+      <p>Você reformou a fachada, trocou a iluminação, treinou a equipe e investiu em anúncio. E mesmo assim o cliente entra, dá uma volta e sai sem comprar.</p>
+      <p>Isso não é falta de sorte: é sintoma. Vitrine que não para ninguém. Produto de maior margem escondido na zona fria. Nenhum ponto que prenda o olhar. <span class="destaque">Invisível pra quem está dentro do negócio, óbvio pra quem olha com olhar técnico.</span></p>
+      <a class="btn" href="#form">Quero descobrir na minha loja</a>
+    </div>
+  </div>
+</section>
 
-  <section class="final">
-    <div class="wrap">
-      <h2>Descubra hoje onde sua loja está perdendo venda</h2>
-      <p>Checklist gratuito, 3 páginas, direto ao ponto. Leitura de 3 minutos.</p>
-      <a class="btn" href="#form" data-scroll>Quero o checklist grátis</a>
+<section class="sec centro glow fraco meio" style="padding-top:40px">
+  <div class="wrap">
+    <span class="eyebrow">O que tem no checklist</span>
+    <h2 class="h2">Os 5 erros que fazem sua loja <span class="laranja">perder venda todo dia</span></h2>
+    <p class="lead">Pra cada erro, uma pergunta de autoavaliação. Em 3 minutos você sabe onde sua loja está "vazando" venda.</p>
+    <div class="metodo-grid tres">
+      <div class="passo-bee surge"><div class="letra">01</div><h3>Vitrine sem foco</h3><p>Dez peças tentando vender tudo ao mesmo tempo: ninguém para na calçada.</p><p class="q">Sua vitrine tem até 3 itens em destaque? <span>SIM</span> <span>NÃO</span></p></div>
+      <div class="passo-bee surge"><div class="letra">02</div><h3>Margem na zona fria</h3><p>O item que mais te dá lucro está justamente onde o cliente menos olha.</p><p class="q">Você sabe onde fica sua zona quente? <span>SIM</span> <span>NÃO</span></p></div>
+      <div class="passo-bee surge"><div class="letra">03</div><h3>Sem ponto de decisão</h3><p>O cliente passa, dá uma volta e vai embora, porque nada fez ele parar.</p><p class="q">Existe um ponto que obriga o cliente a parar? <span>SIM</span> <span>NÃO</span></p></div>
+      <div class="passo-bee surge"><div class="letra">04</div><h3>Iluminação genérica</h3><p>A mesma luz em tudo: seu melhor produto se perde no meio dos outros.</p><p class="q">Seu produto-foco tem luz dirigida? <span>SIM</span> <span>NÃO</span></p></div>
+      <div class="passo-bee surge"><div class="letra">05</div><h3>Fluxo confuso</h3><p>O cliente não sabe por onde ir, e quem não sabe por onde ir não compra.</p><p class="q">O caminho da entrada ao caixa é óbvio? <span>SIM</span> <span>NÃO</span></p></div>
+      <div class="passo-bee surge" style="display:flex;flex-direction:column;justify-content:center;border-color:#FF9F0166"><h3 style="margin-top:0">Quantos "não" a sua loja tem?</h3><p>Cada "não" é venda escapando todo dia. Descubra agora, de graça.</p><a class="btn" href="#form" style="margin-top:24px">Baixar o checklist</a></div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="sec centro glow esq" style="padding-top:40px">
+  <div class="wrap">
+    <span class="eyebrow">Feito para você</span>
+    <h2 class="h2">Pra quem tem loja física e não pode pagar um projeto completo agora</h2>
+    <p class="lead">Vale pra loja de bairro de 40 m² tanto quanto pra loja de shopping. Não é coisa só de rede grande.</p>
+    <div class="difs quatro">
+      <div class="dif surge"><svg viewBox="0 0 24 24"><path d="M8 3 4 6v4h3v11h10V10h3V6l-4-3-2 2h-4Z"/></svg><h3>Moda e roupas</h3><p>Boutique, multimarca, moda fitness.</p></div>
+      <div class="dif surge"><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="6"/><path d="m9 8 3-5 3 5"/></svg><h3>Acessórios</h3><p>Bijuteria, óculos, calçados.</p></div>
+      <div class="dif surge"><svg viewBox="0 0 24 24"><path d="M3 10h18l-2 10H5Z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg><h3>Alimentício</h3><p>Empório, padaria, conveniência.</p></div>
+      <div class="dif surge"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg><h3>Farmácia</h3><p>Drogaria e dermocosméticos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dupla inverte glow">
+  <div class="wrap">
+    <div class="foto tem-foto surge" style="aspect-ratio:4/5;width:44%">
+      <img src="../img/allan-retrato.jpg" alt="Allan Porto, arquiteto especialista em Retail Design" loading="lazy" onerror="this.remove()">
+      <div class="vaga"><span class="mono">AP</span><b>Seu retrato</b><span>img/allan-retrato.jpg</span></div>
+    </div>
+    <div class="cartao surge">
+      <span class="eyebrow" style="display:block">Quem assina o checklist</span>
+      <h2>Allan Porto</h2>
+      <p><span class="destaque">Arquiteto e Urbanista</span> · CAU-PE A166156-6</p>
+      <ul class="lista-check">
+        <li><span class="check"></span>Pós Master em Arquitetura Comercial (Retail Design), IPOG</li>
+        <li><span class="check"></span>Ex-diretor de expansão e novos negócios: já respondeu pela conta no fim do mês</li>
+        <li><span class="check"></span>Gestor de obras comerciais e gerente de projetos</li>
+      </ul>
+      <p><span class="destaque">Caso real:</span> Empório Fit, em Caruaru/PE. 19,52 m² com vitrine de produto-foco, ponto de pausa no meio do trajeto e luz em camadas. É o projeto usado como exemplo no checklist.</p>
+      <a class="btn" href="#form">Quero o checklist grátis</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec centro" style="padding-top:40px">
+  <div class="wrap">
+    <span class="eyebrow">Perguntas frequentes</span>
+    <h2 class="h2">Tire suas dúvidas</h2>
+    <div class="faq">
+      <details open><summary>É grátis mesmo?</summary><p>Sim. Você preenche o formulário e baixa o PDF na hora, na tela seguinte.</p></details>
+      <details><summary>Serve pra minha loja?</summary><p>Serve pra qualquer loja física: moda, acessórios, alimentício, farmácia, de bairro ou de shopping. Os 5 erros aparecem em lojas de todos os tamanhos.</p></details>
+      <details><summary>Vou precisar reformar a loja?</summary><p>Não. O checklist mostra onde está o problema. A maioria das correções é de baixo custo: mudar produto de lugar, reduzir a vitrine, reposicionar um ponto de luz.</p></details>
+      <details><summary>O que vocês fazem com os meus dados?</summary><p>Usamos só para enviar o checklist e conteúdos sobre arquitetura comercial. Você pode cancelar quando quiser. Detalhes na <a href="../privacidade/" style="color:var(--accent);text-decoration:underline">política de privacidade</a>.</p></details>
+    </div>
+    <a class="btn" href="#form" style="margin-top:48px">Quero o checklist grátis</a>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
-    <p>© <span id="year"></span> Allan Porto Arquitetura · CAU-PE A166156-6 · <a href="../privacidade.html">Política de privacidade</a></p>
-    <p>Este site não faz parte do site do Facebook ou da Meta Platforms, Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial da Meta Platforms, Inc.</p>
-    <p>Resultados variam de acordo com o segmento, o ponto comercial e a aplicação de cada lojista.</p>
+    <a class="logo" href="../"><b>Allan</b> Porto <i>·</i></a>
+    <nav class="links-rodape"><a href="../">Site</a><a href="../privacidade/">Privacidade</a></nav>
+    <span>© <span data-ano></span> Allan Porto Arquitetura · CAU-PE A166156-6</span>
+    <p class="aviso">Este site não faz parte do site do Facebook ou da Meta Platforms, Inc. e não é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial da Meta Platforms, Inc. Resultados variam de acordo com o segmento, o ponto comercial e a aplicação de cada lojista.</p>
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn" href="#form" data-scroll>Quero o checklist grátis</a></div>
+<div class="cta-fixo"><a class="btn" href="#form">Quero o checklist grátis</a></div>
 
+<script src="../assets/app.js"></script>
 <script>
 (function () {
-  var cfg = window.LQV_CONFIG;
-  var form = document.getElementById('lead-form');
-  var card = document.getElementById('form');
-  var btn = document.getElementById('submit-btn');
-  var errBox = document.getElementById('form-error');
-  var wa = document.getElementById('whatsapp');
-  document.getElementById('year').textContent = new Date().getFullYear();
+  var S = window.SITE, form = document.getElementById('lead-form'), card = document.getElementById('form');
+  var btn = document.getElementById('enviar'), falha = document.getElementById('falha'), wa = form.whatsapp;
 
-  // ---- UTMs / origem: guarda na sessão pra repassar ao endpoint e à VSL
-  var TRACK_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'];
-  var params = new URLSearchParams(location.search);
-  var tracking = {};
-  TRACK_KEYS.forEach(function (k) {
-    var v = params.get(k);
-    try { if (v) sessionStorage.setItem('lqv_' + k, v); else v = sessionStorage.getItem('lqv_' + k); } catch (e) {}
-    if (v) tracking[k] = v;
-  });
-
-  function cookie(name) {
-    var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
-    return m ? decodeURIComponent(m[1]) : '';
-  }
-
-  // ---- Máscara de WhatsApp (BR)
+  // Máscara (DD) 9XXXX-XXXX
   wa.addEventListener('input', function () {
-    var d = wa.value.replace(/\D/g, '').replace(/^55(?=\d{10,11}$)/, '').slice(0, 11);
-    var out = d;
-    if (d.length > 2) out = '(' + d.slice(0, 2) + ') ' + d.slice(2);
-    if (d.length > 7) out = '(' + d.slice(0, 2) + ') ' + d.slice(2, d.length - 4) + '-' + d.slice(-4);
-    wa.value = out;
+    var d = wa.value.replace(/\D/g, '').replace(/^55(?=\d{11}$)/, '').slice(0, 11), o = d;
+    if (d.length > 2) o = '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    if (d.length > 7) o = '(' + d.slice(0, 2) + ') ' + d.slice(2, d.length - 4) + '-' + d.slice(-4);
+    wa.value = o;
   });
 
-  // ---- Validação
-  function setInvalid(el, bad) { el.closest('.field').classList.toggle('invalid', bad); return !bad; }
-  function validate() {
-    var ok = true;
-    var nome = form.nome.value.trim();
-    var email = form.email.value.trim();
-    var fone = form.whatsapp.value.replace(/\D/g, '');
-    ok = setInvalid(form.nome, nome.length < 2) && ok;
-    ok = setInvalid(form.email, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) && ok;
-    ok = setInvalid(form.whatsapp, !/^[1-9]{2}9\d{8}$/.test(fone)) && ok;
-    var consent = document.getElementById('consent').checked;
-    document.getElementById('consent-wrap').classList.toggle('invalid', !consent);
-    ok = consent && ok;
-    return ok;
+  function marca(el, ruim) { el.closest('.campo').classList.toggle('erro', ruim); return !ruim; }
+  function valida() {
+    var ok = marca(form.nome, form.nome.value.trim().length < 2);
+    ok = marca(form.email, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.value.trim())) && ok;
+    ok = marca(wa, !/^[1-9]{2}9\d{8}$/.test(wa.value.replace(/\D/g, ''))) && ok;
+    var aceite = document.getElementById('consent').checked;
+    document.getElementById('aceite').classList.toggle('erro', !aceite);
+    return aceite && ok;
   }
-  ['nome','email','whatsapp'].forEach(function (n) {
-    form[n].addEventListener('blur', function () { if (form[n].value) validate(); });
-  });
-
-  function vslUrl(firstName) {
-    var u;
-    try { u = new URL(cfg.VSL_URL, location.href); } catch (e) { return cfg.VSL_URL; }
-    Object.keys(tracking).forEach(function (k) { u.searchParams.set(k, tracking[k]); });
-    if (firstName) u.searchParams.set('nome', firstName);
-    return u.toString();
-  }
+  ['nome', 'email', 'whatsapp'].forEach(function (n) { form[n].addEventListener('blur', function () { if (form[n].value) valida(); }); });
 
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
-    errBox.style.display = 'none';
-    if (!validate()) {
-      var firstBad = form.querySelector('.invalid input');
-      if (firstBad) firstBad.focus();
-      return;
-    }
-    btn.disabled = true; btn.classList.add('loading');
-    btn.querySelector('.label').textContent = 'Enviando…';
+    falha.style.display = 'none';
+    if (!valida()) { var r = form.querySelector('.erro input'); if (r) r.focus(); return; }
+    btn.disabled = true; btn.textContent = 'Enviando…';
 
-    var firstName = form.nome.value.trim().split(/\s+/)[0];
+    var nome = form.nome.value.trim(), primeiro = nome.split(/\s+/)[0];
     var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
-    var data = new URLSearchParams({
-      nome: form.nome.value.trim(),
-      email: form.email.value.trim().toLowerCase(),
-      whatsapp: '55' + form.whatsapp.value.replace(/\D/g, ''),
-      consentimento: 'sim',
-      pagina: location.origin + location.pathname,
+    var t = LQV.tracking;
+    var lead = {
+      nome: nome.slice(0, 120),
+      email: form.email.value.trim().toLowerCase().slice(0, 254),
+      whatsapp: '55' + wa.value.replace(/\D/g, ''),
+      consentimento: true,
+      produto: 'loja-que-vende',
+      utm_source: t.utm_source || null, utm_medium: t.utm_medium || null, utm_campaign: t.utm_campaign || null,
+      utm_content: t.utm_content || null, utm_term: t.utm_term || null, fbclid: t.fbclid || null,
       event_id: eventId,
-      fbp: cookie('_fbp'),
-      fbc: cookie('_fbc') || (tracking.fbclid ? 'fb.1.' + Date.now() + '.' + tracking.fbclid : ''),
-      user_agent: navigator.userAgent
-    });
-    Object.keys(tracking).forEach(function (k) { data.set(k, tracking[k]); });
+      pagina: location.origin + location.pathname
+    };
 
-    var send = cfg.FORM_ENDPOINT
-      ? fetch(cfg.FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: data, keepalive: true })
-      : Promise.resolve(console.warn('[LQV] FORM_ENDPOINT vazio: lead não enviado (modo teste).', Object.fromEntries(data)));
-
-    send.then(function () {
-      if (window.fbq) fbq('track', 'Lead', { content_name: cfg.LEAD_CONTENT_NAME, currency: 'BRL', value: 0 }, { eventID: eventId });
-      var target = vslUrl(firstName);
-      document.getElementById('vsl-link').href = target;
-      card.classList.add('done');
-      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(function () { location.href = target; }, 1400);
-    }).catch(function () {
-      btn.disabled = false; btn.classList.remove('loading');
-      btn.querySelector('.label').textContent = 'Quero o checklist grátis';
-      errBox.style.display = 'block';
-    });
-  });
-
-  // ---- CTA fixo no mobile: aparece quando o formulário sai da tela
-  var sticky = document.getElementById('sticky');
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      var e = entries[0];
-      sticky.classList.toggle('show', !e.isIntersecting && !card.classList.contains('done') && e.boundingClientRect.top < 0);
-    }).observe(card);
-  }
-  document.querySelectorAll('[data-scroll]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(function () { form.nome.focus({ preventScroll: true }); }, 450);
+    fetch(S.SUPABASE_URL + '/rest/v1/leads', {
+      method: 'POST',
+      headers: { 'apikey': S.SUPABASE_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify(lead)
+    }).then(function (r) {
+      if (!r.ok) return r.text().then(function (txt) { throw new Error(r.status + ' ' + txt); });
+      LQV.pixel('track', 'Lead', { content_name: 'Checklist 5 Erros de Layout', currency: 'BRL', value: 0 }, { eventID: eventId });
+      var destino = LQV.comTracking('obrigado/', { nome: primeiro });
+      document.getElementById('link-obrigado').href = destino;
+      card.classList.add('feito');
+      setTimeout(function () { location.href = destino; }, 1200);
+    }).catch(function (e) {
+      console.error('[lead]', e);
+      btn.disabled = false; btn.textContent = 'Quero o checklist grátis';
+      falha.style.display = 'block';
     });
   });
 })();

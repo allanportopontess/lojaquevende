@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allan Porto | Links</title>
+<meta name="description" content="Allan Porto, arquiteto especialista em Retail Design. Produtos, materiais gratuitos e contato.">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0D0D'/%3E%3Cpath d='M8 24V8h16v16M8 16h9' stroke='%23FF9F01' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/700.css">
+<link rel="stylesheet" href="../assets/base.css">
+<style>
+  .bio{max-width:520px;margin:0 auto;padding:56px 16px 48px;text-align:center}
+  .avatar{position:relative;width:120px;height:120px;margin:0 auto 18px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,var(--accent),#ffd27a,var(--accent))}
+  .avatar .in{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;border:3px solid var(--bg);background:var(--surface);display:grid;place-items:center;color:var(--accent);font-size:40px;font-weight:700;letter-spacing:-2px}
+  .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .bio h1{font-size:30px;letter-spacing:-.8px}
+  .bio .cargo{color:var(--accent);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-top:8px}
+  .bio .frase{margin:12px auto 0;max-width:380px;font-size:16px}
+  .bio .redes{justify-content:center;margin:22px 0 32px}
+  .bio .produtos{grid-template-columns:1fr;margin-top:0;gap:16px}
+  .bio .produto{flex-direction:row;align-items:stretch}
+  .bio .produto .arte{flex:none;width:118px;aspect-ratio:auto}
+  .bio .produto .arte svg{width:88%}
+  .bio .produto.breve .arte svg{width:36px}
+  .bio .produto .selo{top:10px;left:10px;font-size:10px;padding:5px 8px}
+  .bio .produto .corpo{padding:18px 18px 18px 16px}
+  .bio .produto h3{font-size:19px}
+  .bio .produto p{font-size:14px;margin-top:4px}
+  .bio .produto .ir{margin-top:10px;font-size:12px}
+  .bio .extra{display:grid;gap:12px;margin-top:16px}
+  .bio .extra a{display:block;background:var(--surface);border:1px solid var(--line-soft);border-radius:14px;padding:18px;color:var(--text-strong);font-weight:600;transition:.3s}
+  .bio .extra a:hover{border-color:#FF9F0188}
+  .bio footer{border:0;padding:36px 0 0;font-size:12.5px}
+</style>
+<script src="../assets/config.js"></script>
+</head>
+<body data-raiz="../">
+<div class="glow meio" style="position:relative;overflow:hidden;min-height:100vh">
+<main class="bio">
+  <div class="avatar"><div class="in">AP<img src="../img/allan-avatar.jpg" alt="Allan Porto" onerror="this.remove()"></div></div>
+  <h1>Allan Porto</h1>
+  <p class="cargo">Arquiteto · Retail Design · CAU-PE A166156-6</p>
+  <p class="frase">Arquitetura comercial que vende. Ajudo lojistas a transformar o espaço da loja em faturamento.</p>
+  <nav class="redes" aria-label="Redes sociais"></nav>
+
+  <div class="produtos" data-produtos></div>
+
+  <div class="extra">
+    <a href="../">Conheça o site completo →</a>
+    <a data-contato="whatsapp" href="#">Falar no WhatsApp sobre o projeto da minha loja →</a>
+  </div>
+
+  <footer>© <span data-ano></span> Allan Porto Arquitetura · <a href="../privacidade/" style="text-decoration:underline">Privacidade</a></footer>
+</main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seu checklist está pronto | Loja que Vende</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0D0D'/%3E%3Cpath d='M8 24V8h16v16M8 16h9' stroke='%23FF9F01' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/700.css">
+<link rel="stylesheet" href="../../assets/base.css">
+<style>
+  .topo{padding:150px 0 40px}
+  .topo h1{font-size:52px;line-height:1.08;letter-spacing:-2px}
+  .baixar{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--surface);border:1px solid #FF9F0155;border-radius:var(--r-card);padding:26px 30px;margin-top:40px;text-align:left;box-shadow:0 0 80px -34px var(--accent)}
+  .baixar b{color:var(--text-strong);font-size:19px;display:block}
+  .baixar .btn{padding:18px 30px}
+  .video .vazio{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:repeating-linear-gradient(135deg,#161616 0 14px,#1a1a1a 14px 28px)}
+  .video .vazio .play{width:78px;height:78px;border-radius:50%;border:2px solid var(--accent);display:grid;place-items:center;box-shadow:0 0 40px -8px var(--accent-50)}
+  .video .vazio .play::after{content:"";border-left:22px solid var(--accent);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+  .video .vazio b{color:var(--text-strong);font-size:18px}
+  @media (max-width:767px){.topo{padding:110px 0 30px}.topo h1{font-size:32px;letter-spacing:-1px}.baixar{padding:22px 20px}.baixar .btn{width:100%}}
+</style>
+<script src="../../assets/config.js"></script>
+</head>
+<body data-raiz="../../">
+
+<header class="menu menu-ativo">
+  <div class="wrap">
+    <a class="logo" href="../../"><b>Loja</b> que <i>Vende</i></a>
+  </div>
+</header>
+
+<main>
+<section class="topo centro glow meio">
+  <div class="wrap">
+    <span class="produto-nome"><b>Cadastro confirmado</b> · Checklist liberado</span>
+    <h1 id="titulo">Seu checklist <span class="laranja">está pronto.</span></h1>
+    <p class="lead">Baixe agora e responda com a sua loja na frente. Depois assista ao vídeo abaixo: ele mostra o que fazer com o resultado.</p>
+    <div class="baixar" style="max-width:860px;margin-left:auto;margin-right:auto">
+      <div><b>Checklist dos 5 Erros de Layout</b><span>PDF · 3 páginas · leitura de 3 minutos</span></div>
+      <a class="btn" id="baixar" href="../../assets/checklist-5-erros-de-layout.pdf" download>Baixar o PDF</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec centro" style="padding-top:40px">
+  <div class="wrap" style="max-width:980px">
+    <span class="eyebrow">Assista antes de continuar</span>
+    <h2 class="h2">O que fazer com o resultado do checklist</h2>
+    <div class="video" id="video">
+      <div class="vazio"><span class="play"></span><b>Vídeo em breve</b><span>Enquanto isso, baixe e responda o checklist.</span></div>
+    </div>
+    <div id="bloco-compra" hidden style="margin-top:48px">
+      <p class="lead" style="margin-bottom:28px">Quer o passo a passo completo para corrigir cada erro na sua loja?</p>
+      <a class="btn" id="comprar" href="#" target="_blank" rel="noopener">Quero o Método Loja que Vende</a>
+      <span class="micro">Compra segura pela Hotmart</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="../../"><b>Allan</b> Porto <i>·</i></a>
+    <nav class="links-rodape"><a href="../../">Site</a><a href="../../privacidade/">Privacidade</a></nav>
+    <span>© <span data-ano></span> Allan Porto Arquitetura · CAU-PE A166156-6</span>
+  </div>
+</footer>
+
+<script src="../../assets/app.js"></script>
+<script>
+(function () {
+  var S = window.SITE, qs = new URLSearchParams(location.search);
+  var nome = (qs.get('nome') || '').replace(/[<>&"]/g, '').slice(0, 40);
+  if (nome) {
+    var h = document.getElementById('titulo');
+    h.textContent = '';
+    h.append(nome + ', seu checklist ');
+    var s = document.createElement('span'); s.className = 'laranja'; s.textContent = 'está pronto.'; h.append(s);
+  }
+  document.getElementById('baixar').addEventListener('click', function () {
+    LQV.pixel('trackCustom', 'DownloadChecklist');
+  });
+
+  // Vídeo: YouTube, Vimeo ou link de embed (Panda etc.)
+  function embed(url) {
+    var m;
+    if ((m = url.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/))) return 'https://www.youtube.com/embed/' + m[1] + '?rel=0&modestbranding=1';
+    if ((m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/))) return 'https://player.vimeo.com/video/' + m[1];
+    return url;
+  }
+  if (S.VSL_VIDEO_URL) {
+    var box = document.getElementById('video');
+    box.innerHTML = '<iframe src="' + embed(S.VSL_VIDEO_URL) + '" title="Vídeo Loja que Vende" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+  }
+
+  // Checkout Hotmart (só aparece se configurado); leva as UTMs como src/sck
+  if (S.CHECKOUT_URL) {
+    var a = document.getElementById('comprar');
+    var u = new URL(S.CHECKOUT_URL);
+    var t = LQV.tracking;
+    if (t.utm_source) u.searchParams.set('src', t.utm_source);
+    if (t.utm_content) u.searchParams.set('sck', t.utm_content);
+    Object.keys(t).forEach(function (k) { u.searchParams.set(k, t[k]); });
+    a.href = u.toString();
+    a.addEventListener('click', function () { LQV.pixel('track', 'InitiateCheckout', { content_name: 'Método Loja que Vende', currency: 'BRL' }); });
+    document.getElementById('bloco-compra').hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
