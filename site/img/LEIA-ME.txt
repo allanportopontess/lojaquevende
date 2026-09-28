@@ -1,13 +1,11 @@
-FOTOS DO SITE (salve aqui, com exatamente estes nomes)
-Enquanto um arquivo não existir, o site mostra um espaço reservado no lugar.
+FOTOS DO SITE (mesmos nomes = troca direta, sem mexer no código)
 
-hero.jpg            Foto do Allan para o topo da página inicial. Horizontal, ~2400x1350,
-                    Allan no lado DIREITO, fundo escuro (o texto fica à esquerda).
-hero-mobile.jpg     Mesma foto para celular, ~1000x1000, Allan centralizado na parte de cima.
-allan-retrato.jpg   Retrato vertical 4:5 (~1120x1400). Usado em "Sobre" e na página do checklist.
-allan-avatar.jpg    Foto de rosto quadrada (~400x400) para a página de links da bio.
-emporio-vitrine.jpg Vitrine do Empório Fit (foto ou render), ~1600x1200.
-emporio-planta.jpg  Planta ou render 3D do Empório Fit, ~1400x1050.
-emporio-interior.jpg Área central / araras / console, ~1400x1050.
-emporio-luz.jpg     Iluminação, spots, ripado, ~1400x1050.
-og.jpg              (opcional) imagem de compartilhamento, 1200x630.
+hero.jpg              Topo da home (desktop), 2400x1350, Allan à direita dissolvendo no fundo escuro
+hero-mobile.jpg       Topo da home (celular), 1000x1000
+allan-retrato.jpg     "Sobre" e página do checklist, 4:5
+allan-avatar.jpg      Página de links, 400x400
+imporio-fachada.jpg   Dobra "Projeto real" (fachada e vitrine)
+imporio-pausa.jpg     Galeria: ponto de pausa (puff, console, araras)
+imporio-provador.jpg  Galeria: circulação pelo provador
+imporio-luz.jpg       Galeria: luz em camadas
+og.jpg                Imagem ao compartilhar o link (WhatsApp/Instagram), 1200x630
