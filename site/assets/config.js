@@ -4,9 +4,9 @@
    ===================================================================== */
 window.SITE = {
   // Contato
-  WHATSAPP: "",            // só números com DDI, ex.: "5581999999999"
-  INSTAGRAM: "",           // URL completa, ex.: "https://www.instagram.com/allanporto.arq/"
-  EMAIL: "",               // ex.: "contato@allanporto.com.br"
+  WHATSAPP: "5581991047095", // só números com DDI, ex.: "5581999999999"
+  INSTAGRAM: "https://www.instagram.com/allanporto_arquitetura/", // URL completa, ex.: "https://www.instagram.com/allanporto.arq/"
+  EMAIL: "allanportopontess@gmail.com", // ex.: "contato@allanporto.com.br"
 
   // Meta Pixel
   META_PIXEL_ID: "1414869993251554",
