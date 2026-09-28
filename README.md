@@ -12,7 +12,7 @@ Meta Ads (5 criativos A/B) → /loja-que-vende/ (captura: Checklist dos 5 Erros 
 
 | Rota | Arquivo | O que é |
 |---|---|---|
-| `/` | `site/index.html` | Site institucional: hero, formação, método, produtos, projeto Empório Fit, sobre, contato |
+| `/` | `site/index.html` | Site institucional: hero, formação, método, produtos, projeto Impório Fitness, sobre, contato |
 | `/links/` | `site/links/index.html` | Página para a bio do Instagram |
 | `/loja-que-vende/` | `site/loja-que-vende/index.html` | Captura do checklist (leads vão para o banco) |
 | `/loja-que-vende/curso/` | `site/loja-que-vende/curso/index.html` | Página de vendas do curso (estrutura do Kit Usucapião): entregáveis, depoimentos, oferta com checkout Hotmart |
