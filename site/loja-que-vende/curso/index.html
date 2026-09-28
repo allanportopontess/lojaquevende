@@ -31,9 +31,10 @@
   .etapa .num{width:72px;height:72px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);color:var(--accent);font-size:28px;font-weight:700;display:grid;place-items:center;margin:0 auto 26px;position:relative;box-shadow:0 0 40px -8px var(--accent-50)}
   .etapa small{display:block;color:var(--accent);letter-spacing:3px;font-size:12px;text-transform:uppercase;margin-bottom:8px}
   .etapa h3{font-size:22px;letter-spacing:-.4px;margin-bottom:8px}
-  .prints{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:60px}
-  .print{position:relative;aspect-ratio:9/16;border-radius:28px;overflow:hidden}
-  .print img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+  .prints{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin:60px auto 0;max-width:900px;align-items:start}
+  .print{position:relative;margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line-soft);box-shadow:0 30px 70px -30px rgba(0,0,0,.9),0 0 60px -30px rgba(255,159,1,.35);transition:transform .5s}
+  .print:hover{transform:translateY(-6px) rotate(-.4deg)}
+  .print img{display:block;width:100%;height:auto}
   .print .vaga{border-radius:28px}
   .preco{text-align:center;background:var(--bg);border:1px solid #FF9F0155;border-radius:var(--r-card);padding:40px 32px;box-shadow:0 0 80px -30px var(--accent)}
   .preco .de{font-size:20px}
@@ -55,12 +56,11 @@
   @media (max-width:1024px){
     .amostras.seis,.inventario{grid-template-columns:1fr 1fr}
     .fluxo{grid-template-columns:1fr 1fr;row-gap:48px}.fluxo::before{display:none}
-    .prints{grid-template-columns:1fr 1fr}
   }
   @media (max-width:767px){
     .hero-curso h1{font-size:34px;letter-spacing:-1px}.hero-curso .sub{font-size:17px}
     .amostras.seis,.inventario,.fluxo{grid-template-columns:1fr}
-    .prints{gap:12px}.print,.print .vaga{border-radius:18px}
+    .prints{grid-template-columns:1fr;gap:18px}.print{border-radius:18px}
     .preco .por{font-size:72px}
     .garantia{flex-direction:column;text-align:center;padding:36px 24px;gap:24px}
   }
@@ -176,9 +176,9 @@
   <div class="wrap">
     <div class="conteudo">
       <span class="produto-nome"><b>Loja que Vende</b> · Curso online · Para lojistas e arquitetos</span>
-      <h1>Sua loja pode vender mais <span class="laranja">sem reforma cara.</span> O segredo está no layout.</h1>
-      <p class="sub">Projeto estratégico de layout para mais vendas: fluxo, zoneamento, pontos de decisão e iluminação, aplicados na sua loja em 4 aulas diretas.</p>
-      <span class="micro">4 aulas gravadas · 4 PDFs de apoio · Estudo de caso real</span>
+      <h1>Sua loja pode vender mais <span class="laranja">sem reforma cara.</span></h1>
+      <p class="sub">O segredo não está no produto, no preço nem no vendedor. Está em algo que acontece nos primeiros passos do cliente dentro da loja, e que quase nenhum lojista percebe.</p>
+      <span class="micro">Método em 4 aulas diretas · Criado por arquiteto especialista em varejo</span>
     </div>
   </div>
 </section>
@@ -226,10 +226,10 @@
     <h2 class="h2">Os 4 pilares do Método Loja que Vende</h2>
     <p class="bee-slogan">Do espaço à experiência: <b>arquitetura que impulsiona resultados.</b></p>
     <div class="metodo-grid">
-      <div class="passo-bee surge"><div class="letra">01</div><h3>Diagnóstico do fluxo</h3><p>Por onde o cliente entra, pra onde olha primeiro e onde desiste. E a vitrine que faz parar na calçada.</p></div>
-      <div class="passo-bee surge"><div class="letra">02</div><h3>Zoneamento comercial</h3><p>Produto de maior margem na zona quente, zona fria puxando o cliente pela loja inteira.</p></div>
-      <div class="passo-bee surge"><div class="letra">03</div><h3>Pontos de decisão</h3><p>Criar, de propósito, os lugares onde o cliente para, olha e considera comprar.</p></div>
-      <div class="passo-bee surge"><div class="letra">04</div><h3>Iluminação estratégica</h3><p>Luz de vitrine, spot no produto-foco, caixa sem sombra e provador que vende.</p></div>
+      <div class="passo-bee surge com-bg" style="--bg:url(../../img/caso-fachada.jpg)"><div class="letra">01</div><h3>Diagnóstico do fluxo</h3><p>Por onde o cliente entra, pra onde olha primeiro e onde desiste. E a vitrine que faz parar na calçada.</p></div>
+      <div class="passo-bee surge com-bg" style="--bg:url(../../img/caso-provador.jpg)"><div class="letra">02</div><h3>Zoneamento comercial</h3><p>Produto de maior margem na zona quente, zona fria puxando o cliente pela loja inteira.</p></div>
+      <div class="passo-bee surge com-bg" style="--bg:url(../../img/caso-pausa.jpg)"><div class="letra">03</div><h3>Pontos de decisão</h3><p>Criar, de propósito, os lugares onde o cliente para, olha e considera comprar.</p></div>
+      <div class="passo-bee surge com-bg" style="--bg:url(../../img/caso-luz.jpg)"><div class="letra">04</div><h3>Iluminação estratégica</h3><p>Luz de vitrine, spot no produto-foco, caixa sem sombra e provador que vende.</p></div>
     </div>
   </div>
 </section>
@@ -330,14 +330,11 @@
 <section class="sec centro" style="padding-top:40px">
   <div class="wrap">
     <span class="eyebrow">Depoimentos reais</span>
-    <h2 class="h2">Quem aplicou, recomenda</h2>
-    <p class="lead">Prints reais de conversas com lojistas e profissionais que aplicaram o Método Loja que Vende.</p>
-    <!-- Para publicar um depoimento: salve o print como img/depoimento-1.jpg (até -4.jpg). O espaço reservado some sozinho quando o arquivo existe. -->
+    <h2 class="h2">O que dizem sobre os materiais do Allan</h2>
+    <p class="lead">Prints reais de conversas com clientes que usaram outro material do Allan, sobre regularização de imóveis. Os depoimentos do Loja que Vende entram aqui assim que as primeiras turmas aplicarem o método.</p>
     <div class="prints">
-      <div class="print tem-foto surge"><img src="../../img/depoimento-1.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy" onerror="this.remove()"><div class="vaga"><span>Print do WhatsApp</span><b>Depoimento 1</b><span>em breve</span></div></div>
-      <div class="print tem-foto surge"><img src="../../img/depoimento-2.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy" onerror="this.remove()"><div class="vaga"><span>Print do WhatsApp</span><b>Depoimento 2</b><span>em breve</span></div></div>
-      <div class="print tem-foto surge"><img src="../../img/depoimento-3.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy" onerror="this.remove()"><div class="vaga"><span>Print do WhatsApp</span><b>Depoimento 3</b><span>em breve</span></div></div>
-      <div class="print tem-foto surge"><img src="../../img/depoimento-4.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy" onerror="this.remove()"><div class="vaga"><span>Print do WhatsApp</span><b>Depoimento 4</b><span>em breve</span></div></div>
+      <figure class="print surge"><img src="../../img/depoimento-1.jpg" alt="Print de depoimento de cliente no WhatsApp sobre o material de regularização" loading="lazy"></figure>
+      <figure class="print surge"><img src="../../img/depoimento-2.jpg" alt="Print de depoimento de cliente no WhatsApp sobre o material de regularização" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -357,7 +354,7 @@
 
 <section class="dupla inverte glow esq">
   <div class="wrap">
-    <div class="foto tem-foto premium surge" style="aspect-ratio:4/5;width:44%"><img src="../../img/allan-retrato.jpg" alt="Allan Porto, arquiteto e criador do Loja que Vende" loading="lazy" onerror="this.remove()"><div class="vaga"><span class="mono">AP</span></div></div>
+    <div class="foto tem-foto premium surge" style="aspect-ratio:1;width:46%"><img src="../../img/allan-autoridade.jpg" alt="Allan Porto, arquiteto e criador do Loja que Vende" loading="lazy" onerror="this.remove()"><div class="vaga"><span class="mono">AP</span></div></div>
     <div class="cartao surge">
       <span class="eyebrow" style="display:block">Sobre o autor</span>
       <h2>Feito por quem vive o varejo</h2>

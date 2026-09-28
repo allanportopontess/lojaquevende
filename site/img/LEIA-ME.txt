@@ -18,3 +18,5 @@ og-curso.jpg                Compartilhamento da página de vendas
 DEPOIMENTOS (página /loja-que-vende/curso/)
 Salve os prints como depoimento-1.jpg, depoimento-2.jpg, depoimento-3.jpg, depoimento-4.jpg
 (vertical, formato de tela de celular). O espaço reservado some sozinho quando o arquivo existe.
+allan-autoridade.jpg  Retrato de autoridade (seção Sobre da página de vendas), 800x800
+depoimento-1.jpg / depoimento-2.jpg   Prints de depoimentos (material de regularização)

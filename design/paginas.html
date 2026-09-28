@@ -29,6 +29,15 @@ h1{font-size:34px;letter-spacing:-1px;padding:18px 18px 4px}
 .leg span{display:flex;align-items:center;gap:6px}
 .leg i{width:14px;height:14px;display:inline-block}
 text{font-family:M,sans-serif}
+
+body.mist .area,body.mist .leg,body.mist .sub{filter:blur(9px);opacity:.75}
+body.mist .carimbo{filter:blur(3px)}
+.cadeado{display:none}
+body.mist .cadeado{display:flex;position:absolute;left:0;right:0;top:40%;flex-direction:column;align-items:center;gap:16px;z-index:5;text-align:center}
+.cadeado .c{width:120px;height:120px;border-radius:50%;background:#0D0D0D;display:grid;place-items:center;box-shadow:0 0 0 8px rgba(224,138,0,.18),0 20px 50px -10px rgba(0,0,0,.5)}
+.cadeado .c svg{width:52px;height:52px;fill:none;stroke:#FF9F01;stroke-width:1.8;stroke-linecap:round}
+.cadeado b{font-size:24px;letter-spacing:-.5px;color:#1d1d1d;background:rgba(244,239,230,.85);padding:6px 14px;border-radius:6px}
+.cadeado small{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#E08A00;font-weight:700;background:rgba(244,239,230,.85);padding:4px 10px;border-radius:4px}
 </style>
 </head>
 <body>
@@ -100,6 +109,13 @@ if (p === '1') {
     seta('M350 112 V146') + seta('M350 222 V256') + seta('M350 332 V366') + seta('M255 406 H229') + seta('M130 442 V476') + seta('M225 516 H251') + seta('M350 552 V586') + box + '</svg></div>' + carimbo('—');
 }
 document.getElementById('f').innerHTML = H;
+if (new URLSearchParams(location.search).get('m')) {
+  document.body.classList.add('mist');
+  var temas = {1:'Planta baixa estratégica',2:'Perspectiva 3D',3:'Projeto luminotécnico',4:'Fluxo do cliente'};
+  var d = document.createElement('div'); d.className = 'cadeado';
+  d.innerHTML = '<span class="c"><svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></span><b>' + temas[p] + '</b><small>Liberado dentro do curso</small>';
+  document.body.appendChild(d);
+}
 </script>
 </body>
 </html>
