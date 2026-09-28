@@ -113,6 +113,29 @@
     if (v) el.querySelector('[data-valor]').textContent = v; else el.hidden = true;
   });
 
+  /* ---------- Cronômetro da oferta (data real em SITE.OFERTA_ATE) ---------- */
+  (function () {
+    var fim = S.OFERTA_ATE ? new Date(S.OFERTA_ATE).getTime() : 0;
+    var alvos = document.querySelectorAll('[data-cronometro]');
+    var blocos = document.querySelectorAll('[data-com-cronometro]');
+    if (!alvos.length && !blocos.length) return;
+    function dois(n) { return String(n).padStart(2, '0'); }
+    function tick() {
+      var r = fim - Date.now();
+      if (!fim || r <= 0) { blocos.forEach(function (b) { b.hidden = true; }); document.body.classList.remove('tem-barra'); return; }
+      document.body.classList.add('tem-barra');
+      var t = Math.floor(r / 1000), d = Math.floor(t / 86400), h = Math.floor(t % 86400 / 3600), m = Math.floor(t % 3600 / 60), sg = t % 60;
+      alvos.forEach(function (el) {
+        el.querySelector('[data-d]').textContent = dois(d);
+        el.querySelector('[data-h]').textContent = dois(h);
+        el.querySelector('[data-m]').textContent = dois(m);
+        el.querySelector('[data-s]').textContent = dois(sg);
+      });
+      setTimeout(tick, 1000);
+    }
+    tick();
+  })();
+
   /* ---------- Foto de fundo do hero (só aparece se o arquivo existir) ---------- */
   document.querySelectorAll('.bgfoto[data-src]').forEach(function (d) {
     var src = window.innerWidth < 768 && d.getAttribute('data-src-mobile') ? d.getAttribute('data-src-mobile') : d.getAttribute('data-src');
@@ -120,7 +143,7 @@
     img.onload = function () {
       d.style.backgroundImage = 'url(' + src + ')';
       d.classList.add('ok');
-      var hero = d.closest('.hero');
+      var hero = d.closest('.hero, .hero-curso');
       hero.classList.add('com-foto');
       var arte = hero.querySelector('.arte'); if (arte) arte.classList.add('some');
     };

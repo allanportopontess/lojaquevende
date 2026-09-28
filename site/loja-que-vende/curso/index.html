@@ -17,12 +17,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/metropolis/700.css">
 <link rel="stylesheet" href="../../assets/base.css">
 <style>
-  .hero-curso{min-height:100vh;min-height:880px;display:flex;align-items:center;padding:150px 0 170px}
-  .hero-curso .grade{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;width:100%}
   .hero-curso h1{font-size:56px;line-height:1.07;letter-spacing:-2px}
   .hero-curso .sub{font-size:21px;line-height:1.45;font-weight:600;color:var(--text);margin:24px 0 38px;letter-spacing:-.3px;max-width:540px}
-  .hero-curso .capa{justify-self:center;width:min(100%,470px);filter:drop-shadow(0 50px 70px rgba(0,0,0,.75)) drop-shadow(0 0 60px rgba(255,159,1,.25));transform:rotate(2deg);transition:transform .8s}
-  .hero-curso .capa:hover{transform:rotate(0) scale(1.02)}
   .caixa img.capa{width:62%;height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.7))}
   .amostras.seis{grid-template-columns:repeat(3,1fr)}
   .amostra .selo-a{display:inline-block;background:#0D0D0D;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 9px;border-radius:4px;margin-bottom:10px}
@@ -57,23 +53,114 @@
   .selo-g span{font-size:12px;letter-spacing:2px;text-transform:uppercase}
   .garantia h3{font-size:28px;letter-spacing:-.6px;margin-bottom:10px}
   @media (max-width:1024px){
-    .hero-curso .grade{grid-template-columns:1fr}.hero-curso .capa{width:min(80%,380px);order:-1}
     .amostras.seis,.inventario{grid-template-columns:1fr 1fr}
     .fluxo{grid-template-columns:1fr 1fr;row-gap:48px}.fluxo::before{display:none}
     .prints{grid-template-columns:1fr 1fr}
   }
   @media (max-width:767px){
-    .hero-curso{min-height:0;padding:100px 0 110px}
     .hero-curso h1{font-size:34px;letter-spacing:-1px}.hero-curso .sub{font-size:17px}
     .amostras.seis,.inventario,.fluxo{grid-template-columns:1fr}
     .prints{gap:12px}.print,.print .vaga{border-radius:18px}
     .preco .por{font-size:72px}
     .garantia{flex-direction:column;text-align:center;padding:36px 24px;gap:24px}
   }
+
+  /* barra de oferta com cronômetro (fixa no topo) */
+  .barra{position:fixed;top:0;left:0;right:0;z-index:100;background:#150f04;border-bottom:1px solid #FF9F0133;font-size:15px;color:var(--text-strong);cursor:pointer}
+  .barra .wrap{display:flex;align-items:center;justify-content:center;gap:16px;min-height:48px;flex-wrap:wrap}
+  .barra s{color:var(--text)} .barra b{color:var(--accent)}
+  .relogio{display:inline-flex;gap:4px;align-items:center;font-weight:700;font-variant-numeric:tabular-nums}
+  .relogio span{background:var(--chip);color:var(--accent);border-radius:4px;padding:3px 7px;min-width:34px;text-align:center}
+  .relogio em{font-style:normal;font-size:11px;color:var(--text);margin:0 2px 0 -1px}
+  .barra .ir{color:var(--accent);font-weight:700;text-transform:uppercase;font-size:13px;letter-spacing:1px;border-bottom:1px solid var(--accent)}
+  body.tem-barra .menu{top:48px}
+  /* hero com foto */
+  .hero-curso{position:relative;min-height:100vh;min-height:880px;display:flex;align-items:center;padding:170px 0 170px;background:#0D0D0D}
+  .hero-curso .bgfoto{position:absolute;inset:0;background:right center/cover no-repeat;z-index:-2;opacity:0;transition:opacity .8s}
+  .hero-curso .bgfoto.ok{opacity:1}
+  .hero-curso::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0D0D0D 30%,rgba(13,13,13,.7) 48%,rgba(13,13,13,0) 66%),linear-gradient(0deg,#0D0D0D 0%,rgba(13,13,13,0) 22%);z-index:-1}
+  .hero-curso .conteudo{max-width:600px}
+  .hero-curso .wrap{width:100%}
+  /* livro animado */
+  .livro-cena{--w:min(270px,40vw);--h:calc(var(--w) * 1.486);position:relative;width:100%;height:calc(var(--h) + 60px);display:grid;place-items:center;perspective:1800px;cursor:pointer;outline:none}
+  .livro{position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:rotateY(-24deg) rotateX(4deg);transition:transform .6s}
+  .livro .sombra{position:absolute;left:4%;right:-6%;bottom:-26px;height:30px;background:radial-gradient(closest-side,rgba(0,0,0,.75),rgba(0,0,0,0));transform:translateZ(-40px)}
+  .livro .lombada{position:absolute;left:0;top:0;width:calc(var(--w) * .085);height:100%;transform-origin:left center;transform:rotateY(90deg);background:#0D0D0D center/cover}
+  .livro .base,.livro .leaf{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:left center}
+  .livro .base{background:#f4efe6 center/cover;border-radius:0 4px 4px 0;box-shadow:inset 8px 0 18px -8px rgba(0,0,0,.35),2px 2px 0 #e9e2d6,4px 4px 0 #d8d0c2,6px 6px 0 #c9c0b0,8px 9px 22px rgba(0,0,0,.55)}
+  .livro .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#f4efe6 center/cover;border-radius:0 4px 4px 0;overflow:hidden}
+  .livro .face::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.22),rgba(0,0,0,0) 12%,rgba(255,255,255,0) 88%,rgba(255,255,255,.08))}
+  .livro .face.verso{transform:rotateY(180deg);border-radius:4px 0 0 4px}
+  .livro .face.verso::after{background:linear-gradient(270deg,rgba(0,0,0,.22),rgba(0,0,0,0) 12%)}
+  .livro .l0{transform:translateZ(9px)} .livro .l1{transform:translateZ(6px)} .livro .l2{transform:translateZ(3px)}
+  .livro .l0 .frente{box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 50px -10px rgba(255,159,1,.35)}
+  .livro .l0 .frente::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7%;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(255,255,255,.08) 55%,rgba(0,0,0,.25))}
+  .livro-cena.abrindo .livro{animation:livroGira 7.2s ease-in-out}
+  .livro-cena.abrindo .l0{animation:vira0 7.2s ease-in-out}
+  .livro-cena.abrindo .l1{animation:vira1 7.2s ease-in-out}
+  .livro-cena.abrindo .l2{animation:vira2 7.2s ease-in-out}
+  @keyframes livroGira{0%{transform:rotateY(-24deg) rotateX(4deg)}9%,91%{transform:translateX(calc(var(--w) / 2)) rotateY(0) rotateX(8deg)}100%{transform:rotateY(-24deg) rotateX(4deg)}}
+  @keyframes vira0{0%,9%{transform:rotateY(0) translateZ(9px)}20%,82%{transform:rotateY(-178deg) translateZ(9px)}93%,100%{transform:rotateY(0) translateZ(9px)}}
+  @keyframes vira1{0%,30%{transform:rotateY(0) translateZ(6px)}41%,72%{transform:rotateY(-176deg) translateZ(6px)}82%,100%{transform:rotateY(0) translateZ(6px)}}
+  @keyframes vira2{0%,50%{transform:rotateY(0) translateZ(3px)}61%,62%{transform:rotateY(-174deg) translateZ(3px)}72%,100%{transform:rotateY(0) translateZ(3px)}}
+  .livro-dica{position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);opacity:.8;transition:opacity .4s}
+  .livro-cena.abrindo .livro-dica{opacity:0}
+  /* mini player nas miniaturas */
+  .amostra .tem-foto{overflow:hidden;cursor:pointer}
+  .amostra .tem-foto img{transition:transform 2.2s cubic-bezier(.2,.7,.2,1),filter .6s}
+  .amostra .tem-foto::before{content:"";position:absolute;z-index:3;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(13,13,13,.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%23FF9F01'/%3E%3C/svg%3E") center/26px no-repeat;border:2px solid #FF9F01;backdrop-filter:blur(4px);box-shadow:0 0 30px -4px rgba(255,159,1,.7);transition:transform .4s,opacity .4s}
+  .amostra .tem-foto::after{content:"";position:absolute;z-index:3;left:0;bottom:0;height:4px;width:0;background:linear-gradient(90deg,#FF9F01,#ffd27a);box-shadow:0 0 12px #FF9F01}
+  .amostra .brilho{position:absolute;z-index:2;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.18) 48%,transparent 62%);transform:translateX(-120%);pointer-events:none}
+  .amostra:hover .tem-foto img{transform:scale(1.08) translateY(-1.5%);filter:saturate(1.1) contrast(1.04)}
+  .amostra:hover .tem-foto::before{transform:scale(.6);opacity:0}
+  .amostra:hover .tem-foto::after{width:100%;transition:width 2s linear}
+  .amostra:hover .brilho{transform:translateX(120%);transition:transform 1.6s ease}
+  /* público: ícones que se desenham */
+  .publico .dif{transition:transform .5s,border-color .5s,box-shadow .5s}
+  .publico .dif:hover{transform:translateY(-6px);border-color:#FF9F0166;box-shadow:0 30px 60px -30px rgba(255,159,1,.45)}
+  .publico .dif .ico{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;background:var(--accent-25);transition:transform .5s}
+  .publico .dif:hover .ico{transform:rotate(-6deg) scale(1.08)}
+  .publico .dif svg{width:36px;height:36px}
+  .publico .dif svg *{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset 1.6s ease .2s}
+  .publico .dif.visivel svg *{stroke-dashoffset:0}
+  .publico .dif:hover svg *{animation:redesenha 1.4s ease}
+  @keyframes redesenha{0%{stroke-dashoffset:140}100%{stroke-dashoffset:0}}
+  /* retrato premium */
+  .foto.premium{border:1.5px solid rgba(217,164,65,.6);box-shadow:0 0 0 7px rgba(217,164,65,.06),0 40px 90px -30px rgba(255,170,40,.55),0 0 120px -40px rgba(255,190,90,.5)}
+  .foto.premium::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:2;pointer-events:none;box-shadow:inset 0 0 70px rgba(255,190,90,.16)}
+  /* oferta: comparativo */
+  .compara{list-style:none;margin:26px 0 8px;display:grid;gap:10px}
+  .compara li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;background:rgba(13,13,13,.6);border:1px solid var(--line-soft);border-radius:12px;color:var(--text-strong);font-size:16px}
+  .compara li s{color:#ff6b5b;font-weight:700;white-space:nowrap}
+  .compara li.voce{border-color:#FF9F0188;background:rgba(255,159,1,.08)}
+  .compara li.voce b{color:var(--accent);font-size:20px;white-space:nowrap}
+  .preco .tag-lanc{display:inline-block;background:var(--accent-25);color:var(--accent);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .preco .cron{margin:0 0 22px;font-size:13px;color:var(--text)}
+  .preco .cron .relogio{margin-top:8px}
+  @media (max-width:767px){
+    .barra{font-size:12.5px}.barra .wrap{gap:8px;min-height:44px;padding:6px 10px;flex-wrap:nowrap}.barra .txt-longo,.barra .ir{display:none}
+    .relogio span{min-width:26px;padding:3px 4px}
+    body.tem-barra .menu{top:44px}
+    .hero-curso{min-height:0;padding:120px 0 110px;align-items:flex-end}
+    .hero-curso .bgfoto{background-position:center top;background-size:100% auto}
+    .hero-curso::after{background:linear-gradient(0deg,#0D0D0D 42%,rgba(13,13,13,.55) 60%,rgba(13,13,13,0) 76%)}
+    .hero-curso.com-foto .conteudo{padding-top:300px}
+    .livro-cena{--w:min(210px,42vw)}
+  }
+  @media (prefers-reduced-motion:reduce){.livro-cena.abrindo .livro,.livro-cena.abrindo .leaf{animation:none}}
 </style>
 <script src="../../assets/config.js"></script>
 </head>
 <body data-raiz="../../">
+
+<div class="barra" data-com-cronometro onclick="location.hash='oferta'" role="region" aria-label="Oferta de lançamento">
+  <div class="wrap">
+    <span class="txt-longo">Preço de lançamento ·</span>
+    <span>De <s>R$ 397</s> por <b>R$ 97</b><span class="txt-longo"> · termina em</span></span>
+    <span class="relogio" data-cronometro aria-live="off"><span data-d>00</span><em>d</em><span data-h>00</span>:<span data-m>00</span>:<span data-s>00</span></span>
+    <a class="ir" href="#oferta">Garantir agora</a>
+  </div>
+</div>
 
 <header class="menu menu-ativo">
   <div class="wrap">
@@ -84,16 +171,15 @@
 
 <main id="topo">
 
-<section class="hero-curso glow">
-  <div class="wrap grade">
-    <div>
+<section class="hero-curso">
+  <div class="bgfoto" data-src="../../img/hero-curso.jpg" data-src-mobile="../../img/hero-curso-mobile.jpg"></div>
+  <div class="wrap">
+    <div class="conteudo">
       <span class="produto-nome"><b>Loja que Vende</b> · Curso online · Para lojistas e arquitetos</span>
       <h1>Sua loja pode vender mais <span class="laranja">sem reforma cara.</span> O segredo está no layout.</h1>
       <p class="sub">Projeto estratégico de layout para mais vendas: fluxo, zoneamento, pontos de decisão e iluminação, aplicados na sua loja em 4 aulas diretas.</p>
-      <a class="btn" href="#oferta">Quero transformar minha loja</a>
       <span class="micro">4 aulas gravadas · 4 PDFs de apoio · Estudo de caso real</span>
     </div>
-    <img class="capa" src="../../img/capa-loja-que-vende.webp" alt="Capa do curso Loja que Vende, de Allan Porto Arquitetura" width="1022" height="1453">
   </div>
 </section>
 
@@ -105,7 +191,7 @@
         <ul>
           <li><span class="check"></span>4 aulas gravadas, direto ao ponto</li>
           <li><span class="check"></span>4 PDFs de apoio para aplicar</li>
-          <li><span class="check"></span>Estudo de caso real: Impório Fitness</li>
+          <li><span class="check"></span>Estudo de caso real: loja de moda fitness</li>
           <li><span class="check"></span>Exemplos para 4 segmentos de varejo</li>
           <li><span class="check"></span>Acesso pela área de membros da Hotmart</li>
         </ul>
@@ -150,7 +236,18 @@
 
 <section class="dupla glow">
   <div class="wrap">
-    <div class="foto caixa surge" style="aspect-ratio:1"><img class="capa" src="../../img/capa-loja-que-vende.webp" alt="Loja que Vende, box do curso" loading="lazy"></div>
+    <div class="foto caixa surge" style="aspect-ratio:auto;background:none">
+      <div class="livro-cena" id="livro" tabindex="0" role="button" aria-label="Folhear o curso Loja que Vende: planta baixa, 3D, iluminação e fluxograma">
+        <div class="livro">
+          <div class="sombra"></div>
+          <div class="base" style="background-image:url(../../img/livro-p4.jpg)"></div>
+          <div class="leaf l2"><div class="face frente" style="background-image:url(../../img/livro-p3.jpg)"></div><div class="face verso" style="background-image:url(../../img/livro-p4.jpg)"></div></div>
+          <div class="leaf l1"><div class="face frente" style="background-image:url(../../img/livro-p1.jpg)"></div><div class="face verso" style="background-image:url(../../img/livro-p2.jpg)"></div></div>
+          <div class="leaf l0"><div class="face frente" style="background-image:url(../../img/livro-capa.jpg)"></div><div class="face verso" style="background:#141414"></div></div>
+        </div>
+        <span class="livro-dica">Passe o mouse para folhear</span>
+      </div>
+    </div>
     <div class="cartao surge">
       <span class="chip">Novo · 2026</span>
       <span class="eyebrow" style="display:block">O curso</span>
@@ -172,12 +269,12 @@
     <span class="eyebrow">Entregáveis</span>
     <h2 class="h2">Veja exatamente o que você recebe</h2>
     <div class="amostras seis">
-      <article class="amostra surge"><div class="tem-foto"><img src="../../img/entregavel-aula1.jpg" alt="Aula 01: diagnóstico do fluxo e vitrine" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 01</b></div></div><div class="txt"><span class="selo-a">Aula 01 + PDF</span><h3>Diagnóstico do fluxo + vitrine</h3><p>O trajeto natural do cliente e a regra da vitrine com 1 produto-foco. PDF: checklist de vitrine.</p></div></article>
-      <article class="amostra surge"><div class="tem-foto"><img src="../../img/entregavel-aula2.jpg" alt="Aula 02: zoneamento comercial" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 02</b></div></div><div class="txt"><span class="selo-a">Aula 02 + PDF</span><h3>Zoneamento comercial</h3><p>Zona quente × zona fria e onde colocar cada produto. PDF: template de zoneamento para preencher.</p></div></article>
-      <article class="amostra surge"><div class="tem-foto"><img src="../../img/entregavel-aula3.jpg" alt="Aula 03: pontos de decisão" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 03</b></div></div><div class="txt"><span class="selo-a">Aula 03 + PDF</span><h3>Pontos de decisão</h3><p>A ilha de pausa que faz o cliente parar no meio do trajeto. PDF: checklist de ponto de decisão.</p></div></article>
-      <article class="amostra surge"><div class="tem-foto"><img src="../../img/entregavel-aula4.jpg" alt="Aula 04: iluminação estratégica" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 04</b></div></div><div class="txt"><span class="selo-a">Aula 04 + PDF</span><h3>Iluminação estratégica</h3><p>Luz em camadas: vitrine, produto-foco, caixa e provador. PDF: guia de iluminação por segmento.</p></div></article>
-      <article class="amostra surge"><div class="tem-foto"><img src="../../img/entregavel-pdfs.jpg" alt="Os 4 PDFs de apoio do curso" loading="lazy" onerror="this.remove()"><div class="vaga"><b>PDFs</b></div></div><div class="txt"><span class="selo-a">Material de apoio</span><h3>4 PDFs práticos</h3><p>Um PDF para cada aula, pra imprimir e aplicar na loja no mesmo dia.</p></div></article>
-      <article class="amostra surge"><div class="tem-foto"><img src="../../img/entregavel-caso.jpg" alt="Estudo de caso real Impório Fitness" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Estudo de caso</b></div></div><div class="txt"><span class="selo-a">Bônus</span><h3>Estudo de caso: Impório Fitness</h3><p>Os 4 pilares aplicados numa loja real de 19,52 m² em Caruaru/PE.</p></div></article>
+      <article class="amostra surge"><div class="tem-foto"><span class="brilho"></span><img src="../../img/entregavel-aula1.jpg" alt="Aula 01: diagnóstico do fluxo e vitrine" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 01</b></div></div><div class="txt"><span class="selo-a">Aula 01 + PDF</span><h3>Diagnóstico do fluxo + vitrine</h3><p>O trajeto natural do cliente e a regra da vitrine com 1 produto-foco. PDF: checklist de vitrine.</p></div></article>
+      <article class="amostra surge"><div class="tem-foto"><span class="brilho"></span><img src="../../img/entregavel-aula2.jpg" alt="Aula 02: zoneamento comercial" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 02</b></div></div><div class="txt"><span class="selo-a">Aula 02 + PDF</span><h3>Zoneamento comercial</h3><p>Zona quente × zona fria e onde colocar cada produto. PDF: template de zoneamento para preencher.</p></div></article>
+      <article class="amostra surge"><div class="tem-foto"><span class="brilho"></span><img src="../../img/entregavel-aula3.jpg" alt="Aula 03: pontos de decisão" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 03</b></div></div><div class="txt"><span class="selo-a">Aula 03 + PDF</span><h3>Pontos de decisão</h3><p>A ilha de pausa que faz o cliente parar no meio do trajeto. PDF: checklist de ponto de decisão.</p></div></article>
+      <article class="amostra surge"><div class="tem-foto"><span class="brilho"></span><img src="../../img/entregavel-aula4.jpg" alt="Aula 04: iluminação estratégica" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Aula 04</b></div></div><div class="txt"><span class="selo-a">Aula 04 + PDF</span><h3>Iluminação estratégica</h3><p>Luz em camadas: vitrine, produto-foco, caixa e provador. PDF: guia de iluminação por segmento.</p></div></article>
+      <article class="amostra surge"><div class="tem-foto"><span class="brilho"></span><img src="../../img/entregavel-pdfs.jpg" alt="Os 4 PDFs de apoio do curso" loading="lazy" onerror="this.remove()"><div class="vaga"><b>PDFs</b></div></div><div class="txt"><span class="selo-a">Material de apoio</span><h3>4 PDFs práticos</h3><p>Um PDF para cada aula, pra imprimir e aplicar na loja no mesmo dia.</p></div></article>
+      <article class="amostra surge"><div class="tem-foto"><span class="brilho"></span><img src="../../img/entregavel-caso.jpg" alt="Estudo de caso real de loja de moda fitness" loading="lazy" onerror="this.remove()"><div class="vaga"><b>Estudo de caso</b></div></div><div class="txt"><span class="selo-a">Bônus</span><h3>Estudo de caso: loja de moda fitness</h3><p>Os 4 pilares aplicados numa loja real de 19,52 m² em Caruaru/PE.</p></div></article>
     </div>
   </div>
 </section>
@@ -196,7 +293,7 @@
       <div class="item"><span class="n">06</span>PDF: template de zoneamento</div>
       <div class="item"><span class="n">07</span>PDF: checklist de ponto de decisão</div>
       <div class="item"><span class="n">08</span>PDF: guia de iluminação por segmento</div>
-      <div class="item"><span class="n">09</span>Estudo de caso: Impório Fitness</div>
+      <div class="item"><span class="n">09</span>Estudo de caso: loja de moda fitness</div>
     </div>
     <a class="btn" href="#oferta">Quero o curso completo</a>
   </div>
@@ -250,17 +347,17 @@
     <span class="eyebrow">Feito para você</span>
     <h2 class="h2">Para quem é este curso</h2>
     <p class="lead">Se você tem, gerencia ou projeta uma loja física, o Loja que Vende foi feito para o seu dia a dia.</p>
-    <div class="difs">
-      <div class="dif surge"><svg viewBox="0 0 24 24"><path d="M3 10h18l-2 10H5Z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg><h3>Donos de loja</h3><p>Que têm movimento, mas sentem que a loja não vende o que devia, e não podem pagar um projeto completo agora.</p></div>
-      <div class="dif surge"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><h3>Gerentes e equipes</h3><p>Que cuidam da exposição, da vitrine e da organização no dia a dia e querem critério técnico.</p></div>
-      <div class="dif surge"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg><h3>Arquitetos e designers</h3><p>Que querem entregar projetos comerciais pensados para vender, não só para ficar bonitos.</p></div>
+    <div class="difs publico">
+      <div class="dif surge"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 9.5 4.6 4h14.8L21 9.5"/><path d="M3 9.5c0 1.5 1.3 2.7 3 2.7s3-1.2 3-2.7c0 1.5 1.3 2.7 3 2.7s3-1.2 3-2.7c0 1.5 1.3 2.7 3 2.7s3-1.2 3-2.7"/><path d="M4.5 12v8h15v-8"/><path d="M9.5 20v-5h5v5"/></svg></div><h3>Donos de loja</h3><p>Que têm movimento, mas sentem que a loja não vende o que devia, e não podem pagar um projeto completo agora.</p></div>
+      <div class="dif surge"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="7.5" r="3.2"/><path d="M3 20c.6-3.6 3-5.6 6-5.6s5.4 2 6 5.6"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.8 4.5 4.6"/></svg></div><h3>Gerentes e equipes comerciais</h3><p>Que cuidam da exposição, da vitrine e da organização no dia a dia e querem critério técnico para vender mais.</p></div>
+      <div class="dif surge"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.6"/><path d="M11.2 6 6 20.5"/><path d="M12.8 6 18 20.5"/><path d="M7.6 15.8c2.8 1.3 6 1.3 8.8 0"/><path d="M3 21h18"/></svg></div><h3>Arquitetos e designers</h3><p>Que querem entregar projetos comerciais pensados para vender, não só para ficar bonitos.</p></div>
     </div>
   </div>
 </section>
 
 <section class="dupla inverte glow esq">
   <div class="wrap">
-    <div class="foto tem-foto surge" style="aspect-ratio:4/5;width:44%"><img src="../../img/allan-retrato.jpg" alt="Allan Porto, arquiteto e criador do Loja que Vende" loading="lazy" onerror="this.remove()"><div class="vaga"><span class="mono">AP</span></div></div>
+    <div class="foto tem-foto premium surge" style="aspect-ratio:4/5;width:44%"><img src="../../img/allan-retrato.jpg" alt="Allan Porto, arquiteto e criador do Loja que Vende" loading="lazy" onerror="this.remove()"><div class="vaga"><span class="mono">AP</span></div></div>
     <div class="cartao surge">
       <span class="eyebrow" style="display:block">Sobre o autor</span>
       <h2>Feito por quem vive o varejo</h2>
@@ -282,20 +379,29 @@
       <div>
         <span class="eyebrow">Oferta especial</span>
         <h2>Quanto vale a sua loja <span class="laranja">vendendo o que devia?</span></h2>
+        <p>Compare com o que você gastaria para resolver de outro jeito:</p>
+        <ul class="compara">
+          <li><span>Contratar um arquiteto ou designer</span><s>R$ 5.000</s></li>
+          <li><span>Contratar consultoria especializada</span><s>R$ 3.000</s></li>
+          <li><span>Curso de interiores</span><s>R$ 4.000</s></li>
+          <li class="voce"><span>Método Loja que Vende</span><b>R$ 97</b></li>
+        </ul>
         <p>Um projeto comercial completo custa caro. O <span class="destaque">Loja que Vende</span> te dá o método para corrigir o que mais custa venda hoje, com os seus próprios recursos.</p>
         <ul class="lista-check">
           <li><span class="check"></span>4 aulas gravadas, direto ao ponto</li>
           <li><span class="check"></span>4 PDFs de apoio para aplicar</li>
-          <li><span class="check"></span>Estudo de caso real Impório Fitness</li>
+          <li><span class="check"></span>Estudo de caso real de loja de moda fitness</li>
           <li><span class="check"></span>Garantia de 7 dias</li>
         </ul>
       </div>
       <div class="preco">
         <img class="mini-capa" src="../../img/capa-loja-que-vende-p.webp" alt="" loading="lazy">
-        <div class="de" data-preco="de">De <s>R$ <span data-valor></span></s> por</div>
+        <span class="tag-lanc">Preço promocional de lançamento</span>
+        <div class="de" data-preco="de">De <s>R$ <span data-valor></span></s> por apenas</div>
         <div class="por" data-preco="por"><small>R$</small><span data-valor></span></div>
         <div class="parc" data-preco="parcelas">ou <span data-valor></span></div>
-        <div class="unico">Pagamento seguro pela Hotmart · Acesso imediato</div>
+        <div class="unico">Pagamento único · Acesso imediato</div>
+        <div class="cron" data-com-cronometro>Este preço termina em<br><span class="relogio" data-cronometro><span data-d>00</span><em>d</em><span data-h>00</span>:<span data-m>00</span>:<span data-s>00</span></span></div>
         <a class="btn" href="#" data-checkout target="_blank" rel="noopener">Quero o Loja que Vende</a>
         <div class="selos">
           <span><span class="check"></span>Compra 100% segura</span>
@@ -337,9 +443,24 @@
   </div>
 </footer>
 
-<div class="cta-fixo"><a class="btn" href="#oferta">Quero o Loja que Vende</a></div>
+<div class="cta-fixo"><a class="btn" href="#oferta">Quero o Loja que Vende por R$ 97</a></div>
 
 <script src="../../assets/app.js"></script>
+<script>
+(function () {
+  var cena = document.getElementById('livro'); if (!cena) return;
+  function folhear() { if (cena.classList.contains('abrindo')) return; cena.classList.add('abrindo'); }
+  cena.querySelector('.l0').addEventListener('animationend', function () { cena.classList.remove('abrindo'); });
+  cena.addEventListener('mouseenter', folhear);
+  cena.addEventListener('click', folhear);
+  cena.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); folhear(); } });
+  // em telas de toque (sem hover), folheia uma vez quando aparece
+  if ('IntersectionObserver' in window && !matchMedia('(hover:hover)').matches) {
+    var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { setTimeout(folhear, 500); io.disconnect(); } }, { threshold: .6 });
+    io.observe(cena);
+  }
+})();
+</script>
 <script>LQV.pixel('track', 'ViewContent', { content_name: 'Loja que Vende', content_type: 'product' });</script>
 </body>
 </html>

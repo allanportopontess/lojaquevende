@@ -21,9 +21,13 @@ window.SITE = {
   CHECKOUT_URL: "https://pay.hotmart.com/A107800232K", // checkout Hotmart do curso Loja que Vende
 
   // Preço exibido na página de vendas (deixe "" para esconder e mostrar só o botão)
-  PRECO_DE: "",            // ex.: "997"
-  PRECO_POR: "",           // ex.: "497"
-  PARCELAS: "",            // ex.: "12x de R$ 51,40"
+  PRECO_DE: "397",         // preço âncora (aparece riscado)
+  PRECO_POR: "97",         // preço promocional de lançamento
+  PARCELAS: "",            // ex.: "12x de R$ 9,74" (vazio = esconde)
+
+  // Fim da oferta de lançamento (cronômetro). Formato: "AAAA-MM-DDTHH:MM:SS-03:00"
+  // Quando a data passa, o cronômetro some sozinho. Vazio = sem cronômetro.
+  OFERTA_ATE: "2026-10-05T23:59:59-03:00",
 
   // Produtos exibidos na home e na página de links (ordem = ordem na tela)
   PRODUCTS: [

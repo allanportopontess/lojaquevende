@@ -4,10 +4,10 @@ hero.jpg              Topo da home (desktop), 2400x1350, Allan à direita dissol
 hero-mobile.jpg       Topo da home (celular), 1000x1000
 allan-retrato.jpg     "Sobre" e página do checklist, 4:5
 allan-avatar.jpg      Página de links, 400x400
-imporio-fachada.jpg   Dobra "Projeto real" (fachada e vitrine)
-imporio-pausa.jpg     Galeria: ponto de pausa (puff, console, araras)
-imporio-provador.jpg  Galeria: circulação pelo provador
-imporio-luz.jpg       Galeria: luz em camadas
+caso-fachada.jpg   Dobra "Projeto real" (fachada e vitrine)
+caso-pausa.jpg     Galeria: ponto de pausa (puff, console, araras)
+caso-provador.jpg  Galeria: circulação pelo provador
+caso-luz.jpg       Galeria: luz em camadas
 og.jpg                Imagem ao compartilhar o link (WhatsApp/Instagram), 1200x630
 
 CURSO LOJA QUE VENDE

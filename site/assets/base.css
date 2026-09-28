@@ -292,3 +292,9 @@ footer .aviso{flex-basis:100%;font-size:12.5px;color:#777;margin-top:10px}
 .produto .arte{position:relative}
 .produto .arte img.capa{position:absolute;top:7%;bottom:7%;left:0;right:0;margin:auto;height:86%;width:auto;max-width:90%;object-fit:contain;filter:drop-shadow(0 20px 30px rgba(0,0,0,.6));transition:transform .5s}
 a.produto:hover .arte img.capa{transform:scale(1.04) rotate(-1deg)}
+
+/* mantém a centralização vertical das fotos nas seções lado a lado durante a animação de entrada */
+@media (min-width:1025px){
+  .dupla .foto.surge{transform:translateY(calc(-50% + 24px))}
+  .dupla .foto.surge.visivel{transform:translateY(-50%)}
+}

@@ -115,7 +115,7 @@ var planta = function (heat) {
 var H = '';
 if (v === 'aula1') {
   H = cab('AULA 01', 'Diagnóstico do fluxo + vitrine', 'Por onde o cliente entra, <span>pra onde olha e onde desiste</span>') +
-    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 01</span><span>Fluxo e vitrine</span></div><img class="foto" src="' + IMG + 'imporio-fachada.jpg">' +
+    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 01</span><span>Fluxo e vitrine</span></div><img class="foto" src="' + IMG + 'caso-fachada.jpg">' +
     '<svg class="anot" viewBox="0 0 956 576" preserveAspectRatio="none"><ellipse cx="455" cy="440" rx="120" ry="110" fill="none" stroke="#FF9F01" stroke-width="5"/><text x="600" y="330" font-size="30" fill="#FF9F01">1 produto-foco</text><path d="M595 340 L560 380" stroke="#FF9F01" stroke-width="4"/><path d="M150 560 C 200 470 280 470 330 500" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="12 9"/><text x="70" y="470" font-size="26" fill="#fff">olhar da calçada</text></svg>', 34, ['03:24', '10:00']) +
     pdf('Checklist de vitrine', ['Máximo 3 itens em destaque', 'Luz mais forte que a rua', 'Um tema por vez', 'Troca a cada 15 dias', 'Preço visível e limpo'], '01');
 } else if (v === 'aula2') {
@@ -125,12 +125,12 @@ if (v === 'aula1') {
     pdf('Template de zoneamento', ['Mapeie a entrada e o giro', 'Marque a zona quente', 'Posicione o item de maior margem', 'Use a zona fria para puxar o fluxo', 'Revise por estação'], '02');
 } else if (v === 'aula3') {
   H = cab('AULA 03', 'Pontos de decisão', 'Onde o cliente <span>para e considera</span> comprar') +
-    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 03</span><span>Ilha de pausa</span></div><img class="foto" src="' + IMG + 'imporio-pausa.jpg">' +
+    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 03</span><span>Ilha de pausa</span></div><img class="foto" src="' + IMG + 'caso-pausa.jpg">' +
     '<svg class="anot" viewBox="0 0 956 576" preserveAspectRatio="none"><ellipse cx="520" cy="470" rx="150" ry="70" fill="none" stroke="#FF9F01" stroke-width="5"/><ellipse cx="290" cy="400" rx="120" ry="90" fill="none" stroke="#FF9F01" stroke-width="5" stroke-dasharray="12 8"/><text x="600" y="380" font-size="30" fill="#FF9F01">ponto de pausa</text><text x="120" y="260" font-size="26" fill="#fff">console de dobrados</text></svg>', 46, ['04:36', '10:00']) +
     pdf('Checklist de ponto de decisão', ['1 ponto no meio do fluxo', 'Preço ou oferta visível', 'Produto que combina junto', 'Espaço para parar sem travar', 'Troca de exposição semanal'], '03');
 } else if (v === 'aula4') {
   H = cab('AULA 04', 'Iluminação estratégica', 'Luz que <span>guia o olhar</span>, não só decora') +
-    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 04</span><span>Luz em camadas</span></div><img class="foto" src="' + IMG + 'imporio-luz.jpg">' +
+    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 04</span><span>Luz em camadas</span></div><img class="foto" src="' + IMG + 'caso-luz.jpg">' +
     '<svg class="anot" viewBox="0 0 956 576" preserveAspectRatio="none"><defs><linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/></linearGradient></defs><path d="M880 40 L760 520 L956 520 L956 90 Z" fill="url(#c)"/><path d="M455 55 L360 420 L560 420 Z" fill="url(#c)"/><text x="600" y="120" font-size="28" fill="#FF9F01">luz de destaque</text><text x="60" y="130" font-size="24" fill="#fff">trilho de spots</text></svg>', 80, ['08:02', '10:00']) +
     pdf('Guia de iluminação por segmento', ['Vitrine mais forte que a rua', 'Spot no produto-foco', 'Caixa sem sombra', 'Luz quente no provador', 'Branco neutro em alimentos'], '04');
 } else if (v === 'pdfs') {
@@ -142,9 +142,9 @@ if (v === 'aula1') {
         '<div style="display:flex;gap:10px;margin-top:22px"><i style="width:20px;height:20px;border:2px solid #FF9F01;border-radius:4px;background:#FF9F01"></i><i style="width:20px;height:20px;border:2px solid #FF9F01;border-radius:4px"></i><i style="width:20px;height:20px;border:2px solid #FF9F01;border-radius:4px"></i></div></div></div>';
     }).join('') + '</div>';
 } else if (v === 'caso') {
-  H = cab('BÔNUS', 'Estudo de caso real', 'Impório Fitness: <span>o método aplicado</span> numa loja real') +
-    '<div class="tablet"><div class="slide"><img class="foto" style="filter:none" src="' + IMG + 'imporio-provador.jpg"><div class="player-top"><span><b>Estudo de caso</b></span><span>Caruaru · PE</span></div></div></div>' +
-    '<div class="card-caso"><small>Projeto real</small><b>Impório Fitness</b><div class="st"><div><strong>19,52</strong>m² de loja</div><div><strong>4</strong>pilares aplicados</div></div></div>';
+  H = cab('BÔNUS', 'Estudo de caso real', 'Loja de moda fitness: <span>o método aplicado</span> numa loja real') +
+    '<div class="tablet"><div class="slide"><img class="foto" style="filter:none" src="' + IMG + 'caso-provador.jpg"><div class="player-top"><span><b>Estudo de caso</b></span><span>Caruaru · PE</span></div></div></div>' +
+    '<div class="card-caso"><small>Projeto real</small><b>Loja de moda fitness</b><div class="st"><div><strong>19,52</strong>m² de loja</div><div><strong>4</strong>pilares aplicados</div></div></div>';
 }
 document.getElementById('app').innerHTML = H;
 </script>
