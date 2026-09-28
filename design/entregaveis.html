@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!-- Gera as imagens dos entregáveis (1400x1050). Uso: entregaveis.html?v=aula1|aula2|aula3|aula4|pdfs|caso -->
+<style>
+@font-face{font-family:M;src:url(../isca/fonts/metropolis-latin-400-normal.woff2)}
+@font-face{font-family:M;src:url(../isca/fonts/metropolis-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:M;src:url(../isca/fonts/metropolis-latin-700-normal.woff2);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1400px;height:1050px;overflow:hidden}
+body{font-family:M,sans-serif;color:#F3F3F3;background:#0D0D0D;position:relative}
+.bg{position:absolute;inset:0;background:
+  radial-gradient(60% 55% at 72% 60%,rgba(255,159,1,.34),rgba(255,159,1,0) 70%),
+  radial-gradient(40% 40% at 10% 10%,rgba(255,159,1,.10),rgba(255,159,1,0) 70%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.028) 0 1px,transparent 1px 70px),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.028) 0 1px,transparent 1px 70px),#0D0D0D}
+.tag{position:absolute;left:70px;top:62px;display:flex;gap:14px;align-items:center}
+.tag .n{background:#FF9F01;color:#0D0D0D;font-weight:700;font-size:22px;letter-spacing:2px;padding:10px 16px;border-radius:6px}
+.tag .t{font-size:20px;letter-spacing:5px;text-transform:uppercase;color:#A7A7A7}
+.titulo{position:absolute;left:70px;top:128px;font-size:54px;font-weight:700;letter-spacing:-1.5px;line-height:1.05;max-width:900px}
+.titulo span{color:#FF9F01}
+
+/* notebook */
+.laptop{position:absolute;left:120px;top:300px;width:1000px}
+.tela{position:relative;width:1000px;height:620px;background:#050505;border-radius:22px 22px 6px 6px;padding:22px;box-shadow:0 0 0 2px #2a2a2a,0 40px 90px -20px rgba(0,0,0,.9),0 0 120px -40px #FF9F01}
+.tela .cam{position:absolute;top:8px;left:50%;width:8px;height:8px;border-radius:50%;background:#1f1f1f;transform:translateX(-50%)}
+.slide{position:relative;width:100%;height:100%;border-radius:6px;overflow:hidden;background:#111}
+.base{width:1160px;height:26px;margin-left:-80px;background:linear-gradient(#2d2d2d,#151515);border-radius:0 0 26px 26px;position:relative}
+.base::before{content:"";position:absolute;left:50%;top:0;width:160px;height:10px;transform:translateX(-50%);background:#0e0e0e;border-radius:0 0 12px 12px}
+
+/* cabeçalho do player */
+.player-top{position:absolute;left:0;right:0;top:0;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,0));z-index:3;font-size:15px;letter-spacing:3px;text-transform:uppercase}
+.player-top b{color:#FF9F01}
+.player-bot{position:absolute;left:0;right:0;bottom:0;height:64px;padding:0 22px;display:flex;align-items:center;gap:16px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.9));z-index:3;font-size:14px;color:#ccc}
+.barra{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.2);position:relative}
+.barra i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#FF9F01}
+.barra i::after{content:"";position:absolute;right:-7px;top:-5px;width:15px;height:15px;border-radius:50%;background:#FF9F01}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:110px;height:110px;border-radius:50%;background:rgba(13,13,13,.55);border:3px solid #FF9F01;display:grid;place-items:center;z-index:4;box-shadow:0 0 60px -6px rgba(255,159,1,.8);backdrop-filter:blur(4px)}
+.play::after{content:"";border-left:36px solid #FF9F01;border-top:22px solid transparent;border-bottom:22px solid transparent;margin-left:9px}
+.foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.78) contrast(1.05)}
+svg.anot{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+.anot text{font-family:M,sans-serif;font-weight:700}
+
+/* PDF flutuante */
+.pdf{position:absolute;right:70px;bottom:120px;width:330px;height:430px;background:#F3F3F3;border-radius:10px;color:#1a1a1a;box-shadow:0 40px 80px -20px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.08);transform:rotate(4deg);overflow:hidden;z-index:6}
+.pdf .topo{background:#0D0D0D;color:#F3F3F3;padding:20px 22px 18px;position:relative;overflow:hidden}
+.pdf .topo::after{content:"";position:absolute;width:180px;height:140px;right:-50px;top:-50px;border-radius:50%;background:#FF9F01;opacity:.35;filter:blur(30px)}
+.pdf .topo small{display:block;color:#FF9F01;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.pdf .topo b{display:block;font-size:24px;line-height:1.1;margin-top:8px;letter-spacing:-.5px;position:relative;z-index:1}
+.pdf ul{list-style:none;padding:18px 22px;display:grid;gap:11px}
+.pdf li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600;color:#333}
+.pdf li i{flex:none;width:18px;height:18px;border:2px solid #FF9F01;border-radius:4px}
+.pdf li i.ok{background:#FF9F01;position:relative}
+.pdf li i.ok::after{content:"";position:absolute;left:4px;top:1px;width:5px;height:9px;border:solid #0D0D0D;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.pdf .selo{position:absolute;right:16px;bottom:16px;background:#0D0D0D;color:#FF9F01;font-weight:700;font-size:13px;letter-spacing:2px;padding:6px 10px;border-radius:4px}
+.pdf .mini{padding:0 22px}
+.pdf .linha{height:9px;border-radius:5px;background:#dcdcdc;margin:9px 0}
+
+/* pdfs em leque */
+.leque{position:absolute;left:0;right:0;top:300px;height:640px}
+.doc{position:absolute;top:40px;width:340px;height:470px;background:#F3F3F3;border-radius:12px;overflow:hidden;box-shadow:0 40px 80px -20px rgba(0,0,0,.9);color:#1a1a1a}
+.doc .topo{background:#0D0D0D;color:#F3F3F3;padding:22px 24px;height:170px;position:relative;overflow:hidden}
+.doc .topo::after{content:"";position:absolute;width:200px;height:160px;right:-60px;top:-60px;border-radius:50%;background:#FF9F01;opacity:.35;filter:blur(30px)}
+.doc .topo small{color:#FF9F01;font-size:12px;letter-spacing:3px;font-weight:700}
+.doc .topo b{display:block;font-size:27px;line-height:1.08;margin-top:10px;position:relative;z-index:1;letter-spacing:-.5px}
+.doc .corpo{padding:22px 24px}
+
+/* tablet */
+.tablet{position:absolute;left:170px;top:290px;width:900px;height:650px;background:#0a0a0a;border-radius:44px;padding:30px;box-shadow:0 0 0 3px #2a2a2a,0 50px 100px -20px rgba(0,0,0,.9),0 0 140px -40px #FF9F01;transform:rotate(-3deg)}
+.tablet .slide{border-radius:18px}
+.card-caso{position:absolute;right:80px;bottom:110px;width:360px;background:rgba(26,26,26,.92);border:1px solid rgba(255,159,1,.45);border-radius:18px;padding:26px 28px;z-index:6;backdrop-filter:blur(10px);box-shadow:0 30px 60px -20px rgba(0,0,0,.9)}
+.card-caso small{color:#FF9F01;letter-spacing:3px;font-size:12px;font-weight:700;text-transform:uppercase}
+.card-caso b{display:block;font-size:30px;margin-top:10px;letter-spacing:-.6px}
+.card-caso .st{display:flex;gap:22px;margin-top:18px}
+.card-caso .st div{font-size:13px;color:#A7A7A7}
+.card-caso .st strong{display:block;font-size:30px;color:#FF9F01;letter-spacing:-1px}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div id="app"></div>
+<script>
+var v = new URLSearchParams(location.search).get('v') || 'aula1';
+var IMG = '../site/img/';
+function laptop(slide, prog, tempo) {
+  return '<div class="laptop"><div class="tela"><span class="cam"></span><div class="slide">' + slide +
+    '<div class="play"></div><div class="player-bot"><span>' + tempo[0] + '</span><div class="barra"><i style="width:' + prog + '%"></i></div><span>' + tempo[1] + '</span></div></div></div><div class="base"></div></div>';
+}
+function pdf(titulo, itens, n) {
+  return '<div class="pdf"><div class="topo"><small>PDF de apoio · ' + n + '</small><b>' + titulo + '</b></div><ul>' +
+    itens.map(function (t, i) { return '<li><i class="' + (i < 2 ? 'ok' : '') + '"></i>' + t + '</li>'; }).join('') +
+    '</ul><div class="mini"><div class="linha" style="width:92%"></div><div class="linha" style="width:74%"></div><div class="linha" style="width:84%"></div></div><span class="selo">PDF</span></div>';
+}
+function cab(n, t, titulo) {
+  return '<div class="tag"><span class="n">' + n + '</span><span class="t">' + t + '</span></div><h1 class="titulo">' + titulo + '</h1>';
+}
+var planta = function (heat) {
+  return '<svg class="anot" viewBox="0 0 956 576" preserveAspectRatio="xMidYMid slice"><defs>' +
+  '<radialGradient id="q" cx="80%" cy="92%" r="70%"><stop offset="0" stop-color="#FF9F01" stop-opacity=".75"/><stop offset=".6" stop-color="#FF9F01" stop-opacity=".12"/><stop offset="1" stop-color="#FF9F01" stop-opacity="0"/></radialGradient>' +
+  '<radialGradient id="f" cx="12%" cy="15%" r="55%"><stop offset="0" stop-color="#5b7c99" stop-opacity=".7"/><stop offset="1" stop-color="#5b7c99" stop-opacity="0"/></radialGradient>' +
+  '<pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern></defs>' +
+  '<rect width="956" height="576" fill="#101010"/><rect width="956" height="576" fill="url(#g)"/>' +
+  '<g transform="translate(150 70)"><rect width="656" height="436" fill="#161616"/>' + (heat ? '<rect width="656" height="436" fill="url(#q)"/><rect width="656" height="436" fill="url(#f)"/>' : '') +
+  '<rect width="656" height="436" fill="none" stroke="#F3F3F3" stroke-width="7"/>' +
+  '<rect x="470" y="430" width="120" height="12" fill="#101010"/><path d="M470 436 A120 120 0 0 1 590 316" fill="none" stroke="#A7A7A7" stroke-width="1.5" stroke-dasharray="5 5"/>' +
+  '<rect x="300" y="396" width="150" height="20" fill="#F3F3F3"/>' +
+  '<rect x="590" y="70" width="44" height="130" fill="none" stroke="#A7A7A7" stroke-width="2.5"/>' +
+  '<circle cx="360" cy="230" r="44" fill="none" stroke="#A7A7A7" stroke-width="2.5"/>' +
+  '<rect x="22" y="22" width="200" height="22" fill="none" stroke="#A7A7A7" stroke-width="2.5"/><rect x="22" y="22" width="22" height="200" fill="none" stroke="#A7A7A7" stroke-width="2.5"/>' +
+  '<circle cx="130" cy="130" r="26" fill="#5b7c99"/><text x="130" y="139" text-anchor="middle" font-size="26" fill="#fff">$</text>' +
+  '<path d="M530 470 C530 360 500 320 440 290 C400 270 400 200 520 160" fill="none" stroke="#FF9F01" stroke-width="5" stroke-dasharray="14 10"/>' +
+  '<path d="M512 150 L532 158 L516 172" fill="none" stroke="#FF9F01" stroke-width="5"/></g>';
+};
+var H = '';
+if (v === 'aula1') {
+  H = cab('AULA 01', 'Diagnóstico do fluxo + vitrine', 'Por onde o cliente entra, <span>pra onde olha e onde desiste</span>') +
+    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 01</span><span>Fluxo e vitrine</span></div><img class="foto" src="' + IMG + 'imporio-fachada.jpg">' +
+    '<svg class="anot" viewBox="0 0 956 576" preserveAspectRatio="none"><ellipse cx="455" cy="440" rx="120" ry="110" fill="none" stroke="#FF9F01" stroke-width="5"/><text x="600" y="330" font-size="30" fill="#FF9F01">1 produto-foco</text><path d="M595 340 L560 380" stroke="#FF9F01" stroke-width="4"/><path d="M150 560 C 200 470 280 470 330 500" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="12 9"/><text x="70" y="470" font-size="26" fill="#fff">olhar da calçada</text></svg>', 34, ['03:24', '10:00']) +
+    pdf('Checklist de vitrine', ['Máximo 3 itens em destaque', 'Luz mais forte que a rua', 'Um tema por vez', 'Troca a cada 15 dias', 'Preço visível e limpo'], '01');
+} else if (v === 'aula2') {
+  H = cab('AULA 02', 'Zoneamento comercial', 'Produto certo na <span>zona quente</span>, produto certo na zona fria') +
+    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 02</span><span>Zona quente × zona fria</span></div>' + planta(true) +
+    '<text x="520" y="455" font-size="26" fill="#FF9F01" text-anchor="end">ZONA QUENTE</text><text x="185" y="300" font-size="24" fill="#8fb0cc">ZONA FRIA</text><text x="178" y="245" font-size="20" fill="#fff">maior margem</text></svg>', 58, ['05:48', '10:00']) +
+    pdf('Template de zoneamento', ['Mapeie a entrada e o giro', 'Marque a zona quente', 'Posicione o item de maior margem', 'Use a zona fria para puxar o fluxo', 'Revise por estação'], '02');
+} else if (v === 'aula3') {
+  H = cab('AULA 03', 'Pontos de decisão', 'Onde o cliente <span>para e considera</span> comprar') +
+    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 03</span><span>Ilha de pausa</span></div><img class="foto" src="' + IMG + 'imporio-pausa.jpg">' +
+    '<svg class="anot" viewBox="0 0 956 576" preserveAspectRatio="none"><ellipse cx="520" cy="470" rx="150" ry="70" fill="none" stroke="#FF9F01" stroke-width="5"/><ellipse cx="290" cy="400" rx="120" ry="90" fill="none" stroke="#FF9F01" stroke-width="5" stroke-dasharray="12 8"/><text x="600" y="380" font-size="30" fill="#FF9F01">ponto de pausa</text><text x="120" y="260" font-size="26" fill="#fff">console de dobrados</text></svg>', 46, ['04:36', '10:00']) +
+    pdf('Checklist de ponto de decisão', ['1 ponto no meio do fluxo', 'Preço ou oferta visível', 'Produto que combina junto', 'Espaço para parar sem travar', 'Troca de exposição semanal'], '03');
+} else if (v === 'aula4') {
+  H = cab('AULA 04', 'Iluminação estratégica', 'Luz que <span>guia o olhar</span>, não só decora') +
+    laptop('<div class="player-top"><span><b>Loja que Vende</b> · Aula 04</span><span>Luz em camadas</span></div><img class="foto" src="' + IMG + 'imporio-luz.jpg">' +
+    '<svg class="anot" viewBox="0 0 956 576" preserveAspectRatio="none"><defs><linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/></linearGradient></defs><path d="M880 40 L760 520 L956 520 L956 90 Z" fill="url(#c)"/><path d="M455 55 L360 420 L560 420 Z" fill="url(#c)"/><text x="600" y="120" font-size="28" fill="#FF9F01">luz de destaque</text><text x="60" y="130" font-size="24" fill="#fff">trilho de spots</text></svg>', 80, ['08:02', '10:00']) +
+    pdf('Guia de iluminação por segmento', ['Vitrine mais forte que a rua', 'Spot no produto-foco', 'Caixa sem sombra', 'Luz quente no provador', 'Branco neutro em alimentos'], '04');
+} else if (v === 'pdfs') {
+  var docs = [['01', 'Checklist de vitrine', -12, 70], ['02', 'Template de zoneamento', -4, 330], ['03', 'Ponto de decisão', 4, 590], ['04', 'Guia de iluminação', 12, 850]];
+  H = cab('4 PDFs', 'Material de apoio', 'Um PDF prático <span>para cada aula</span>') + '<div class="leque">' +
+    docs.map(function (d, i) {
+      return '<div class="doc" style="left:' + d[3] + 'px;transform:rotate(' + d[2] + 'deg);z-index:' + (i + 1) + '"><div class="topo"><small>PDF · ' + d[0] + '</small><b>' + d[1] + '</b></div><div class="corpo">' +
+        [90, 70, 84, 60, 78, 66, 88].map(function (w) { return '<div style="height:10px;border-radius:5px;background:#d9d9d9;margin:12px 0;width:' + w + '%"></div>'; }).join('') +
+        '<div style="display:flex;gap:10px;margin-top:22px"><i style="width:20px;height:20px;border:2px solid #FF9F01;border-radius:4px;background:#FF9F01"></i><i style="width:20px;height:20px;border:2px solid #FF9F01;border-radius:4px"></i><i style="width:20px;height:20px;border:2px solid #FF9F01;border-radius:4px"></i></div></div></div>';
+    }).join('') + '</div>';
+} else if (v === 'caso') {
+  H = cab('BÔNUS', 'Estudo de caso real', 'Impório Fitness: <span>o método aplicado</span> numa loja real') +
+    '<div class="tablet"><div class="slide"><img class="foto" style="filter:none" src="' + IMG + 'imporio-provador.jpg"><div class="player-top"><span><b>Estudo de caso</b></span><span>Caruaru · PE</span></div></div></div>' +
+    '<div class="card-caso"><small>Projeto real</small><b>Impório Fitness</b><div class="st"><div><strong>19,52</strong>m² de loja</div><div><strong>4</strong>pilares aplicados</div></div></div>';
+}
+document.getElementById('app').innerHTML = H;
+</script>
+</body>
+</html>

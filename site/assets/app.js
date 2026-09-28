@@ -81,12 +81,36 @@
           LQV.pixel('trackCustom', 'CliqueProduto', { produto: p.slug });
         });
       } else el.setAttribute('aria-disabled', 'true');
-      el.innerHTML = '<div class="arte">' + (ativo && p.art === 'planta' ? ARTE_PLANTA : ARTE_CADEADO) + '</div>' +
+      var arte = !ativo ? ARTE_CADEADO : p.art === 'capa' ? '<img class="capa" src="' + raiz + 'img/capa-loja-que-vende-p.webp" alt="Capa do curso ' + p.title + '" loading="lazy">' : ARTE_PLANTA;
+      el.innerHTML = '<div class="arte">' + arte + '</div>' +
         '<span class="selo">' + p.badge + '</span>' +
         '<div class="corpo"><h3>' + p.title + '</h3><p>' + p.text + '</p>' +
         (ativo ? '<span class="ir">' + (p.cta || 'Saiba mais') + ' →</span>' : '') + '</div>';
       box.appendChild(el);
     });
+  });
+
+  /* ---------- Botões de compra (data-checkout): link Hotmart + UTMs + InitiateCheckout ---------- */
+  LQV.checkout = function () {
+    if (!S.CHECKOUT_URL) return '';
+    var u = new URL(S.CHECKOUT_URL), t = LQV.tracking;
+    if (t.utm_source) u.searchParams.set('src', t.utm_source);
+    if (t.utm_content) u.searchParams.set('sck', t.utm_content);
+    Object.keys(t).forEach(function (k) { u.searchParams.set(k, t[k]); });
+    return u.toString();
+  };
+  document.querySelectorAll('[data-checkout]').forEach(function (a) {
+    var url = LQV.checkout();
+    if (!url) { a.hidden = true; return; }
+    a.href = url;
+    a.addEventListener('click', function () {
+      LQV.pixel('track', 'InitiateCheckout', { content_name: 'Loja que Vende', currency: 'BRL', value: Number(S.PRECO_POR) || undefined });
+    });
+  });
+  // Preço (data-preco="de|por|parcelas"): esconde o bloco se não configurado
+  document.querySelectorAll('[data-preco]').forEach(function (el) {
+    var v = { de: S.PRECO_DE, por: S.PRECO_POR, parcelas: S.PARCELAS }[el.getAttribute('data-preco')];
+    if (v) el.querySelector('[data-valor]').textContent = v; else el.hidden = true;
   });
 
   /* ---------- Foto de fundo do hero (só aparece se o arquivo existir) ---------- */

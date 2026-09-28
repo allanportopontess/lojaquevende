@@ -9,3 +9,12 @@ imporio-pausa.jpg     Galeria: ponto de pausa (puff, console, araras)
 imporio-provador.jpg  Galeria: circulação pelo provador
 imporio-luz.jpg       Galeria: luz em camadas
 og.jpg                Imagem ao compartilhar o link (WhatsApp/Instagram), 1200x630
+
+CURSO LOJA QUE VENDE
+capa-loja-que-vende.webp    Capa do curso (fundo transparente); -p = versão menor para cartões
+entregavel-*.jpg            Imagens dos entregáveis (geradas a partir de design/entregaveis.html)
+og-curso.jpg                Compartilhamento da página de vendas
+
+DEPOIMENTOS (página /loja-que-vende/curso/)
+Salve os prints como depoimento-1.jpg, depoimento-2.jpg, depoimento-3.jpg, depoimento-4.jpg
+(vertical, formato de tela de celular). O espaço reservado some sozinho quando o arquivo existe.

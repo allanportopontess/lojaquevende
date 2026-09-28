@@ -18,19 +18,24 @@ window.SITE = {
 
   // Página pós-cadastro (Loja que Vende)
   VSL_VIDEO_URL: "",       // YouTube, Vimeo ou Panda (link do vídeo). Vazio = "vídeo em breve"
-  CHECKOUT_URL: "",        // link do checkout Hotmart. Vazio = botão de compra escondido
+  CHECKOUT_URL: "https://pay.hotmart.com/A107800232K", // checkout Hotmart do curso Loja que Vende
+
+  // Preço exibido na página de vendas (deixe "" para esconder e mostrar só o botão)
+  PRECO_DE: "",            // ex.: "997"
+  PRECO_POR: "",           // ex.: "497"
+  PARCELAS: "",            // ex.: "12x de R$ 51,40"
 
   // Produtos exibidos na home e na página de links (ordem = ordem na tela)
   PRODUCTS: [
     {
       slug: "loja-que-vende",
       status: "ativo",                         // "ativo" | "em-breve"
-      badge: "Checklist grátis",
+      badge: "Curso online",
       title: "Loja que Vende",
-      text: "Os 5 erros de layout que fazem sua loja perder venda, e como corrigir sem reforma.",
-      cta: "Baixar agora",
-      href: "loja-que-vende/",                 // relativo à raiz do site
-      art: "planta"
+      text: "Projeto estratégico de layout para mais vendas: 4 aulas + 4 PDFs de apoio + estudo de caso real.",
+      cta: "Conhecer o curso",
+      href: "loja-que-vende/curso/",           // relativo à raiz do site
+      art: "capa"
     },
     { slug: "produto-2", status: "em-breve", badge: "Em breve", title: "Novo produto", text: "Em preparação. Siga no Instagram para saber primeiro." },
     { slug: "produto-3", status: "em-breve", badge: "Em breve", title: "Novo produto", text: "Em preparação. Siga no Instagram para saber primeiro." }

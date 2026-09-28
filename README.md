@@ -15,6 +15,7 @@ Meta Ads (5 criativos A/B) → /loja-que-vende/ (captura: Checklist dos 5 Erros 
 | `/` | `site/index.html` | Site institucional: hero, formação, método, produtos, projeto Empório Fit, sobre, contato |
 | `/links/` | `site/links/index.html` | Página para a bio do Instagram |
 | `/loja-que-vende/` | `site/loja-que-vende/index.html` | Captura do checklist (leads vão para o banco) |
+| `/loja-que-vende/curso/` | `site/loja-que-vende/curso/index.html` | Página de vendas do curso (estrutura do Kit Usucapião): entregáveis, depoimentos, oferta com checkout Hotmart |
 | `/loja-que-vende/obrigado/` | `site/loja-que-vende/obrigado/index.html` | Download do PDF, vídeo (VSL) e botão de compra |
 | `/privacidade/` | `site/privacidade/index.html` | Política de privacidade (LGPD) |
 
@@ -22,6 +23,8 @@ Meta Ads (5 criativos A/B) → /loja-que-vende/ (captura: Checklist dos 5 Erros 
 
 - **`site/assets/config.js`**: WhatsApp, Instagram, e-mail, Pixel, link do vídeo, link do checkout Hotmart e a **lista de produtos** (para lançar um produto novo, troque `status` para `"ativo"` e preencha título, texto e link).
 - **`site/img/`**: fotos. Nomes e tamanhos em `site/img/LEIA-ME.txt`. Sem a foto, o site mostra um espaço reservado.
+- **Preço na página de vendas:** `PRECO_DE`, `PRECO_POR` e `PARCELAS` em `config.js` (vazio = só o botão aparece).
+- **`design/entregaveis.html`**: fonte das imagens dos entregáveis (`site/img/entregavel-*.jpg`).
 - **`isca/checklist.html`**: fonte do PDF do checklist (`site/assets/checklist-5-erros-de-layout.pdf`).
 
 Todo push no branch principal que altere `site/` republica o site automaticamente (`.github/workflows/pages.yml`).
