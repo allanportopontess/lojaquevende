@@ -27,7 +27,7 @@ window.SITE = {
 
   // Fim da oferta de lançamento (cronômetro). Formato: "AAAA-MM-DDTHH:MM:SS-03:00"
   // Quando a data passa, o cronômetro some sozinho. Vazio = sem cronômetro.
-  OFERTA_ATE: "2026-10-05T23:59:59-03:00",
+  OFERTA_ATE: "2026-10-20T23:59:59-03:00",
 
   // Produtos exibidos na home e na página de links (ordem = ordem na tela)
   PRODUCTS: [
