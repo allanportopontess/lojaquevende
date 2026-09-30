@@ -149,7 +149,7 @@ Os nomes abaixo são os que aparecem na busca do Gerenciador em português. A Me
 
 ### Regiões prioritárias
 
-Critério: densidade de lojas físicas, poder de compra para um ticket de R$497–997, polos de moda e confecção (a loja de roupa é o avatar mais forte) e a base do Allan em Pernambuco, onde o caso Empório Fit é prova local.
+Critério: densidade de lojas físicas, poder de compra para um ticket de R$497–997, polos de moda e confecção (a loja de roupa é o avatar mais forte) e a base do Allan em Pernambuco, onde o caso da loja de moda fitness é prova local.
 
 | Cluster | Estados | Por que entra |
 |---|---|---|
@@ -285,7 +285,7 @@ Botão (CTA) nos 5: **Baixar**. Alternativa se o "Baixar" ficar caro: *Saiba mai
 
 ### C2: Produto de maior margem escondido na zona fria
 
-- **Vídeo:** planta com zona quente/fria destacada ou foto real das araras do Empório Fit
+- **Vídeo:** planta com zona quente/fria destacada ou foto real das araras da loja de moda fitness (caso real)
 - **Texto principal:**
   > Qual produto da sua loja tem a maior margem?
   >
@@ -315,7 +315,7 @@ Botão (CTA) nos 5: **Baixar**. Alternativa se o "Baixar" ficar caro: *Saiba mai
 
 ### C4: Vitrine lotada sem foco
 
-- **Vídeo:** foto real da vitrine do Empório Fit
+- **Vídeo:** foto real da vitrine da loja de moda fitness (caso real)
 - **Texto principal:**
   > Sua vitrine tem 10 peças tentando vender tudo ao mesmo tempo?
   >
