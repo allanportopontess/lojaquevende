@@ -281,7 +281,7 @@ Botão (CTA) nos 5: **Baixar**. Alternativa se o "Baixar" ficar caro: *Saiba mai
   >
   > 👇 Toque em "Baixar" e receba grátis.
 - **Título:** Checklist grátis: 5 erros que fazem sua loja perder venda
-- **Descrição:** PDF de 3 páginas, feito por arquiteto de varejo
+- **Descrição:** PDF de 2 páginas, feito por arquiteto de varejo
 
 ### C2: Produto de maior margem escondido na zona fria
 

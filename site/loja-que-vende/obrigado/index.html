@@ -38,9 +38,9 @@
   <div class="wrap">
     <span class="produto-nome"><b>Cadastro confirmado</b> · Checklist liberado</span>
     <h1 id="titulo">Seu checklist <span class="laranja">está pronto.</span></h1>
-    <p class="lead">Baixe agora e responda com a sua loja na frente. Depois assista ao vídeo abaixo: ele mostra o que fazer com o resultado.</p>
+    <p class="lead">Baixe agora e responda com a sua loja na frente. Leva 3 minutos e, no final, você vê como corrigir cada erro que encontrar.</p>
     <div class="baixar" style="max-width:860px;margin-left:auto;margin-right:auto">
-      <div><b>Checklist dos 5 Erros de Layout</b><span>PDF · 3 páginas · leitura de 3 minutos</span></div>
+      <div><b>Checklist dos 5 Erros de Layout</b><span>PDF · 2 páginas · leitura de 3 minutos</span></div>
       <a class="btn" id="baixar" href="../../assets/checklist-5-erros-de-layout.pdf" download>Baixar o PDF</a>
     </div>
   </div>
@@ -48,10 +48,18 @@
 
 <section class="sec centro" style="padding-top:40px">
   <div class="wrap" style="max-width:980px">
+    <div id="bloco-video" hidden>
     <span class="eyebrow">Assista antes de continuar</span>
     <h2 class="h2">O que fazer com o resultado do checklist</h2>
     <div class="video" id="video">
       <div class="vazio"><span class="play"></span><b>Vídeo em breve</b><span>Enquanto isso, baixe e responda o checklist.</span></div>
+    </div>
+    </div>
+    <div id="bloco-curso">
+      <span class="eyebrow">Depois do checklist</span>
+      <h2 class="h2">Marcou algum "NÃO"? Cada um tem correção.</h2>
+      <p class="lead" style="margin-bottom:28px">O Loja que Vende mostra, em 4 aulas diretas, como corrigir cada erro do checklist na loja que você já tem, sem reforma cara.</p>
+      <a class="btn" id="ver-curso" href="../curso/">Ver como corrigir minha loja</a>
     </div>
     <div id="bloco-compra" hidden style="margin-top:48px">
       <p class="lead" style="margin-bottom:28px">Quer o passo a passo completo para corrigir cada erro na sua loja?</p>
@@ -92,7 +100,11 @@
     if ((m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/))) return 'https://player.vimeo.com/video/' + m[1];
     return url;
   }
+  // Sem vídeo: o próximo passo é a página do curso; com vídeo: vídeo + checkout
+  document.getElementById('ver-curso').href = LQV.comTracking('../curso/');
   if (S.VSL_VIDEO_URL) {
+    document.getElementById('bloco-video').hidden = false;
+    document.getElementById('bloco-curso').hidden = true;
     var box = document.getElementById('video');
     box.innerHTML = '<iframe src="' + embed(S.VSL_VIDEO_URL) + '" title="Vídeo Loja que Vende" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
   }
@@ -107,7 +119,7 @@
     Object.keys(t).forEach(function (k) { u.searchParams.set(k, t[k]); });
     a.href = u.toString();
     a.addEventListener('click', function () { LQV.pixel('track', 'InitiateCheckout', { content_name: 'Método Loja que Vende', currency: 'BRL' }); });
-    document.getElementById('bloco-compra').hidden = false;
+    if (S.VSL_VIDEO_URL) document.getElementById('bloco-compra').hidden = false;
   }
 })();
 </script>
