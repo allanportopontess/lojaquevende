@@ -33,7 +33,7 @@ Criado via API em 25/09/2026, revisado em 30/09/2026 (curso a R$ 97). **Tudo PAU
 
 **Pendente:**
 1. **Pagamento da conta:** as campanhas ativas aparecem com "Erro no pagamento". Nada veicula até resolver em Cobrança.
-2. **Pixel da Hotmart:** instalar o pixel `1414869993251554` no produto (Hotmart → Ferramentas → Pixel de rastreamento) para o evento `Purchase` chegar. Sem ele a campanha de Vendas não tem sinal para otimizar.
+2. ~~Pixel da Hotmart~~ **feito em 30/09:** pixel `1414869993251554` no checkout (Vendas realizadas + Visitas na página de pagamento), via WEB + API de Conversões. Obs.: o pixel é o mesmo do produto de usucapião (nome "usucapião"); eventos dos dois produtos ficam juntos.
 3. **Anúncios:** dependem dos 5 vídeos (link público), da URL publicada da landing e da página do Facebook que assina os anúncios.
 4. **Pixel na landing:** usar `1414869993251554` em `META_PIXEL_ID`.
 
