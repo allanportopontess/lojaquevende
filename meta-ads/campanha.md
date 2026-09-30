@@ -10,30 +10,30 @@ Anúncio (Reels/Stories/Feed) → Página de captura (https://allanportopontess.
 
 ## 0. Status na conta de anúncios (Allan Porto · 711536816218119)
 
-Criado via API em 25/09/2026. **Tudo PAUSADO, sem gasto.**
+Criado via API em 25/09/2026, revisado em 30/09/2026 (curso a R$ 97). **Tudo PAUSADO, sem gasto.**
 
 | Nível | Nome | ID |
 |---|---|---|
 | Campanha | LQV \| Leads \| Teste Criativos \| ABO | `120252208276050286` |
-| Conjunto | LQV \| C1 Trafego sem conversao \| Lojistas RegPrio 25-60 | `120252208286520286` |
-| Conjunto | LQV \| C2 Margem zona fria \| Lojistas RegPrio 25-60 | `120252209022210286` |
-| Conjunto | LQV \| C3 Sem ponto de decisao \| Lojistas RegPrio 25-60 | `120252209149640286` |
-| Conjunto | LQV \| C4 Vitrine lotada \| Lojistas RegPrio 25-60 | `120252209208490286` |
-| Conjunto | LQV \| C5 Iluminacao generica \| Lojistas RegPrio 25-60 | `120252209263640286` |
+| Conjunto | LQV \| C1 Trafego sem conversao \| BR Adv+ 25-60 | `120252208286520286` |
+| Conjunto | LQV \| C2 Margem zona fria \| BR Adv+ 25-60 | `120252209022210286` |
+| Conjunto | LQV \| C3 Sem ponto de decisao \| BR Adv+ 25-60 | `120252209149640286` |
+| Conjunto | LQV \| C4 Vitrine lotada \| BR Adv+ 25-60 | `120252209208490286` |
+| Conjunto | LQV \| C5 Iluminacao generica \| BR Adv+ 25-60 | `120252209263640286` |
+| Campanha | LQV \| Vendas \| Pagina do curso \| ABO | `120252291174380286` |
+| Conjunto | LQV \| Vendas \| Criativo vencedor \| BR Adv+ 25-60 | `120252291185320286` |
 
-**Configuração aplicada nos 5 conjuntos** (C2–C5 duplicados do C1):
-- Otimização: `Lead` no pixel `1414869993251554` · lance menor custo · R$ 40/dia cada
-- Idade 25–60 (regra fixa, Advantage+ público desligado) · moradores dos 16 estados dos 4 clusters
-- Posicionamentos: Facebook Feed/Stories/Reels + Instagram Feed/Stories/Reels (mobile e desktop)
-- Segmentação detalhada (OU), IDs validados pela API da Meta:
-  - Interesses: Varejo `6003778400853`, Pequenas empresas `6002884511422`, Empreendedorismo `6003371567474`, Ponto de venda `6003366145856`, Boutiques `6003103108917`, Marketing digital `6003127206524`, Marketing de mídia social `6003389760112`, Design de interiores `6002920953955`
-  - Comportamentos: Proprietários de pequenas empresas `6002714898572`, Admins de páginas de varejo `6020530250383`, Admins de páginas de negócios `6020530281783`
-  - Setores: Vendas `6008888980183`, Gestão `6009003311983`
-- **Descontinuados pela Meta** (a API rejeitou, não usar): Merchandising visual. Retirados por serem da mesma categoria em descontinuação: Retail design, Small Business Owners (interesse), business owner, Store manager.
+**Revisão de 30/09 (decidida com o Allan):**
+- Estratégia: **Leads + Vendas**. Leads (checklist → página do curso) roda primeiro; a campanha de Vendas (compra, pixel `Purchase`, destino página do curso) recebe o criativo vencedor e a verba migra para a que der venda mais barata.
+- Orçamento: **R$ 30/dia por conjunto** (5 × 30 = R$ 150/dia no teste). Conjunto de Vendas também R$ 30/dia, ativado no lugar dos criativos perdedores, mantendo ~R$ 150/dia no total.
+- Localização: **Brasil inteiro** (moradores). Cortar estados pelo relatório por região depois de 5–7 dias.
+- Público: **Advantage+** (sem interesses). Idade mínima 25 é regra fixa; 25–60 vai como sugestão (a Meta exige teto 65 no Advantage+).
+- Posicionamentos manuais mantidos: FB Feed/Stories/Reels + IG Feed/Stories/Reels.
+- Com ticket de R$ 97 (líquido ≈ R$ 86), o **CPL de equilíbrio é ≈ R$ 1,70 a 2,60** para conversão lead→venda de 2–3%. As seções 3 e 5 abaixo são o plano original (interesses, 16 estados, R$ 40, ticket R$ 497–997) e ficam como referência.
 
 **Pendente:**
 1. **Pagamento da conta:** as campanhas ativas aparecem com "Erro no pagamento". Nada veicula até resolver em Cobrança.
-2. **Conferir a lista de estados** em um conjunto (os 5 são iguais): SP, RJ, MG, ES, PR, SC, RS, PE, CE, BA, PB, RN, GO, DF, MT, MS. 7 códigos vieram de campanhas antigas; 9 foram inferidos pela sequência (a API não devolve conjunto sem gasto).
+2. **Pixel da Hotmart:** instalar o pixel `1414869993251554` no produto (Hotmart → Ferramentas → Pixel de rastreamento) para o evento `Purchase` chegar. Sem ele a campanha de Vendas não tem sinal para otimizar.
 3. **Anúncios:** dependem dos 5 vídeos (link público), da URL publicada da landing e da página do Facebook que assina os anúncios.
 4. **Pixel na landing:** usar `1414869993251554` em `META_PIXEL_ID`.
 
