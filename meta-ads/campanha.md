@@ -23,6 +23,13 @@ Criado via API em 25/09/2026, revisado em 30/09/2026 (curso a R$ 97). **Tudo PAU
 | Campanha | LQV \| Vendas \| Pagina do curso \| ABO | `120252291174380286` |
 | Conjunto | LQV \| Vendas \| Criativo vencedor \| BR Adv+ 25-60 | `120252291185320286` |
 
+**Teste A/B de 01/10 (2 criativos, substitui os 5 do plano original):**
+- Roteiros: `criativos/roteiros-teste-AB.pdf`.
+- `120252208286520286` renomeado para **LQV | A Vender mais | BR Adv+ 25-60** · R$ 50/dia · avatar: dono(a) que quer aumentar vendas.
+- `120252209022210286` renomeado para **LQV | B Upgrade na loja | BR Adv+ 25-60** · R$ 50/dia · avatar: dono(a) que quer modernizar/reformar.
+- Total do teste: R$ 100/dia (abaixo do teto de R$ 150 aprovado). C3, C4 e C5 ficam pausados, sem anúncio.
+- Destino: `https://lojaquevende.allanportoarquiteto.com.br/loja-que-vende/` + UTMs. Vencedor em 5–7 dias: menor custo por lead e mais cliques para o curso.
+
 **Revisão de 30/09 (decidida com o Allan):**
 - Estratégia: **Leads + Vendas**. Leads (checklist → página do curso) roda primeiro; a campanha de Vendas (compra, pixel `Purchase`, destino página do curso) recebe o criativo vencedor e a verba migra para a que der venda mais barata.
 - Orçamento: **R$ 30/dia por conjunto** (5 × 30 = R$ 150/dia no teste). Conjunto de Vendas também R$ 30/dia, ativado no lugar dos criativos perdedores, mantendo ~R$ 150/dia no total.
