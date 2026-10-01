@@ -23,6 +23,8 @@ Criado via API em 25/09/2026, revisado em 30/09/2026 (curso a R$ 97). **Tudo PAU
 | Campanha | LQV \| Vendas \| Pagina do curso \| ABO | `120252291174380286` |
 | Conjunto | LQV \| Vendas \| Criativo vencedor \| BR Adv+ 25-60 | `120252291185320286` |
 
+**Domínio (01/10):** site publicado em `https://lojaquevende.allanportoarquiteto.com.br/` (CNAME no Registro.br → GitHub Pages, HTTPS forçado). Pendente: verificar `allanportoarquiteto.com.br` na Meta (TXT no Registro.br).
+
 **Teste A/B de 01/10 (2 criativos, substitui os 5 do plano original):**
 - Roteiros: `criativos/roteiros-teste-AB.pdf`.
 - `120252208286520286` renomeado para **LQV | A Vender mais | BR Adv+ 25-60** · R$ 50/dia · avatar: dono(a) que quer aumentar vendas.
