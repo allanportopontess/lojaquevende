@@ -25,6 +25,11 @@ Criado via API em 25/09/2026, revisado em 30/09/2026 (curso a R$ 97). **Tudo PAU
 
 **Domínio (01/10):** site publicado em `https://lojaquevende.allanportoarquiteto.com.br/` (CNAME no Registro.br → GitHub Pages, HTTPS forçado). Pendente: verificar `allanportoarquiteto.com.br` na Meta (TXT no Registro.br).
 
+**Anúncios criados (01/10, PAUSADOS):**
+- `120252309448220286` · **R1 | Movimento sem venda | 9x16** · conjunto C1 (Leads) · vídeo `2124406961796252` · página `415346875195516` · botão Baixar · destino página de captura (checklist) com UTMs `utm_source=meta&utm_medium=paid&utm_campaign=LQV_Leads&utm_term=C1_checklist&utm_content=R1_movimento_sem_venda` · miniatura `img/ads/capa-R1.jpg`.
+
+**Regra (01/10):** o preço do Loja que Vende só aparece na página de vendas. Checklist, captura, obrigado, roteiros, capas e textos de anúncio falam em "condição especial por tempo limitado", sem valor.
+
 **Teste atual (01/10, substitui o A/B "Vender mais × Upgrade"): checklist na mão, lead × venda direta**
 - Roteiros: `criativos/roteiros-checklist.pdf` · capas: `criativos/capa-C1.jpg`, `criativos/capa-C2.jpg`.
 - **C1 Checklist âncora** → conjunto `120252208286520286` (campanha Leads) · R$ 50/dia · destino: página de captura · botão Baixar.
