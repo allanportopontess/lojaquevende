@@ -54,12 +54,12 @@ h1,h2,h3{color:#0D0D0D;font-weight:700;letter-spacing:-.02em}
 .rodape a{color:#E08A00;font-weight:700;text-decoration:none}
 
 /* página 2 */
-.res{margin-top:2mm;display:grid;grid-template-columns:auto 1fr;gap:5mm;align-items:center}
+.res{margin-top:0;display:grid;grid-template-columns:auto 1fr;gap:5mm;align-items:center}
 .res h1{font-size:21pt;line-height:1.05}
 .total{display:flex;align-items:center;gap:3.5mm;background:#FFF4E0;border:1px solid #FFD699;border-radius:2.5mm;padding:3mm 4mm}
 .total .caixa{width:17mm;height:12mm;border:2px solid #FF9F01;border-radius:1.8mm;flex:none}
 .total b{color:#0D0D0D}
-.placar{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin:5mm 0 8mm}
+.placar{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin:4mm 0 6mm}
 .faixa{border-radius:2.5mm;padding:3.2mm 3.8mm;border:1px solid #e3e3e3;font-size:8.9pt}
 .faixa .q{font-size:17pt;font-weight:700;color:#0D0D0D;line-height:1}
 .faixa .q small{font-size:8.5pt;color:#8a8a8a;font-weight:600}
@@ -70,13 +70,13 @@ h1,h2,h3{color:#0D0D0D;font-weight:700;letter-spacing:-.02em}
 
 .lacuna h2{font-size:15pt;line-height:1.12}
 .lacuna>p{margin-top:1.5mm}
-.lacuna ul{list-style:none;margin:3.5mm 0 3.5mm;display:grid;gap:2.4mm}
+.lacuna ul{list-style:none;margin:3mm 0 3mm;display:grid;gap:1.8mm}
 .lacuna li{display:grid;grid-template-columns:6mm 1fr;align-items:start;font-weight:600;color:#0D0D0D}
 .lacuna li::before{content:"?";width:4.6mm;height:4.6mm;border-radius:50%;border:1.5px solid #FF9F01;color:#E08A00;font-size:7.5pt;display:grid;place-items:center;margin-top:.2mm}
 .lacuna .alerta-txt{border-left:2px solid #FF9F01;padding-left:3mm;color:#555}
 .lacuna .alerta-txt b{color:#0D0D0D}
 
-.solucao{margin-top:8mm;background:#0D0D0D;color:#A7A7A7;border-radius:3.5mm;padding:6.5mm 7mm 6mm;position:relative;overflow:hidden}
+.solucao{margin-top:4.5mm;background:#0D0D0D;color:#A7A7A7;border-radius:3.5mm;padding:5.5mm 7mm 5mm;position:relative;overflow:hidden}
 .solucao::before{content:"";position:absolute;width:110mm;height:80mm;right:-25mm;bottom:-35mm;border-radius:50%;background:#FF9F01;opacity:.3;filter:blur(42px)}
 .solucao>*{position:relative}
 .solucao .eyebrow{font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase;color:#FF9F01;font-weight:700}
@@ -88,16 +88,18 @@ h1,h2,h3{color:#0D0D0D;font-weight:700;letter-spacing:-.02em}
 .mapa b{display:block;color:#F3F3F3;font-size:9.4pt}
 .mapa span{color:#FF9F01;font-weight:600}
 .extra{font-size:8.9pt}
-.oferta{display:flex;align-items:center;justify-content:space-between;gap:5mm;margin-top:4mm;padding-top:4mm;border-top:1px solid #2d2d2d}
-.preco{line-height:1.15}
-.preco s{color:#8a8a8a;font-size:9.5pt}
-.preco strong{display:block;color:#F3F3F3;font-size:22pt;letter-spacing:-.02em}
-.preco strong small{font-size:10pt;color:#A7A7A7;font-weight:600}
-.preco em{font-style:normal;font-size:8pt;color:#FF9F01;font-weight:600}
-.btn{display:inline-block;background:#FF9F01;color:#0D0D0D !important;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:4mm 6mm;border-radius:2mm;text-decoration:none;font-size:10.5pt;text-align:center;white-space:nowrap}
-.btn-box{text-align:center}
-.btn-box small{display:block;margin-top:1.6mm;font-size:7.8pt;color:#8a8a8a}
-.url{display:block;margin-top:3mm;font-size:7.8pt;color:#8a8a8a;word-break:break-all}
+.oferta{margin-top:4mm;padding-top:4.5mm;border-top:1px solid #2d2d2d;text-align:center}
+.gancho-cta{font-size:11.5pt;line-height:1.4;color:#d6d6d6;margin:0 auto 4.5mm;max-width:150mm}
+.gancho-cta b{color:#F3F3F3}
+.gancho-cta span{color:#FFB733;font-weight:700}
+.btn{position:relative;overflow:hidden;display:block;width:100%;padding:5.2mm 6mm;border-radius:3mm;text-decoration:none;text-align:center;
+  background:linear-gradient(180deg,#FFC24D 0%,#FF9F01 55%,#E58A00 100%);color:#0D0D0D !important;
+  font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15pt;
+  border:1px solid #FFD27A;box-shadow:0 0 0 1.2mm rgba(255,159,1,.18),0 3mm 9mm rgba(255,159,1,.45),inset 0 .6mm 0 rgba(255,255,255,.55)}
+.btn i{font-style:normal;display:inline-block;margin-left:2mm;background:#0D0D0D;color:#FFB733;border-radius:50%;width:8mm;height:8mm;line-height:8mm;font-size:12pt;vertical-align:middle}
+.btn .brilho{position:absolute;top:0;bottom:0;left:-30%;width:22%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.toque{display:block;margin-top:2.6mm;font-size:8.2pt;color:#9a9a9a}
+.url{display:block;text-align:center;margin-top:2.5mm;font-size:7.8pt;color:#8a8a8a;word-break:break-all}
 </style>
 </head>
 <body>
@@ -200,8 +202,9 @@ h1,h2,h3{color:#0D0D0D;font-weight:700;letter-spacing:-.02em}
     </div>
     <p class="extra">+ 4 PDFs de apoio para aplicar na hora · + estudo de caso real de uma loja de moda fitness de 19,52 m², do projeto à loja pronta.</p>
     <div class="oferta">
-      <div class="preco"><s style="text-decoration:none;color:#FF9F01;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:8pt">Condição especial de lançamento</s><strong style="font-size:15pt;line-height:1.2">Preço especial por tempo limitado</strong><em>Acesso imediato · Garantia de 7 dias</em></div>
-      <div class="btn-box"><a class="btn" href="https://lojaquevende.allanportoarquiteto.com.br/loja-que-vende/curso/?utm_source=checklist&amp;utm_medium=pdf&amp;utm_campaign=isca&amp;utm_content=cta_final">Quero corrigir minha loja →</a><small>Veja a condição completa na página</small></div>
+      <p class="gancho-cta">Você já sabe <b>onde</b> sua loja perde venda.<br>Agora veja <span>como corrigir cada erro</span>, sem reforma.</p>
+      <a class="btn" href="https://lojaquevende.allanportoarquiteto.com.br/loja-que-vende/curso/?utm_source=checklist&amp;utm_medium=pdf&amp;utm_campaign=isca&amp;utm_content=cta_final"><span class="brilho"></span>Quero corrigir minha loja <i>→</i></a>
+      <small class="toque">Toque no botão · leva menos de 1 minuto para ver</small>
     </div>
     <span class="url">lojaquevende.allanportoarquiteto.com.br/loja-que-vende/curso/</span>
   </div>
