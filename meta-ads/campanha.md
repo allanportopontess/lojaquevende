@@ -25,6 +25,13 @@ Criado via API em 25/09/2026, revisado em 30/09/2026 (curso a R$ 97). **Tudo PAU
 
 **Domínio (01/10):** site publicado em `https://lojaquevende.allanportoarquiteto.com.br/` (CNAME no Registro.br → GitHub Pages, HTTPS forçado). Pendente: verificar `allanportoarquiteto.com.br` na Meta (TXT no Registro.br).
 
+**Teste atual (01/10, substitui o A/B "Vender mais × Upgrade"): checklist na mão, lead × venda direta**
+- Roteiros: `criativos/roteiros-checklist.pdf` · capas: `criativos/capa-C1.jpg`, `criativos/capa-C2.jpg`.
+- **C1 Checklist âncora** → conjunto `120252208286520286` (campanha Leads) · R$ 50/dia · destino: página de captura · botão Baixar.
+- **C2 Checklist direto curso** → conjunto `120252291185320286` (campanha Vendas, otimiza Purchase) · R$ 50/dia · destino: `https://lojaquevende.allanportoarquiteto.com.br/loja-que-vende/curso/` · botão Saiba mais.
+- Conjunto `120252209022210286` (B Upgrade) fica pausado, sem anúncio. Total: R$ 100/dia. Métrica de decisão: custo por venda em 5–7 dias.
+- Página de vendas: checklist entra como bônus (item 10; pilha R$ 197 + 120 + 50 + 30 = R$ 397). **Allan precisa subir o PDF do checklist na área de membros da Hotmart.**
+
 **Teste A/B de 01/10 (2 criativos, substitui os 5 do plano original):**
 - Roteiros: `criativos/roteiros-teste-AB.pdf`.
 - `120252208286520286` renomeado para **LQV | A Vender mais | BR Adv+ 25-60** · R$ 50/dia · avatar: dono(a) que quer aumentar vendas.

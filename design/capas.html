@@ -26,7 +26,9 @@ h1 span{color:#FF9F01}
 var v=new URLSearchParams(location.search).get('v')||'A';
 var C={
  A:{bg:'../site/img/caso-pausa.jpg',tag:'Para donos de loja',h:'Entra gente…<br><span>e o caixa?</span>',s:'O problema pode não ser o preço.'},
- B:{bg:'../site/img/caso-fachada.jpg',tag:'Antes de reformar',h:'Vai reformar<br>a loja? <span>Espera.</span>',s:'Loja bonita não é loja que vende.'}
+ B:{bg:'../site/img/caso-fachada.jpg',tag:'Antes de reformar',h:'Vai reformar<br>a loja? <span>Espera.</span>',s:'Loja bonita não é loja que vende.'},
+ C1:{bg:'../site/img/caso-pausa.jpg',tag:'Checklist grátis',h:'5 erros que fazem sua loja <span>perder venda</span>',s:'Descubra os da sua em 3 minutos ↓'},
+ C2:{bg:'../site/img/caso-fachada.jpg',tag:'Loja que Vende',h:'Achou o erro?<br><span>Agora corrija.</span>',s:'4 aulas + checklist · R$ 97 no lançamento'}
 }[v];
 document.getElementById('bg').style.backgroundImage='url('+C.bg+')';
 document.getElementById('tag').textContent=C.tag;document.getElementById('h').innerHTML=C.h;document.getElementById('s').textContent=C.s;
