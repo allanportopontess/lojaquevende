@@ -1,7 +1,7 @@
 # Allan Porto Arquitetura: site + funil Loja que Vende
 
 Site estático (HTML/CSS/JS, sem build), com o visual do Kit Usucapião Pro, publicado de graça no GitHub Pages:
-**https://allanportopontess.github.io/lojaquevende/**
+**https://lojaquevende.allanportoarquiteto.com.br/**
 
 ```
 Meta Ads (5 criativos A/B) → /loja-que-vende/ (captura: Checklist dos 5 Erros de Layout)

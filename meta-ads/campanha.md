@@ -3,7 +3,7 @@
 Objetivo desta fase: descobrir qual dos 5 criativos gera **lead mais barato e mais qualificado** para a isca "Checklist dos 5 Erros de Layout". O vencedor vai para a escala; os outros são pausados.
 
 ```
-Anúncio (Reels/Stories/Feed) → Página de captura (https://allanportopontess.github.io/lojaquevende/loja-que-vende/) → VSL → Checkout Hotmart → order bump / upsell
+Anúncio (Reels/Stories/Feed) → Página de captura (https://lojaquevende.allanportoarquiteto.com.br/loja-que-vende/) → VSL → Checkout Hotmart → order bump / upsell
 ```
 
 ---
@@ -256,7 +256,7 @@ Os roteiros do doc terminam em **"link na bio"**. Em anúncio pago isso manda o 
 
 ## 7. Os 5 anúncios
 
-URL de destino (todos): `https://allanportopontess.github.io/lojaquevende/loja-que-vende/` (a página de captura)
+URL de destino (todos): `https://lojaquevende.allanportoarquiteto.com.br/loja-que-vende/` (a página de captura)
 Parâmetros de URL (campo "Parâmetros de URL" do anúncio, igual nos 5):
 
 ```
