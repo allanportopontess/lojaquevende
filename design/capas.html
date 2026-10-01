@@ -1,0 +1,33 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Capas dos criativos</title>
+<style>
+@font-face{font-family:M;src:url(../isca/fonts/metropolis-latin-700-normal.woff2) format("woff2");font-weight:700}
+@font-face{font-family:M;src:url(../isca/fonts/metropolis-latin-600-normal.woff2) format("woff2");font-weight:600}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0d0d0d}
+.c{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:M,sans-serif}
+.bg{position:absolute;inset:-40px;background-size:cover;background-position:center;filter:blur(18px) brightness(.38) saturate(.9)}
+.glow{position:absolute;width:900px;height:700px;left:50%;top:180px;transform:translateX(-50%);border-radius:50%;background:#FF9F01;opacity:.22;filter:blur(120px)}
+.foto{position:absolute;left:0;right:0;bottom:0;height:1180px;background:url(../site/img/allan-autoridade.jpg) center 20%/cover;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 30%);mask-image:linear-gradient(to bottom,transparent 0,#000 30%)}
+.vinheta{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,13,.0) 55%,rgba(13,13,13,.55) 100%)}
+.topo{position:absolute;left:80px;right:80px;top:300px;text-align:center}
+.tag{display:inline-block;background:#FF9F01;color:#0d0d0d;font-weight:700;font-size:34px;letter-spacing:4px;text-transform:uppercase;padding:14px 30px;border-radius:12px}
+h1{margin-top:44px;color:#F3F3F3;font-weight:700;font-size:118px;line-height:1.0;letter-spacing:-3px;text-shadow:0 6px 40px rgba(0,0,0,.6)}
+h1 span{color:#FF9F01}
+.sub{margin-top:34px;color:#e8e8e8;font-weight:600;font-size:44px;line-height:1.25}
+.ass{position:absolute;left:0;right:0;bottom:560px;text-align:center;color:#fff;font-weight:600;font-size:32px;letter-spacing:1px;text-shadow:0 2px 16px rgba(0,0,0,.8)}
+.ass b{color:#FF9F01}
+</style></head><body>
+<div class="c">
+  <div class="bg" id="bg"></div><div class="glow"></div>
+  <div class="foto"></div><div class="vinheta"></div>
+  <div class="topo"><span class="tag" id="tag"></span><h1 id="h"></h1><p class="sub" id="s"></p></div>
+</div>
+<script>
+var v=new URLSearchParams(location.search).get('v')||'A';
+var C={
+ A:{bg:'../site/img/caso-pausa.jpg',tag:'Para donos de loja',h:'Entra gente…<br><span>e o caixa?</span>',s:'O problema pode não ser o preço.'},
+ B:{bg:'../site/img/caso-fachada.jpg',tag:'Antes de reformar',h:'Vai reformar<br>a loja? <span>Espera.</span>',s:'Loja bonita não é loja que vende.'}
+}[v];
+document.getElementById('bg').style.backgroundImage='url('+C.bg+')';
+document.getElementById('tag').textContent=C.tag;document.getElementById('h').innerHTML=C.h;document.getElementById('s').textContent=C.s;
+</script></body></html>

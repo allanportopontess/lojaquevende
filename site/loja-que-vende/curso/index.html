@@ -133,6 +133,26 @@
   .compara li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;background:rgba(13,13,13,.6);border:1px solid var(--line-soft);border-radius:12px;color:var(--text-strong);font-size:16px}
   .compara li s{color:#ff6b5b;font-weight:700;white-space:nowrap}
   .compara li.voce{border-color:#FF9F0188;background:rgba(255,159,1,.08)}
+  /* oferta: pilha de valor */
+  .stack-t{margin-top:30px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .stack{list-style:none;margin:12px 0 0;display:grid;gap:8px}
+  .stack li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 16px;border-bottom:1px dashed var(--line-soft);color:var(--text-strong);font-size:16px}
+  .stack li span{display:flex;gap:10px;align-items:center}
+  .stack li .check{margin-top:0;flex:none}
+  .stack li em{font-style:normal;color:var(--text);white-space:nowrap}
+  .stack li.total{border-bottom:0;padding-top:16px;font-weight:700}
+  .stack li.total em{color:#ff6b5b;text-decoration:line-through}
+  .stack li.hoje{background:rgba(255,159,1,.1);border:1px solid #FF9F0188;border-radius:12px;font-weight:700;font-size:18px}
+  .stack li.hoje em{color:var(--accent);font-size:22px}
+  .por-venda{margin-top:16px;font-size:15px;color:var(--text)}
+  /* dores */
+  .dores{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:920px;margin:40px auto 0;text-align:left}
+  .dores li{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;background:var(--card,#1a1a1a);border:1px solid var(--line-soft);border-radius:16px;color:var(--text-strong);font-size:17px;line-height:1.45;transition:border-color .3s,transform .3s}
+  .dores li:hover{border-color:#FF9F0188;transform:translateY(-2px)}
+  .dores li i{flex:none;width:24px;height:24px;border-radius:6px;border:2px solid #ff6b5b;display:grid;place-items:center;color:#ff6b5b;font-style:normal;font-weight:700;font-size:15px;margin-top:1px}
+  .dores-fecho{max-width:760px;margin:36px auto 0;font-size:18px;line-height:1.6}
+  .dores-fecho b{color:var(--text-strong)}
+  @media (max-width:767px){.dores{grid-template-columns:1fr}.dores li{font-size:16px;padding:16px 18px}}
   .compara li.voce b{color:var(--accent);font-size:20px;white-space:nowrap}
   .preco .tag-lanc{display:inline-block;background:var(--accent-25);color:var(--accent);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
   .preco .cron{margin:0 0 22px;font-size:13px;color:var(--text)}
@@ -175,10 +195,10 @@
   <div class="bgfoto" data-src="../../img/hero-curso.jpg" data-src-mobile="../../img/hero-curso-mobile.jpg"></div>
   <div class="wrap">
     <div class="conteudo">
-      <span class="produto-nome"><b>Loja que Vende</b> · Curso online · Para lojistas e arquitetos</span>
+      <span class="produto-nome"><b>Loja que Vende</b> · Curso online · Para donos de loja física</span>
       <h1>Sua loja pode vender mais <span class="laranja">sem reforma cara.</span></h1>
       <p class="sub">O segredo não está no produto, no preço nem no vendedor. Está em algo que acontece nos primeiros passos do cliente dentro da loja, e que quase nenhum lojista percebe.</p>
-      <span class="micro">Método em 4 aulas diretas · Criado por arquiteto especialista em varejo</span>
+      <span class="micro">4 aulas curtas · Primeira mudança aplicada no mesmo dia · Sem obra · Por arquiteto especialista em varejo</span>
     </div>
   </div>
 </section>
@@ -213,10 +233,26 @@
           <span class="soft">Acessórios</span>
           <span class="soft">Alimentício</span>
           <span class="soft">Farmácia</span>
-          <span class="soft">Showroom</span>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="sec centro">
+  <div class="wrap">
+    <span class="eyebrow">Você reconhece isso?</span>
+    <h2 class="h2">Se a sua loja tem 2 destes sinais, ela perde venda <span class="laranja">todo dia</span></h2>
+    <ul class="dores">
+      <li class="surge"><i>✕</i>Entra gente, mas o caixa não acompanha o movimento.</li>
+      <li class="surge"><i>✕</i>O cliente dá uma volta, diz "tô só olhando" e vai embora.</li>
+      <li class="surge"><i>✕</i>Quem passa na calçada nem vira o rosto para a sua vitrine.</li>
+      <li class="surge"><i>✕</i>Tem produto bom encalhado no fundo da loja.</li>
+      <li class="surge"><i>✕</i>Você já fez promoção, anúncio e treinamento, e vendeu igual.</li>
+      <li class="surge"><i>✕</i>Pensa em reformar, mas não tem certeza se vai resolver.</li>
+    </ul>
+    <p class="dores-fecho">Nenhum desses sinais se resolve com mais anúncio. Todos têm a mesma causa: <b>o espaço não conduz o cliente até a compra.</b> E essa é a correção mais barata que existe, porque o espaço você já pagou.</p>
+    <a class="btn-outline" href="#oferta" style="margin-top:28px">Quero corrigir minha loja</a>
   </div>
 </section>
 
@@ -384,12 +420,16 @@
           <li class="voce"><span>Método Loja que Vende</span><b>R$ 97</b></li>
         </ul>
         <p>Um projeto comercial completo custa caro. O <span class="destaque">Loja que Vende</span> te dá o método para corrigir o que mais custa venda hoje, com os seus próprios recursos.</p>
-        <ul class="lista-check">
-          <li><span class="check"></span>4 aulas gravadas, direto ao ponto</li>
-          <li><span class="check"></span>4 PDFs de apoio para aplicar</li>
-          <li><span class="check"></span>Estudo de caso real de loja de moda fitness</li>
-          <li><span class="check"></span>Garantia de 7 dias</li>
+        <div class="stack-t">Tudo que você leva hoje</div>
+        <ul class="stack">
+          <li><span><span class="check"></span>4 aulas gravadas, direto ao ponto</span><em>R$ 197</em></li>
+          <li><span><span class="check"></span>4 PDFs de apoio: checklists e templates</span><em>R$ 120</em></li>
+          <li><span><span class="check"></span>Bônus: estudo de caso real (loja de 19,52 m²)</span><em>R$ 80</em></li>
+          <li><span><span class="check"></span>Garantia incondicional de 7 dias</span><em>incluída</em></li>
+          <li class="total"><span>Valor total</span><em>R$ 397</em></li>
+          <li class="hoje"><span>Hoje, no lançamento</span><em>R$ 97</em></li>
         </ul>
+        <p class="por-venda">R$ 97 é menos do que a margem de <b>uma única venda</b> que hoje entra pela porta e sai sem comprar.</p>
       </div>
       <div class="preco">
         <img class="mini-capa" src="../../img/capa-loja-que-vende-p.webp" alt="" loading="lazy">
@@ -399,7 +439,7 @@
         <div class="parc" data-preco="parcelas">ou <span data-valor></span></div>
         <div class="unico">Pagamento único · Acesso imediato</div>
         <div class="cron" data-com-cronometro>Este preço termina em<br><span class="relogio" data-cronometro><span data-d>00</span><em>d</em><span data-h>00</span>:<span data-m>00</span>:<span data-s>00</span></span></div>
-        <a class="btn" href="#" data-checkout target="_blank" rel="noopener">Quero o Loja que Vende</a>
+        <a class="btn" href="#" data-checkout target="_blank" rel="noopener">Quero vender mais</a>
         <div class="selos">
           <span><span class="check"></span>Compra 100% segura</span>
           <span><span class="check"></span>Acesso imediato</span>
@@ -415,7 +455,9 @@
     <span class="eyebrow">Perguntas frequentes</span>
     <h2 class="h2">Tire suas dúvidas</h2>
     <div class="faq">
-      <details open><summary>Existe garantia?</summary><p>Sim. Você tem 7 dias de garantia. Se não gostar do curso por qualquer motivo, é só pedir o reembolso pela própria Hotmart dentro do prazo e recebe 100% do valor.</p></details>
+      <details open><summary>Existe garantia?</summary><p>Sim. Você tem 7 dias de garantia incondicional. Se não gostar do curso por qualquer motivo, é só pedir o reembolso pela própria Hotmart dentro do prazo e recebe 100% do valor.</p></details>
+      <details><summary>Em quanto tempo consigo aplicar?</summary><p>No mesmo dia. As aulas são curtas e cada uma termina com uma mudança prática. A primeira, na vitrine, normalmente não custa nada: é tirar, escolher e reposicionar.</p></details>
+      <details><summary>Por que só R$ 97?</summary><p>É o preço de lançamento, válido até 20/10 às 23h59. Depois dessa data o curso volta para R$ 397.</p></details>
       <details><summary>Como recebo o acesso?</summary><p>Logo após a confirmação do pagamento, a Hotmart envia o acesso para o seu e-mail. As aulas e os PDFs ficam na área de membros.</p></details>
       <details><summary>Preciso reformar a loja para aplicar?</summary><p>Não. O método foca em ajustes pontuais de alto impacto: posição dos produtos, vitrine, pontos de pausa e iluminação.</p></details>
       <details><summary>Serve para loja pequena?</summary><p>Serve. O estudo de caso do curso é uma loja de 19,52 m². Os princípios valem para loja de bairro, de shopping e showroom.</p></details>
@@ -424,7 +466,7 @@
     </div>
     <div class="garantia">
       <div class="selo-g"><div><b>7</b><span>dias de<br>garantia</span></div></div>
-      <div><h3>Garantia de 7 dias</h3><p>Você compra sem risco. Se em até 7 dias entender que o curso não é para você, devolvemos 100% do valor investido.</p></div>
+      <div><h3>Garantia de 7 dias: o risco é todo meu</h3><p>Assista às aulas e aplique na sua loja. Se em 7 dias você não encontrar pelo menos 3 ajustes para fazer, ou simplesmente não gostar, peça o reembolso pela Hotmart e receba 100% do valor. Sem perguntas.</p></div>
     </div>
   </div>
 </section>
@@ -446,6 +488,7 @@
 <script>
 (function () {
   var cena = document.getElementById('livro'); if (!cena) return;
+  if (window.matchMedia && matchMedia('(hover: none)').matches) { var dica = cena.querySelector('.livro-dica'); if (dica) dica.textContent = 'Toque para folhear'; }
   function folhear() { if (cena.classList.contains('abrindo')) return; cena.classList.add('abrindo'); }
   cena.querySelector('.l0').addEventListener('animationend', function () { cena.classList.remove('abrindo'); });
   cena.addEventListener('mouseenter', folhear);
