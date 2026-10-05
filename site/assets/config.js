@@ -21,7 +21,7 @@ window.SITE = {
   CHECKOUT_URL: "https://pay.hotmart.com/A107800232K", // checkout Hotmart do curso Loja que Vende
 
   // Página de links da bio (/links/): link de venda do Kit Usucapião PRO (Hotmart). Vazio = card escondido
-  KIT_USUCAPIAO_URL: "",
+  KIT_USUCAPIAO_URL: "https://pay.hotmart.com/C106999952U",
 
   // Preço exibido na página de vendas (deixe "" para esconder e mostrar só o botão)
   PRECO_DE: "397",         // preço âncora (aparece riscado)
