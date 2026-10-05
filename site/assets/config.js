@@ -20,6 +20,9 @@ window.SITE = {
   VSL_VIDEO_URL: "",       // YouTube, Vimeo ou Panda (link do vídeo). Vazio = "vídeo em breve"
   CHECKOUT_URL: "https://pay.hotmart.com/A107800232K", // checkout Hotmart do curso Loja que Vende
 
+  // Página de links da bio (/links/): link de venda do Kit Usucapião PRO (Hotmart). Vazio = card escondido
+  KIT_USUCAPIAO_URL: "",
+
   // Preço exibido na página de vendas (deixe "" para esconder e mostrar só o botão)
   PRECO_DE: "397",         // preço âncora (aparece riscado)
   PRECO_POR: "97",         // preço promocional de lançamento
