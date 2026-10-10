@@ -25,6 +25,11 @@ Criado via API em 25/09/2026, revisado em 30/09/2026 (curso a R$ 97). **Tudo PAU
 
 **Domínio (01/10):** site publicado em `https://lojaquevende.allanportoarquiteto.com.br/` (CNAME no Registro.br → GitHub Pages, HTTPS forçado). Pendente: verificar `allanportoarquiteto.com.br` na Meta (TXT no Registro.br).
 
+**Estrutura LQV (10/10):**
+- **LQV | Advantage+ | Leads checklist** (`120252382051370286`) → conjunto `120252382055770286`: público Advantage+ aberto (a Meta encontra donos de loja a partir do criativo R1), Brasil 25+, posicionamentos automáticos, R$ 50/dia.
+- **LQV | Segmentada | Leads checklist** (`120252208276050286`) → conjunto `120252208286520286` **LQV | Segmentada | Lojistas e varejo 25-60**: Advantage+ público DESLIGADO, Brasil 25–60, FB/IG Feed/Stories/Reels, R$ 50/dia. Segmentação (OU): interesses Varejo, Ponto de venda, Boutiques, Pequenas empresas, Empreendedorismo, Design de interiores · comportamentos Proprietários de pequenas empresas, Admins de páginas de varejo, Admins de páginas de negócios · setores Vendas, Gestão.
+- Pedido do Allan sem opção exata na Meta: "gerente de loja", "dono de franquia", "arquiteto/designer de loja" (cargos e interesses descontinuados) → cobertos por setores Vendas/Gestão, Empreendedorismo/Pequenas empresas e Design de interiores.
+
 **Campanha ADV (06/10, ATIVA):** `120252382051370286` **LQV | ADV | Leads checklist** (Leads, ABO) → conjunto `120252382055770286` **LQV | ADV | BR Advantage+ | R1** (Brasil, 25+, Advantage+ público e posicionamentos, R$ 50/dia, otimiza Lead) → anúncio `120252382070120286` **R1 | Movimento sem venda | ADV | 9x16** (mesmo vídeo `2124406961796252`, destino checklist, UTMs `utm_campaign=LQV_ADV&utm_term=ADV_BR&utm_content=R1_movimento_sem_venda`). Roda junto com o C1 (R$ 50/dia) = R$ 100/dia no Loja que Vende.
 **06/10:** limite de gastos removido pelo Allan; Windsor reconectado; campanha/conjunto/anúncio C1 reativados.
 
